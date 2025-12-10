@@ -1,0 +1,21 @@
+{%- comment -%}
+  Meta Tags Snippet
+  Development-ready meta tags for SEO
+{%- endcomment -%}
+
+{%- if canonical_url != blank -%}
+  <link rel="canonical" href="{{ canonical_url }}">
+{%- endif -%}
+
+{%- if settings.favicon != blank -%}
+  <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32 }}">
+{%- endif -%}
+
+{%- unless settings.type_body_font.system? -%}
+  <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+{%- endunless -%}
+
+{%- unless settings.type_header_font.system? -%}
+  <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+{%- endunless -%}
+

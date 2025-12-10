@@ -2,24 +2,34 @@
   "current": {
     "colors": {
       "accent_1": {
-        "label": "Accent 1"
+        "label": "Accent 1",
+        "value": "#000000"
       },
       "accent_2": {
-        "label": "Accent 2"
+        "label": "Accent 2",
+        "value": "#ffffff"
       },
       "background_1": {
-        "label": "Background 1"
-      },
-      "background_2": {
-        "label": "Background 2"
+        "label": "Background 1",
+        "value": "#ffffff"
       },
       "text_1": {
-        "label": "Text 1"
+        "label": "Text 1",
+        "value": "#000000"
+      }
+    },
+    "typography": {
+      "type_body_font": {
+        "value": "assistant_n4",
+        "type": "font_picker"
       },
-      "text_2": {
-        "label": "Text 2"
+      "type_header_font": {
+        "value": "assistant_n4",
+        "type": "font_picker"
+      },
+      "type_body_scale": {
+        "value": 100
       }
     }
   }
 }
-

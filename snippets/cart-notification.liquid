@@ -1,0 +1,22 @@
+{%- comment -%}
+  Cart Notification Snippet
+  Development-ready cart notification component
+{%- endcomment -%}
+
+<div id="cart-notification" class="cart-notification-wrapper" aria-modal="true" aria-label="{{ 'general.cart.item_added' | t }}" role="dialog" tabindex="-1" hidden>
+  <div class="cart-notification-inner">
+    <div class="cart-notification-header">
+      <h2 class="cart-notification-title">{{ 'general.cart.item_added' | t }}</h2>
+      <button type="button" class="cart-notification-close" aria-label="{{ 'accessibility.close' | t }}">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div id="cart-notification-product" class="cart-notification-product"></div>
+    <div class="cart-notification-footer">
+      <a href="{{ routes.cart_url }}" class="button button--primary">
+        {{ 'general.cart.view_cart' | t }}
+      </a>
+    </div>
+  </div>
+</div>
+

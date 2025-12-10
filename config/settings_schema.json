@@ -6,6 +6,80 @@
     "theme_author": "Erzana",
     "theme_documentation_url": "",
     "theme_support_url": ""
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "colors_accent_1",
+        "default": "#000000",
+        "label": "Accent 1"
+      },
+      {
+        "type": "color",
+        "id": "colors_accent_2",
+        "default": "#ffffff",
+        "label": "Accent 2"
+      },
+      {
+        "type": "color",
+        "id": "colors_background_1",
+        "default": "#ffffff",
+        "label": "Background 1"
+      },
+      {
+        "type": "color",
+        "id": "colors_text_1",
+        "default": "#000000",
+        "label": "Text 1"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "type_body_font",
+        "default": "assistant_n4",
+        "label": "Body font",
+        "info": "Select body font"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_header_font",
+        "default": "assistant_n4",
+        "label": "Heading font",
+        "info": "Select heading font"
+      },
+      {
+        "type": "range",
+        "id": "type_body_scale",
+        "min": 100,
+        "max": 130,
+        "step": 5,
+        "unit": "%",
+        "label": "Body text scale",
+        "default": 100
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook",
+        "info": "https://www.facebook.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram",
+        "info": "https://www.instagram.com/shopify"
+      }
+    ]
   }
 ]
-
