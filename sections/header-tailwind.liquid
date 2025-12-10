@@ -66,7 +66,7 @@
         <nav class="hidden xl:block flex-1 ml-8" role="navigation" aria-label="Navigation principale">
           <ul class="flex items-center justify-center gap-8 list-none m-0 p-0">
             {%- for link in linklists.main-menu.links -%}
-              <li class="relative {% if link.active %}text-gold{% endif %}">
+              <li class="relative group {% if link.active %}text-gold{% endif %}">
                 <a href="{{ link.url }}" class="block py-2 text-black hover:text-gold transition-colors relative">
                   {{ link.title }}
                   <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all hover:w-full {% if link.active %}w-full{% endif %}"></span>
