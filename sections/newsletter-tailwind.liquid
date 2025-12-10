@@ -1,0 +1,93 @@
+{%- comment -%}
+  Newsletter Section - Tailwind CSS Only
+  No custom CSS, only Tailwind utility classes
+{%- endcomment -%}
+
+<section class="py-16 md:py-24 bg-white" data-section-id="{{ section.id }}">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="text-3xl md:text-4xl font-bold text-black mb-4 tracking-tight">
+          {{ section.settings.heading }}
+        </h2>
+      {%- endif -%}
+      
+      {%- if section.settings.subheading != blank -%}
+        <p class="text-base md:text-lg text-black/70 mb-8">
+          {{ section.settings.subheading }}
+        </p>
+      {%- endif -%}
+
+      {%- form 'customer', class: 'max-w-2xl mx-auto' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <input 
+            type="email" 
+            name="contact[email]" 
+            class="flex-1 min-w-[250px] px-6 py-4 text-base text-black bg-white border-2 border-gold rounded outline-none transition-all focus:border-[#B8941F] focus:ring-4 focus:ring-gold/10 placeholder:text-gray-500" 
+            placeholder="{{ section.settings.placeholder | default: 'Entrez votre adresse e-mail' }}"
+            required
+            aria-label="{{ 'newsletter.label' | t }}"
+            autocomplete="email"
+          >
+          <button type="submit" class="px-10 py-4 text-base font-semibold uppercase tracking-wide text-black bg-gold border-2 border-gold rounded cursor-pointer transition-all hover:bg-[#B8941F] hover:border-[#B8941F] hover:-translate-y-0.5 hover:shadow-md hover:shadow-gold/30 whitespace-nowrap" aria-label="{{ 'newsletter.button_label' | t }}">
+            {{ section.settings.button_text | default: 'S\'abonner' }}
+          </button>
+        </div>
+
+        {%- if form.posted_successfully? -%}
+          <p class="mt-4 px-4 py-2 text-sm text-gold bg-gold/10 rounded" role="status">
+            {{ 'newsletter.success' | t }}
+          </p>
+        {%- endif -%}
+
+        {%- if form.errors -%}
+          <div class="mt-4 px-4 py-2 text-sm text-red-600 bg-red-50 rounded" role="alert">
+            {{ form.errors | default_errors }}
+          </div>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter Tailwind",
+  "tag": "section",
+  "class": "section-newsletter-tailwind",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Abonnez-vous à notre newsletter"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Recevez les dernières mises à jour sur les nouveaux produits et les offres exclusives"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Email Placeholder",
+      "default": "Entrez votre adresse e-mail"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "S'abonner"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter Tailwind"
+    }
+  ]
+}
+{% endschema %}
+

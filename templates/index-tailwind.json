@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "header-tailwind": {
+      "type": "header-tailwind",
+      "settings": {
+        "logo_tagline": "Chaussures pour être à l'aise",
+        "show_announcement": true,
+        "announcement_text": "DÉCOUVREZ NOTRE PROMO 3D EXCLUSIVE"
+      }
+    },
+    "hero-tailwind": {
+      "type": "hero-tailwind",
+      "settings": {
+        "heading": "Bienvenue dans notre boutique",
+        "description": "Découvrez des produits de qualité premium à des prix imbattables",
+        "button_text": "Acheter maintenant",
+        "button_link": "/collections/all"
+      }
+    },
+    "categories-tailwind": {
+      "type": "categories-tailwind",
+      "settings": {
+        "heading": "Acheter par catégorie",
+        "subheading": "Parcourez nos collections sélectionnées"
+      }
+    },
+    "products-tailwind": {
+      "type": "products-tailwind",
+      "settings": {
+        "heading": "Meilleures ventes",
+        "subheading": "Nos produits les plus populaires"
+      }
+    },
+    "promo-tailwind": {
+      "type": "promo-tailwind",
+      "settings": {
+        "heading": "Offre spéciale",
+        "description": "Obtenez 20% de réduction sur votre première commande",
+        "button_text": "Acheter maintenant",
+        "button_link": "/collections/all"
+      }
+    },
+    "newsletter-tailwind": {
+      "type": "newsletter-tailwind",
+      "settings": {
+        "heading": "Abonnez-vous à notre newsletter",
+        "subheading": "Recevez les dernières mises à jour sur les nouveaux produits et les offres exclusives",
+        "placeholder": "Entrez votre adresse e-mail",
+        "button_text": "S'abonner"
+      }
+    }
+  },
+  "order": [
+    "header-tailwind",
+    "hero-tailwind",
+    "categories-tailwind",
+    "products-tailwind",
+    "promo-tailwind",
+    "newsletter-tailwind"
+  ]
+}
+
