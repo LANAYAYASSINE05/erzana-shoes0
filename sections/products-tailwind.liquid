@@ -58,8 +58,8 @@
           
           <form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data" class="px-6 pb-6">
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-            <button type="submit" class="w-full py-3.5 px-6 bg-gold text-black text-sm font-semibold uppercase tracking-wide rounded transition-all hover:bg-[#B8941F] hover:-translate-y-0.5 hover:shadow-md hover:shadow-gold/30 active:translate-y-0" name="add" aria-label="{{ 'products.product.add_to_cart' | t }}">
-              <span>{{ 'products.product.add_to_cart' | t }}</span>
+            <button type="submit" class="w-full py-3.5 px-6 bg-gold text-black text-sm font-semibold uppercase tracking-wide rounded transition-all hover:bg-[#B8941F] hover:-translate-y-0.5 hover:shadow-md hover:shadow-gold/30 active:translate-y-0" name="add" aria-label="Ajouter au panier">
+              <span>Ajouter au panier</span>
             </button>
           </form>
         </div>
