@@ -1,5 +1,79 @@
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "hero-section": {
+      "type": "hero-section",
+      "settings": {
+        "heading": "Luxury Redefined",
+        "subheading": "Discover timeless elegance and exceptional craftsmanship",
+        "button_text": "Explore Collection",
+        "button_link": "/collections/all",
+        "height": "large"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "settings": {
+        "heading": "Our Collections",
+        "subheading": "Curated selections of premium products"
+      }
+    },
+    "featured-products": {
+      "type": "featured-products",
+      "settings": {
+        "heading": "Featured Products",
+        "subheading": "Handpicked luxury items for the discerning customer"
+      }
+    },
+    "why-choose-us": {
+      "type": "why-choose-us",
+      "blocks": {
+        "feature-1": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Quality",
+            "description": "Crafted with the finest materials and attention to detail"
+          }
+        },
+        "feature-2": {
+          "type": "feature",
+          "settings": {
+            "title": "Expert Craftsmanship",
+            "description": "Handcrafted by skilled artisans with years of experience"
+          }
+        },
+        "feature-3": {
+          "type": "feature",
+          "settings": {
+            "title": "Exclusive Design",
+            "description": "Unique designs that reflect your personal style and elegance"
+          }
+        }
+      },
+      "block_order": [
+        "feature-1",
+        "feature-2",
+        "feature-3"
+      ],
+      "settings": {
+        "heading": "Why Choose Us",
+        "subheading": "Experience the difference of true luxury"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Stay Connected",
+        "subheading": "Subscribe to our newsletter for exclusive offers and updates",
+        "placeholder": "Enter your email",
+        "button_text": "Subscribe"
+      }
+    }
+  },
+  "order": [
+    "hero-section",
+    "featured-collections",
+    "featured-products",
+    "why-choose-us",
+    "newsletter"
+  ]
 }
-

@@ -1,0 +1,94 @@
+{%- comment -%}
+  Featured Products Section - Luxury Homepage
+  4 products grid with gold hover effects
+{%- endcomment -%}
+
+{%- liquid
+  assign products_to_show = section.settings.products_list
+  if products_to_show == blank
+    assign products_to_show = collections.all.products | limit: 4
+  endif
+-%}
+
+<section class="featured-products-section" data-section-id="{{ section.id }}">
+  <div class="featured-products-container">
+    {%- if section.settings.heading != blank -%}
+      <div class="section-header">
+        <h2 class="section-heading">{{ section.settings.heading }}</h2>
+        {%- if section.settings.subheading != blank -%}
+          <p class="section-subheading">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="products-grid">
+      {%- for product in products_to_show limit: 4 -%}
+        <div class="product-card">
+          <a href="{{ product.url }}" class="product-link">
+            <div class="product-image-wrapper">
+              {%- if product.featured_image != blank -%}
+                <img 
+                  src="{{ product.featured_image | image_url: width: 600 }}" 
+                  alt="{{ product.title | escape }}"
+                  class="product-image"
+                  loading="lazy"
+                  width="{{ product.featured_image.width }}"
+                  height="{{ product.featured_image.height }}"
+                >
+              {%- else -%}
+                <div class="product-placeholder">
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              <div class="product-overlay">
+                <span class="product-overlay-text">View Details</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">{{ product.title }}</h3>
+              <div class="product-price">
+                {%- if product.compare_at_price > product.price -%}
+                  <span class="price-compare">{{ product.compare_at_price | money }}</span>
+                {%- endif -%}
+                <span class="price-current">{{ product.price | money }}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "tag": "section",
+  "class": "section-featured-products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Featured Products"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "product_list",
+      "id": "products_list",
+      "label": "Products",
+      "limit": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}
+
