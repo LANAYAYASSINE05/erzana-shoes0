@@ -1,0 +1,89 @@
+{%- comment -%}
+  Categories Grid Section
+  4 category cards with image, title, and hover animation
+{%- endcomment -%}
+
+{%- liquid
+  assign collections_to_show = section.settings.collections_list
+  if collections_to_show == blank
+    assign collections_to_show = collections | limit: 4
+  endif
+-%}
+
+<section class="categories-grid-section" data-section-id="{{ section.id }}">
+  <div class="categories-grid-container">
+    {%- if section.settings.heading != blank -%}
+      <div class="section-header">
+        <h2 class="section-heading">{{ section.settings.heading }}</h2>
+        {%- if section.settings.subheading != blank -%}
+          <p class="section-subheading">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="categories-grid">
+      {%- for collection in collections_to_show limit: 4 -%}
+        <div class="category-card">
+          <a href="{{ collection.url }}" class="category-link">
+            <div class="category-image-wrapper">
+              {%- if collection.featured_image != blank -%}
+                <img 
+                  src="{{ collection.featured_image | image_url: width: 600 }}" 
+                  alt="{{ collection.title | escape }}"
+                  class="category-image"
+                  loading="lazy"
+                  width="{{ collection.featured_image.width }}"
+                  height="{{ collection.featured_image.height }}"
+                >
+              {%- else -%}
+                <div class="category-placeholder">
+                  {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-info">
+              <h3 class="category-title">{{ collection.title }}</h3>
+              {%- if collection.products_count > 0 -%}
+                <span class="category-count">{{ collection.products_count }} {{ 'products.general.products' | t }}</span>
+              {%- endif -%}
+            </div>
+          </a>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Categories Grid",
+  "tag": "section",
+  "class": "section-categories-grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "collection_list",
+      "id": "collections_list",
+      "label": "Collections",
+      "limit": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Categories Grid"
+    }
+  ]
+}
+{% endschema %}
+

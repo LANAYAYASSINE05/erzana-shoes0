@@ -75,6 +75,7 @@
 
   {{ 'base.css' | asset_url | stylesheet_tag }}
   {{ 'luxury-homepage.css' | asset_url | stylesheet_tag }}
+  {{ 'ecommerce-homepage.css' | asset_url | stylesheet_tag }}
 
   {%- unless settings.type_body_font.system? and settings.type_header_font.system? -%}
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>

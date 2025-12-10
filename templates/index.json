@@ -1,79 +1,87 @@
 {
   "sections": {
-    "hero-section": {
-      "type": "hero-section",
+    "hero-banner": {
+      "type": "hero-banner",
       "settings": {
-        "heading": "Luxury Redefined",
-        "subheading": "Discover timeless elegance and exceptional craftsmanship",
-        "button_text": "Explore Collection",
+        "heading": "Welcome to Our Store",
+        "description": "Discover premium quality products at unbeatable prices",
+        "button_text": "Shop Now",
         "button_link": "/collections/all",
-        "height": "large"
+        "text_alignment": "center",
+        "overlay_opacity": 40
       }
     },
-    "featured-collections": {
-      "type": "featured-collections",
+    "categories-grid": {
+      "type": "categories-grid",
       "settings": {
-        "heading": "Our Collections",
-        "subheading": "Curated selections of premium products"
+        "heading": "Shop by Category",
+        "subheading": "Browse our curated collections"
       }
     },
-    "featured-products": {
-      "type": "featured-products",
+    "best-sellers": {
+      "type": "best-sellers",
       "settings": {
-        "heading": "Featured Products",
-        "subheading": "Handpicked luxury items for the discerning customer"
+        "heading": "Best Sellers",
+        "subheading": "Our most popular products"
       }
     },
-    "why-choose-us": {
-      "type": "why-choose-us",
+    "brand-benefits": {
+      "type": "brand-benefits",
       "blocks": {
-        "feature-1": {
-          "type": "feature",
+        "delivery": {
+          "type": "delivery",
+          "settings": {
+            "title": "Fast Delivery",
+            "description": "Free shipping on orders over $50"
+          }
+        },
+        "quality": {
+          "type": "quality",
           "settings": {
             "title": "Premium Quality",
-            "description": "Crafted with the finest materials and attention to detail"
+            "description": "Handpicked products for the best quality"
           }
         },
-        "feature-2": {
-          "type": "feature",
+        "payment": {
+          "type": "payment",
           "settings": {
-            "title": "Expert Craftsmanship",
-            "description": "Handcrafted by skilled artisans with years of experience"
-          }
-        },
-        "feature-3": {
-          "type": "feature",
-          "settings": {
-            "title": "Exclusive Design",
-            "description": "Unique designs that reflect your personal style and elegance"
+            "title": "Secure Payment",
+            "description": "100% secure and encrypted transactions"
           }
         }
       },
       "block_order": [
-        "feature-1",
-        "feature-2",
-        "feature-3"
+        "delivery",
+        "quality",
+        "payment"
       ],
+      "settings": {}
+    },
+    "promo-banner": {
+      "type": "promo-banner",
       "settings": {
-        "heading": "Why Choose Us",
-        "subheading": "Experience the difference of true luxury"
+        "heading": "Special Offer",
+        "description": "Get 20% off on your first order",
+        "button_text": "Shop Now",
+        "button_link": "/collections/all"
       }
     },
-    "newsletter": {
-      "type": "newsletter",
+    "newsletter-signup": {
+      "type": "newsletter-signup",
       "settings": {
-        "heading": "Stay Connected",
-        "subheading": "Subscribe to our newsletter for exclusive offers and updates",
-        "placeholder": "Enter your email",
+        "heading": "Subscribe to Our Newsletter",
+        "subheading": "Get the latest updates on new products and exclusive offers",
+        "placeholder": "Enter your email address",
         "button_text": "Subscribe"
       }
     }
   },
   "order": [
-    "hero-section",
-    "featured-collections",
-    "featured-products",
-    "why-choose-us",
-    "newsletter"
+    "hero-banner",
+    "categories-grid",
+    "best-sellers",
+    "brand-benefits",
+    "promo-banner",
+    "newsletter-signup"
   ]
 }
