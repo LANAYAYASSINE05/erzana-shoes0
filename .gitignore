@@ -5,7 +5,8 @@ yarn.lock
 pnpm-lock.yaml
 
 # Build outputs
-assets/theme.css
+# Note: theme.css must be committed for GitHub import to work
+# assets/theme.css - NOT ignored, needed for Shopify deployment
 assets/theme.css.map
 
 # Environment variables

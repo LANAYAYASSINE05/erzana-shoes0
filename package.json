@@ -5,7 +5,8 @@
   "scripts": {
     "build": "postcss src/css/tailwind.css -o assets/theme.css",
     "watch": "postcss src/css/tailwind.css -o assets/theme.css --watch",
-    "dev": "npm run watch"
+    "dev": "npm run watch",
+    "precommit": "npm run build"
   },
   "keywords": [
     "shopify",
