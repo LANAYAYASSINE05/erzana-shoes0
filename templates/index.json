@@ -3,9 +3,9 @@
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
-        "heading": "Welcome to Our Store",
-        "description": "Discover premium quality products at unbeatable prices",
-        "button_text": "Shop Now",
+        "heading": "Bienvenue dans notre boutique",
+        "description": "Découvrez des produits de qualité premium à des prix imbattables",
+        "button_text": "Acheter maintenant",
         "button_link": "/collections/all",
         "text_alignment": "center",
         "overlay_opacity": 40
@@ -14,15 +14,15 @@
     "categories-grid": {
       "type": "categories-grid",
       "settings": {
-        "heading": "Shop by Category",
-        "subheading": "Browse our curated collections"
+        "heading": "Acheter par catégorie",
+        "subheading": "Parcourez nos collections sélectionnées"
       }
     },
     "best-sellers": {
       "type": "best-sellers",
       "settings": {
-        "heading": "Best Sellers",
-        "subheading": "Our most popular products"
+        "heading": "Meilleures ventes",
+        "subheading": "Nos produits les plus populaires"
       }
     },
     "brand-benefits": {
@@ -31,22 +31,22 @@
         "delivery": {
           "type": "delivery",
           "settings": {
-            "title": "Fast Delivery",
-            "description": "Free shipping on orders over $50"
+            "title": "Livraison rapide",
+            "description": "Livraison gratuite pour les commandes de plus de 50€"
           }
         },
         "quality": {
           "type": "quality",
           "settings": {
-            "title": "Premium Quality",
-            "description": "Handpicked products for the best quality"
+            "title": "Qualité premium",
+            "description": "Produits sélectionnés pour la meilleure qualité"
           }
         },
         "payment": {
           "type": "payment",
           "settings": {
-            "title": "Secure Payment",
-            "description": "100% secure and encrypted transactions"
+            "title": "Paiement sécurisé",
+            "description": "Transactions 100% sécurisées et cryptées"
           }
         }
       },
@@ -60,19 +60,19 @@
     "promo-banner": {
       "type": "promo-banner",
       "settings": {
-        "heading": "Special Offer",
-        "description": "Get 20% off on your first order",
-        "button_text": "Shop Now",
+        "heading": "Offre spéciale",
+        "description": "Obtenez 20% de réduction sur votre première commande",
+        "button_text": "Acheter maintenant",
         "button_link": "/collections/all"
       }
     },
     "newsletter-signup": {
       "type": "newsletter-signup",
       "settings": {
-        "heading": "Subscribe to Our Newsletter",
-        "subheading": "Get the latest updates on new products and exclusive offers",
-        "placeholder": "Enter your email address",
-        "button_text": "Subscribe"
+        "heading": "Abonnez-vous à notre newsletter",
+        "subheading": "Recevez les dernières mises à jour sur les nouveaux produits et les offres exclusives",
+        "placeholder": "Entrez votre adresse e-mail",
+        "button_text": "S'abonner"
       }
     }
   },
