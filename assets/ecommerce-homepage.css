@@ -741,8 +741,10 @@ input:focus {
 .header-top-bar {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .header-container {
@@ -757,12 +759,18 @@ input:focus {
 
 .header-announcement p {
   margin: 0;
-  color: var(--color-gold);
-  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .header-main {
   padding: var(--spacing-md) 0;
+  background-color: var(--color-white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header-wrapper {
@@ -770,10 +778,14 @@ input:focus {
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-lg);
+  position: relative;
 }
 
 /* Logo */
 .header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   flex-shrink: 0;
 }
 
@@ -784,6 +796,22 @@ input:focus {
   color: var(--color-black);
 }
 
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logo-box {
+  background-color: var(--color-black);
+  border: 2px solid var(--color-white);
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .logo-image {
   max-width: 150px;
   height: auto;
@@ -792,18 +820,47 @@ input:focus {
 .logo-text {
   font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-black);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.logo-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.logo-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-tagline {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-gold);
+  font-style: italic;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* Navigation */
 .header-nav {
-  flex: 1;
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .header-nav {
     display: block;
+    flex: 1;
+    margin-left: var(--spacing-lg);
   }
 }
 
@@ -823,13 +880,14 @@ input:focus {
 
 .nav-link {
   display: block;
-  padding: var(--spacing-xs) 0;
+  padding: var(--spacing-xs) var(--spacing-sm);
   color: var(--color-black);
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
   text-decoration: none;
-  transition: color var(--transition-base);
+  transition: all var(--transition-base);
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -856,11 +914,13 @@ input:focus {
 /* Dropdown Menu */
 .nav-dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 10px);
   left: 0;
-  min-width: 200px;
+  min-width: 220px;
   background-color: var(--color-white);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--border-radius);
   list-style: none;
   margin: 0;
   padding: var(--spacing-sm) 0;
@@ -868,6 +928,7 @@ input:focus {
   visibility: hidden;
   transform: translateY(-10px);
   transition: all var(--transition-base);
+  z-index: 100;
 }
 
 .nav-item:hover .nav-dropdown {
@@ -1138,13 +1199,28 @@ input:focus {
 }
 
 /* Responsive Header */
+@media (max-width: 1199px) {
+  .header-logo {
+    position: static;
+    transform: none;
+  }
+}
+
 @media (max-width: 991px) {
   .header-wrapper {
     gap: var(--spacing-sm);
   }
 
-  .logo-image {
-    max-width: 120px;
+  .logo-box {
+    padding: 0.4rem 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.65rem;
   }
 
   .header-actions {
@@ -1162,8 +1238,16 @@ input:focus {
     padding: var(--spacing-sm) 0;
   }
 
-  .logo-image {
-    max-width: 100px;
+  .logo-box {
+    padding: 0.3rem 0.75rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.6rem;
   }
 
   .header-announcement {
