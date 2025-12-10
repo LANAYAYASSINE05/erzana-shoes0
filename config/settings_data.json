@@ -1,0 +1,25 @@
+{
+  "current": {
+    "colors": {
+      "accent_1": {
+        "label": "Accent 1"
+      },
+      "accent_2": {
+        "label": "Accent 2"
+      },
+      "background_1": {
+        "label": "Background 1"
+      },
+      "background_2": {
+        "label": "Background 2"
+      },
+      "text_1": {
+        "label": "Text 1"
+      },
+      "text_2": {
+        "label": "Text 2"
+      }
+    }
+  }
+}
+
