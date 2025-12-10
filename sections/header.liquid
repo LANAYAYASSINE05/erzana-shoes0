@@ -1,54 +1,188 @@
 {%- comment -%}
-  Header Section
-  Development-ready header component
+  Header Section - E-commerce Store
+  Complete header with logo, navigation, search, account, and cart
 {%- endcomment -%}
 
-<header class="site-header" role="banner">
-  <div class="container">
-    <div class="header-wrapper">
-      <div class="header-logo">
-        <a href="{{ routes.root_url }}" class="logo-link">
-          {%- if section.settings.logo != blank -%}
-            <img src="{{ section.settings.logo | image_url: width: 200 }}" 
-                 alt="{{ shop.name }}" 
-                 width="{{ section.settings.logo.width }}" 
-                 height="{{ section.settings.logo.height }}">
-          {%- else -%}
-            <span class="logo-text">{{ shop.name }}</span>
+<header class="site-header" role="banner" data-section-id="{{ section.id }}">
+  <div class="header-top-bar">
+    <div class="header-container">
+      <div class="header-top-content">
+        {%- if section.settings.show_announcement -%}
+          <div class="header-announcement">
+            <p>{{ section.settings.announcement_text | default: "Livraison gratuite à partir de 500 MAD" }}</p>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="header-container">
+      <div class="header-wrapper">
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false" data-mobile-menu-toggle>
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="{{ routes.root_url }}" class="logo-link">
+            {%- if section.settings.logo != blank -%}
+              <img 
+                src="{{ section.settings.logo | image_url: width: 200 }}" 
+                alt="{{ shop.name | escape }}" 
+                class="logo-image"
+                width="{{ section.settings.logo.width }}"
+                height="{{ section.settings.logo.height }}"
+                loading="eager"
+              >
+            {%- else -%}
+              <span class="logo-text">{{ shop.name }}</span>
+            {%- endif -%}
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="header-nav" role="navigation" aria-label="Navigation principale">
+          <ul class="nav-menu">
+            {%- for link in linklists.main-menu.links -%}
+              <li class="nav-item {% if link.active %}nav-item-active{% endif %}">
+                <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+                {%- if link.links != blank -%}
+                  <ul class="nav-dropdown">
+                    {%- for childlink in link.links -%}
+                      <li class="nav-dropdown-item">
+                        <a href="{{ childlink.url }}" class="nav-dropdown-link">{{ childlink.title }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Search -->
+          <button class="header-action-btn search-toggle" aria-label="Rechercher" data-search-toggle>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <!-- Account -->
+          {%- if shop.customer_accounts_enabled -%}
+            <a href="{{ routes.account_url }}" class="header-action-btn account-link" aria-label="Mon compte">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 10C12.7614 10 15 7.76142 15 5C15 2.23858 12.7614 0 10 0C7.23858 0 5 2.23858 5 5C5 7.76142 7.23858 10 10 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 12C5.58172 12 2 14.6863 2 18V20H18V18C18 14.6863 14.4183 12 10 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           {%- endif -%}
-        </a>
-      </div>
 
-      <nav class="header-nav" role="navigation">
-        <ul class="nav-menu">
-          {%- for link in linklists.main-menu.links -%}
-            <li class="nav-item">
-              <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="{{ routes.cart_url }}" class="cart-link">
-          Cart
-          <span class="cart-count">({{ cart.item_count }})</span>
-        </a>
+          <!-- Cart -->
+          <a href="{{ routes.cart_url }}" class="header-action-btn cart-link" aria-label="Panier">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H3L3.4 3M5 11H15L19 3H3.4M5 11L3.4 3M5 11L2.70711 13.2929C2.07714 13.9229 2.52331 15 3.41421 15H15M15 11C15 12.1046 15.8954 13 17 13C18.1046 13 19 12.1046 19 11C19 9.89543 18.1046 9 17 9C15.8954 9 15 9.89543 15 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {%- if cart.item_count > 0 -%}
+              <span class="cart-count-badge">{{ cart.item_count }}</span>
+            {%- endif -%}
+          </a>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" data-mobile-menu>
+    <nav class="mobile-nav" role="navigation" aria-label="Navigation mobile">
+      <ul class="mobile-nav-menu">
+        {%- for link in linklists.main-menu.links -%}
+          <li class="mobile-nav-item">
+            <a href="{{ link.url }}" class="mobile-nav-link">{{ link.title }}</a>
+            {%- if link.links != blank -%}
+              <ul class="mobile-nav-submenu">
+                {%- for childlink in link.links -%}
+                  <li class="mobile-nav-subitem">
+                    <a href="{{ childlink.url }}" class="mobile-nav-sublink">{{ childlink.title }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" data-search-overlay>
+    <div class="search-overlay-content">
+      <form action="{{ routes.search_url }}" method="get" class="search-form" role="search">
+        <input 
+          type="search" 
+          name="q" 
+          class="search-input" 
+          placeholder="Rechercher des produits..."
+          aria-label="Rechercher"
+          autocomplete="off"
+        >
+        <button type="submit" class="search-submit" aria-label="Soumettre la recherche">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+      <button class="search-close" aria-label="Fermer la recherche" data-search-close>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
 
 {% schema %}
 {
-  "name": "Header",
+  "name": "En-tête",
+  "tag": "header",
+  "class": "section-header",
   "settings": [
     {
       "type": "image_picker",
       "id": "logo",
       "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Largeur du logo",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 150
+    },
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Afficher la barre d'annonce",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Texte de l'annonce",
+      "default": "Livraison gratuite à partir de 500 MAD"
     }
   ]
 }
 {% endschema %}
-

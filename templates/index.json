@@ -32,7 +32,7 @@
           "type": "delivery",
           "settings": {
             "title": "Livraison rapide",
-            "description": "Livraison gratuite pour les commandes de plus de 50€"
+            "description": "Livraison gratuite pour les commandes de plus de 500 MAD"
           }
         },
         "quality": {
