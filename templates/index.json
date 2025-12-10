@@ -1,38 +1,44 @@
 {
   "sections": {
-    "hero-banner": {
-      "type": "hero-banner",
+    "header-tailwind": {
+      "type": "header-tailwind",
+      "settings": {
+        "logo_tagline": "Chaussures pour être à l'aise",
+        "show_announcement": true,
+        "announcement_text": "DÉCOUVREZ NOTRE PROMO 3D EXCLUSIVE"
+      }
+    },
+    "hero-tailwind": {
+      "type": "hero-tailwind",
       "settings": {
         "heading": "Bienvenue dans notre boutique",
         "description": "Découvrez des produits de qualité premium à des prix imbattables",
         "button_text": "Acheter maintenant",
-        "button_link": "/collections/all",
-        "text_alignment": "center",
-        "overlay_opacity": 40
+        "button_link": "/collections/all"
       }
     },
-    "categories-grid": {
-      "type": "categories-grid",
+    "categories-tailwind": {
+      "type": "categories-tailwind",
       "settings": {
         "heading": "Acheter par catégorie",
         "subheading": "Parcourez nos collections sélectionnées"
       }
     },
-    "best-sellers": {
-      "type": "best-sellers",
+    "products-tailwind": {
+      "type": "products-tailwind",
       "settings": {
         "heading": "Meilleures ventes",
         "subheading": "Nos produits les plus populaires"
       }
     },
-    "brand-benefits": {
-      "type": "brand-benefits",
+    "brand-benefits-tailwind": {
+      "type": "brand-benefits-tailwind",
       "blocks": {
         "delivery": {
           "type": "delivery",
           "settings": {
             "title": "Livraison rapide",
-            "description": "Livraison gratuite pour les commandes de plus de 500 MAD"
+            "description": "Livraison gratuite pour toute commande de plus de 500 MAD"
           }
         },
         "quality": {
@@ -57,8 +63,8 @@
       ],
       "settings": {}
     },
-    "promo-banner": {
-      "type": "promo-banner",
+    "promo-tailwind": {
+      "type": "promo-tailwind",
       "settings": {
         "heading": "Offre spéciale",
         "description": "Obtenez 20% de réduction sur votre première commande",
@@ -66,8 +72,8 @@
         "button_link": "/collections/all"
       }
     },
-    "newsletter-signup": {
-      "type": "newsletter-signup",
+    "newsletter-tailwind": {
+      "type": "newsletter-tailwind",
       "settings": {
         "heading": "Abonnez-vous à notre newsletter",
         "subheading": "Recevez les dernières mises à jour sur les nouveaux produits et les offres exclusives",
@@ -77,11 +83,12 @@
     }
   },
   "order": [
-    "hero-banner",
-    "categories-grid",
-    "best-sellers",
-    "brand-benefits",
-    "promo-banner",
-    "newsletter-signup"
+    "header-tailwind",
+    "hero-tailwind",
+    "categories-tailwind",
+    "products-tailwind",
+    "brand-benefits-tailwind",
+    "promo-tailwind",
+    "newsletter-tailwind"
   ]
 }
