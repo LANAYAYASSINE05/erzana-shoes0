@@ -254,4 +254,138 @@ Après avoir créé les collections et configuré le menu :
 3. Vérifiez que chaque collection affiche correctement ses produits
 4. Vérifiez que les couleurs (blanc, noir, or) sont bien appliquées
 
+RÉSOLUTIONS D'IMAGES RECOMMANDÉES
+==================================
+
+Pour une présentation optimale des images dans le thème, utilisez les résolutions
+suivantes selon le type d'image :
+
+HERO BANNER (Section Hero - Page d'accueil)
+--------------------------------------------
+
+Desktop (Ordinateur) :
+- Résolution recommandée : 3840 x 2160 pixels (4K)
+- Résolution minimale : 1920 x 1080 pixels (Full HD)
+- Format : JPG ou WebP
+- Ratio d'aspect : 16:9 (recommandé) ou adapté au design
+- Taille de fichier : < 500 KB (optimisé)
+- Largeur maximale supportée : 3840px
+
+Mobile (Téléphone) :
+- Résolution recommandée : 1600 x 900 pixels
+- Résolution minimale : 800 x 450 pixels
+- Format : JPG ou WebP
+- Ratio d'aspect : 16:9 ou adapté
+- Taille de fichier : < 200 KB (optimisé)
+- Largeur maximale supportée : 1600px
+
+Note : Le thème génère automatiquement plusieurs tailles (832, 1200, 1600, 1920, 
+       2560, 3840px) pour le responsive. Utilisez toujours la plus haute résolution
+       disponible, Shopify optimisera automatiquement.
+
+IMAGES DE PRODUITS
+------------------
+
+Images principales de produits :
+- Résolution recommandée : 2048 x 2048 pixels (carré)
+- Résolution minimale : 1024 x 1024 pixels
+- Format : JPG (qualité 85-90%) ou WebP
+- Ratio d'aspect : 1:1 (carré) - RECOMMANDÉ
+- Taille de fichier : < 300 KB par image
+- Fond : Blanc ou transparent (PNG)
+
+Images secondaires/variantes :
+- Résolution recommandée : 2048 x 2048 pixels
+- Format : JPG ou WebP
+- Ratio d'aspect : 1:1 (carré)
+
+Note : Shopify génère automatiquement plusieurs tailles pour les images produits.
+       Utilisez toujours des images carrées pour une meilleure cohérence visuelle.
+
+IMAGES DE COLLECTIONS
+---------------------
+
+Images de collection (page d'accueil, liste collections) :
+- Résolution recommandée : 1920 x 1920 pixels (carré)
+- Résolution minimale : 1200 x 1200 pixels
+- Format : JPG (qualité 85-90%) ou WebP
+- Ratio d'aspect : 1:1 (carré) - RECOMMANDÉ
+- Taille de fichier : < 400 KB
+- Fond : Cohérent avec le design de la collection
+
+Note : Les images de collections sont affichées en grille, utilisez un ratio carré
+       pour une présentation uniforme.
+
+LOGO
+----
+
+Logo du site (header) :
+- Résolution recommandée : 800 x 200 pixels (format horizontal)
+- Résolution minimale : 400 x 100 pixels
+- Format : PNG (avec transparence) ou SVG (recommandé)
+- Ratio d'aspect : Variable selon le design (généralement 4:1 ou 3:1)
+- Taille de fichier : < 100 KB
+- Fond : Transparent (PNG) ou vectoriel (SVG)
+
+Note : Le logo est redimensionné automatiquement selon les paramètres du thème.
+       Utilisez SVG pour une qualité parfaite à toutes les tailles.
+
+IMAGES DE SECTIONS (Media with Content)
+---------------------------------------
+
+Images pour sections "Media with Content" :
+- Résolution recommandée : 1920 x 1080 pixels (16:9)
+- Résolution minimale : 1200 x 675 pixels
+- Format : JPG (qualité 85-90%) ou WebP
+- Ratio d'aspect : 16:9 (recommandé) ou adapté
+- Taille de fichier : < 400 KB
+
+BONNES PRATIQUES
+----------------
+
+1. OPTIMISATION DES IMAGES :
+   - Compressez toujours vos images avant l'upload
+   - Utilisez des outils comme TinyPNG, ImageOptim, ou Squoosh
+   - Format WebP recommandé pour une meilleure compression
+
+2. RATIO D'ASPECT :
+   - Produits : TOUJOURS 1:1 (carré)
+   - Collections : 1:1 (carré) recommandé
+   - Hero banners : 16:9 ou adapté au design
+   - Sections : 16:9 ou adapté
+
+3. QUALITÉ :
+   - JPG : Qualité 85-90% (bon équilibre qualité/taille)
+   - PNG : Utilisez uniquement si transparence nécessaire
+   - WebP : Meilleur format moderne (compression supérieure)
+
+4. NOMENCLATURE :
+   - Utilisez des noms descriptifs : "botte-noire-cuir-01.jpg"
+   - Évitez les espaces, utilisez des tirets
+   - Incluez des mots-clés pertinents
+
+5. ALT TEXT (Texte alternatif) :
+   - Ajoutez toujours un texte alternatif descriptif
+   - Important pour l'accessibilité et le SEO
+   - Exemple : "Botte en cuir noir Erzana - Collection Hiver 2024"
+
+6. ORDRE DES IMAGES :
+   - Images produits : La meilleure image en première position
+   - Collections : Image représentative de la collection
+
+RÉSUMÉ DES RÉSOLUTIONS
+----------------------
+
+Type d'image              | Desktop          | Mobile           | Format
+--------------------------|------------------|------------------|--------
+Hero Banner               | 3840 x 2160 px   | 1600 x 900 px    | JPG/WebP
+Image Produit             | 2048 x 2048 px   | 2048 x 2048 px   | JPG/WebP
+Image Collection          | 1920 x 1920 px   | 1920 x 1920 px   | JPG/WebP
+Logo                      | 800 x 200 px     | 400 x 100 px     | SVG/PNG
+Section Media             | 1920 x 1080 px   | 1200 x 675 px    | JPG/WebP
+
+Note importante : Shopify génère automatiquement plusieurs tailles pour chaque
+image uploadée. Utilisez toujours la résolution maximale recommandée, le système
+sélectionnera automatiquement la meilleure taille selon l'appareil.
+
 ================================================================================
