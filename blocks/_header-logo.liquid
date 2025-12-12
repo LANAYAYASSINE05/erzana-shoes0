@@ -157,6 +157,13 @@
     object-fit: contain;
     height: var(--header-logo-image-height-mobile);
     width: var(--header-logo-image-width-mobile);
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    /* Améliorer la visibilité du logo */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 
     @media screen and (min-width: 750px) {
       height: var(--header-logo-image-height);
