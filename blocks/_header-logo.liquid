@@ -40,9 +40,33 @@
   "
   {{ block.shopify_attributes }}
 >
+  {% comment %}
+    ============================================
+    LOGO IMAGE DIRECTE
+    ============================================
+    Logo depuis Shopify Files
+  {% endcomment %}
+  {% assign logo_direct_url = 'https://cdn.shopify.com/s/files/1/0964/1646/5207/files/Logo.jpg?v=1765579067' %}
+
   {% liquid
-    assign logo_width = settings.logo_height | times: settings.logo.aspect_ratio | ceil
-    assign logo_width_mobile = settings.logo_height_mobile | times: settings.logo.aspect_ratio | ceil
+    # Si URL directe fournie, utiliser celle-ci, sinon utiliser settings.logo
+    if logo_direct_url != blank
+      assign use_direct_logo = true
+      # Ratio par défaut pour le logo (ajustez selon votre logo : 2.5 = 2.5x plus large que haut)
+      assign logo_aspect_ratio = 2.5
+      assign logo_width = settings.logo_height | times: logo_aspect_ratio | ceil
+      assign logo_width_mobile = settings.logo_height_mobile | times: logo_aspect_ratio | ceil
+    else
+      assign use_direct_logo = false
+      if settings.logo != blank
+        assign logo_width = settings.logo_height | times: settings.logo.aspect_ratio | ceil
+        assign logo_width_mobile = settings.logo_height_mobile | times: settings.logo.aspect_ratio | ceil
+      else
+        assign logo_width = settings.logo_height | times: 2 | ceil
+        assign logo_width_mobile = settings.logo_height_mobile | times: 2 | ceil
+      endif
+    endif
+    
     assign inverse_logo_width = settings.logo_height | times: inverse_logo.aspect_ratio | ceil
     assign inverse_logo_width_mobile = settings.logo_height_mobile | times: inverse_logo.aspect_ratio | ceil
     assign logo_style = '--header-logo-image-width: ' | append: logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
@@ -53,13 +77,23 @@
     class="header-logo__image-container header-logo__image-container--original"
     data-testid="header-logo"
   >
-    {% render 'image',
-      image: settings.logo,
-      class: 'header-logo__image',
-      height: settings.logo_height,
-      text_fallback: shop.name,
-      style: logo_style
-    %}
+    {% if use_direct_logo %}
+      <img
+        src="{{ logo_direct_url }}"
+        alt="{{ shop.name }}"
+        class="header-logo__image"
+        style="{{ logo_style }}"
+        loading="eager"
+      >
+    {% else %}
+      {% render 'image',
+        image: settings.logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        text_fallback: shop.name,
+        style: logo_style
+      %}
+    {% endif %}
   </span>
 
   {% if use_inverse_logo %}
