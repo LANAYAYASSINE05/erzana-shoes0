@@ -44,16 +44,16 @@
     ============================================
     LOGO IMAGE DIRECTE
     ============================================
-    Logo depuis Shopify Files
+    Logo depuis Shopify Files - Dimensions: 2000 × 1414 px
   {% endcomment %}
-  {% assign logo_direct_url = 'https://cdn.shopify.com/s/files/1/0964/1646/5207/files/Logo.jpg?v=1765579067' %}
+  {% assign logo_direct_url = 'https://cdn.shopify.com/s/files/1/0964/1646/5207/files/Logo.png?v=1765580905' %}
 
   {% liquid
     # Si URL directe fournie, utiliser celle-ci, sinon utiliser settings.logo
     if logo_direct_url != blank
       assign use_direct_logo = true
-      # Ratio par défaut pour le logo (ajustez selon votre logo : 2.5 = 2.5x plus large que haut)
-      assign logo_aspect_ratio = 2.5
+      # Ratio d'aspect calculé selon les dimensions réelles : 2000 × 1414 px = 1.414
+      assign logo_aspect_ratio = 1.414
       assign logo_width = settings.logo_height | times: logo_aspect_ratio | ceil
       assign logo_width_mobile = settings.logo_height_mobile | times: logo_aspect_ratio | ceil
     else
