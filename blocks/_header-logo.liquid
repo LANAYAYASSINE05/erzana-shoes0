@@ -44,9 +44,9 @@
     ============================================
     LOGO IMAGE DIRECTE
     ============================================
-    Logo depuis Shopify Files - Dimensions: 2000 × 1414 px
+    Logo depuis assets/Logo.png - Dimensions: 2000 × 1414 px
   {% endcomment %}
-  {% assign logo_direct_url = 'https://cdn.shopify.com/s/files/1/0964/1646/5207/files/Logo.png?v=1765580905' %}
+  {% assign logo_direct_url = 'Logo.png' | asset_url %}
 
   {% liquid
     # Si URL directe fournie, utiliser celle-ci, sinon utiliser settings.logo
