@@ -4591,49 +4591,31 @@ text-component {
 
 /* Fond blanc pour product-list avec scheme-1 */
 .section-wrapper.color-scheme-1 .section-resource-list,
-.section.color-scheme-1.section-resource-list,
 .section-resource-list.color-scheme-1,
-.section-wrapper.color-scheme-1 .section-resource-list .section-background,
-.section.color-scheme-1.section-resource-list .section-background {
+.section-wrapper.color-scheme-1 .section-resource-list .section-background {
   background-color: var(--color-premium-white) !important;
 }
 
 /* Titres premium dans product-list header */
 .section-wrapper.color-scheme-1 .section-resource-list__header,
-.section.color-scheme-1.section-resource-list .section-resource-list__header,
 .section-wrapper.color-scheme-1 .section-resource-list__header h1,
-.section.color-scheme-1.section-resource-list .section-resource-list__header h1,
 .section-wrapper.color-scheme-1 .section-resource-list__header h2,
-.section.color-scheme-1.section-resource-list .section-resource-list__header h2,
 .section-wrapper.color-scheme-1 .section-resource-list__header h3,
-.section.color-scheme-1.section-resource-list .section-resource-list__header h3,
 .section-wrapper.color-scheme-1 .section-resource-list__header h4,
-.section.color-scheme-1.section-resource-list .section-resource-list__header h4,
 .section-wrapper.color-scheme-1 .section-resource-list__header .h1,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .h1,
 .section-wrapper.color-scheme-1 .section-resource-list__header .h2,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .h2,
 .section-wrapper.color-scheme-1 .section-resource-list__header .h3,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .h3,
 .section-wrapper.color-scheme-1 .section-resource-list__header .h4,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .h4,
 .section-wrapper.color-scheme-1 .section-resource-list__header .text-block,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .text-block,
 .section-wrapper.color-scheme-1 .section-resource-list__header .text-block > *,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .text-block > *,
 .section-wrapper.color-scheme-1 .section-resource-list__header .group-block-content,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .group-block-content,
-.section-wrapper.color-scheme-1 .section-resource-list__header .group-block-content > *,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .group-block-content > * {
+.section-wrapper.color-scheme-1 .section-resource-list__header .group-block-content > * {
   color: var(--color-premium-black) !important;
 }
 
 .section-wrapper.color-scheme-1 .section-resource-list__header h2,
-.section.color-scheme-1.section-resource-list .section-resource-list__header h2,
 .section-wrapper.color-scheme-1 .section-resource-list__header .h2,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .h2,
-.section-wrapper.color-scheme-1 .section-resource-list__header .product-list-text,
-.section.color-scheme-1.section-resource-list .section-resource-list__header .product-list-text {
+.section-wrapper.color-scheme-1 .section-resource-list__header .product-list-text {
   color: var(--color-premium-black) !important;
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
