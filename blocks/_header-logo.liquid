@@ -12,16 +12,20 @@
     assign use_inverse_logo = true
   endif
 
+  # Configuration des logos ERZANA SHOES (conforme au README.md)
   # Utiliser les logos depuis les paramètres du thème, sinon utiliser directement les fichiers assets
+  # Les logos sont configurés via l'éditeur de thème Shopify (Paramètres → Logo et favicon)
+  # Fallback automatique vers assets/Logo.png et assets/Logo inverse.png
   if settings.logo != blank
     assign main_logo = settings.logo
     assign use_asset_logo = false
   else
-    # Fallback vers le fichier Logo.png dans assets
+    # Fallback vers le fichier Logo.png dans assets (conforme README.md)
     assign use_asset_logo = true
   endif
 
   # Toujours préparer le logo inverse pour le changement au scroll
+  # Logo inverse utilisé pour headers transparents et fonds sombres (conforme README.md)
   if settings.logo_inverse != blank
     assign inverse_logo = settings.logo_inverse
     assign use_asset_inverse_logo = false
@@ -29,7 +33,7 @@
     assign inverse_logo = settings.logo
     assign use_asset_inverse_logo = false
   else
-    # Fallback vers le fichier Logo inverse.png dans assets
+    # Fallback vers le fichier Logo inverse.png dans assets (conforme README.md)
     assign use_asset_inverse_logo = true
   endif
 %}

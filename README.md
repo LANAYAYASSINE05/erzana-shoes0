@@ -81,7 +81,8 @@ Ce thème peut être facilement personnalisé pour votre boutique de luxe :
 - **Logos** : Les logos ERZANA SHOES sont déjà inclus dans `assets/`. Configurez-les dans l'éditeur de thème Shopify :
   - `Logo.png` → Logo principal
   - `Logo inverse.png` → Logo inverse (pour headers transparents)
-- Utilisez des images haute résolution des chaussures (minimum 2000px de largeur)
+- **Images Produits** : Utilisez des images haute résolution des chaussures (minimum 2000px de largeur)
+  - 📐 **Voir le guide complet des résolutions** : `RESOLUTIONS_IMAGES.md`
 - Privilégiez un design épuré avec beaucoup d'espace blanc pour mettre en valeur chaque paire
 - Mettez en avant les détails artisanaux : cuir premium, finitions, semelles
 - Intégrez des vidéos de présentation montrant la qualité des matériaux

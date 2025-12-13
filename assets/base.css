@@ -4296,3 +4296,320 @@ text-component {
     font-size: max(1rem, 100%);
   }
 }
+
+/* ============================================
+   ERZANA SHOES - Styles Premium Sections
+   Newsletter & Promotional Sections
+   ============================================ */
+
+/* Variables pour les couleurs premium */
+:root {
+  --color-premium-gold: #D4AF37;
+  --color-premium-gold-dark: #B8962E;
+  --color-premium-black: #000000;
+  --color-premium-white: #FFFFFF;
+}
+
+/* Section Premium - Fond Blanc */
+.section-wrapper:has(.email-signup-block),
+.section-wrapper.premium-section-white,
+.section-wrapper.color-scheme-1:has(.email-signup-block),
+.section-wrapper.color-scheme-4:has(.email-signup-block) {
+  background-color: var(--color-premium-white) !important;
+}
+
+.section-wrapper:has(.email-signup-block) .section-background,
+.section-wrapper.premium-section-white .section-background {
+  background-color: var(--color-premium-white) !important;
+}
+
+/* Section Premium - Fond Noir (pour sections importantes) */
+.section-wrapper.premium-section-black,
+.section-wrapper.color-scheme-2:has(.email-signup-block) {
+  background-color: var(--color-premium-black) !important;
+}
+
+.section-wrapper.premium-section-black .section-background {
+  background-color: var(--color-premium-black) !important;
+}
+
+/* Styles pour fond blanc - Texte et contenu */
+.section-wrapper:has(.email-signup-block) .section,
+.section-wrapper.premium-section-white .section {
+  color: var(--color-premium-black);
+}
+
+.section-wrapper:has(.email-signup-block) h1,
+.section-wrapper:has(.email-signup-block) h2,
+.section-wrapper:has(.email-signup-block) h3,
+.section-wrapper:has(.email-signup-block) h4,
+.section-wrapper:has(.email-signup-block) .h1,
+.section-wrapper:has(.email-signup-block) .h2,
+.section-wrapper:has(.email-signup-block) .h3,
+.section-wrapper:has(.email-signup-block) .h4,
+.section-wrapper.premium-section-white h1,
+.section-wrapper.premium-section-white h2,
+.section-wrapper.premium-section-white h3,
+.section-wrapper.premium-section-white h4,
+.section-wrapper.premium-section-white .h1,
+.section-wrapper.premium-section-white .h2,
+.section-wrapper.premium-section-white .h3,
+.section-wrapper.premium-section-white .h4 {
+  color: var(--color-premium-black) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.section-wrapper:has(.email-signup-block) p,
+.section-wrapper:has(.email-signup-block) .paragraph,
+.section-wrapper.premium-section-white p,
+.section-wrapper.premium-section-white .paragraph {
+  color: var(--color-premium-black);
+  font-weight: 300;
+}
+
+/* Styles pour fond noir - Texte et contenu */
+.section-wrapper.premium-section-black .section {
+  color: var(--color-premium-white);
+}
+
+.section-wrapper.premium-section-black h1,
+.section-wrapper.premium-section-black h2,
+.section-wrapper.premium-section-black h3,
+.section-wrapper.premium-section-black h4,
+.section-wrapper.premium-section-black .h1,
+.section-wrapper.premium-section-black .h2,
+.section-wrapper.premium-section-black .h3,
+.section-wrapper.premium-section-black .h4 {
+  color: var(--color-premium-white) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.section-wrapper.premium-section-black p,
+.section-wrapper.premium-section-black .paragraph {
+  color: var(--color-premium-white);
+  font-weight: 300;
+}
+
+/* Boutons sur fond blanc - Style contour OR */
+.section-wrapper:has(.email-signup-block) .button,
+.section-wrapper:has(.email-signup-block) button,
+.section-wrapper:has(.email-signup-block) .button-secondary,
+.section-wrapper.premium-section-white .button:not(.button-unstyled),
+.section-wrapper.premium-section-white button:not(.button-unstyled),
+.section-wrapper.premium-section-white .button-secondary {
+  background-color: transparent !important;
+  border: 1px solid var(--color-premium-gold) !important;
+  color: var(--color-premium-black) !important;
+  padding: 12px 32px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.section-wrapper:has(.email-signup-block) .button:hover,
+.section-wrapper:has(.email-signup-block) button:hover,
+.section-wrapper:has(.email-signup-block) .button-secondary:hover,
+.section-wrapper.premium-section-white .button:not(.button-unstyled):hover,
+.section-wrapper.premium-section-white button:not(.button-unstyled):hover,
+.section-wrapper.premium-section-white .button-secondary:hover {
+  background-color: var(--color-premium-gold) !important;
+  border-color: var(--color-premium-gold) !important;
+  color: var(--color-premium-black) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Boutons sur fond noir - Style plein OR */
+.section-wrapper.premium-section-black .button:not(.button-unstyled),
+.section-wrapper.premium-section-black button:not(.button-unstyled),
+.section-wrapper.premium-section-black .button-secondary {
+  background-color: var(--color-premium-gold) !important;
+  border: 1px solid var(--color-premium-gold) !important;
+  color: var(--color-premium-black) !important;
+  padding: 12px 32px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.section-wrapper.premium-section-black .button:not(.button-unstyled):hover,
+.section-wrapper.premium-section-black button:not(.button-unstyled):hover,
+.section-wrapper.premium-section-black .button-secondary:hover {
+  background-color: var(--color-premium-gold-dark) !important;
+  border-color: var(--color-premium-gold-dark) !important;
+  color: var(--color-premium-black) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+}
+
+/* Email Signup - Style Premium */
+.email-signup-block {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.email-signup__heading {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Input email sur fond blanc */
+.section-wrapper:has(.email-signup-block) .email-signup__input,
+.section-wrapper.premium-section-white .email-signup__input {
+  background-color: var(--color-premium-white) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  color: var(--color-premium-black) !important;
+  padding: 14px 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.section-wrapper:has(.email-signup-block) .email-signup__input:focus,
+.section-wrapper.premium-section-white .email-signup__input:focus {
+  border-color: var(--color-premium-gold) !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.section-wrapper:has(.email-signup-block) .email-signup__input::placeholder,
+.section-wrapper.premium-section-white .email-signup__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Input email sur fond noir */
+.section-wrapper.premium-section-black .email-signup__input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: var(--color-premium-white) !important;
+  padding: 14px 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.section-wrapper.premium-section-black .email-signup__input:focus {
+  border-color: var(--color-premium-gold) !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.section-wrapper.premium-section-black .email-signup__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Bouton email signup - Fond blanc */
+.section-wrapper:has(.email-signup-block) .email-signup__button:not(.button-unstyled),
+.section-wrapper.premium-section-white .email-signup__button:not(.button-unstyled) {
+  background-color: transparent !important;
+  border: 1px solid var(--color-premium-gold) !important;
+  color: var(--color-premium-black) !important;
+}
+
+.section-wrapper:has(.email-signup-block) .email-signup__button:not(.button-unstyled):hover,
+.section-wrapper.premium-section-white .email-signup__button:not(.button-unstyled):hover {
+  background-color: var(--color-premium-gold) !important;
+  border-color: var(--color-premium-gold) !important;
+  color: var(--color-premium-black) !important;
+}
+
+/* Bouton email signup - Fond noir */
+.section-wrapper.premium-section-black .email-signup__button:not(.button-unstyled) {
+  background-color: var(--color-premium-gold) !important;
+  border: 1px solid var(--color-premium-gold) !important;
+  color: var(--color-premium-black) !important;
+}
+
+.section-wrapper.premium-section-black .email-signup__button:not(.button-unstyled):hover {
+  background-color: var(--color-premium-gold-dark) !important;
+  border-color: var(--color-premium-gold-dark) !important;
+  color: var(--color-premium-black) !important;
+}
+
+/* Message de succès/erreur */
+.email-signup__message {
+  margin-top: 12px;
+}
+
+.email-signup__message--success {
+  color: var(--color-premium-gold);
+}
+
+.section-wrapper.premium-section-black .email-signup__message--success {
+  color: var(--color-premium-gold);
+}
+
+.email-signup__message--error {
+  color: #dc3545;
+}
+
+/* Sections promotionnelles - Override des fonds gris */
+.section-wrapper.color-scheme-2:not(.premium-section-black):not(:has(.email-signup-block)) {
+  background-color: var(--color-premium-white) !important;
+}
+
+.section-wrapper.color-scheme-4:not(.premium-section-white):not(:has(.email-signup-block)) {
+  background-color: var(--color-premium-white) !important;
+}
+
+.section-wrapper.color-scheme-2 .section-background:not(.premium-section-black),
+.section-wrapper.color-scheme-4 .section-background:not(.premium-section-white) {
+  background-color: var(--color-premium-white) !important;
+}
+
+/* Amélioration de la hiérarchie visuelle pour les sections promotionnelles */
+.section-wrapper:has(.email-signup-block) .email-signup__heading,
+.section-wrapper.premium-section-white h2:first-child,
+.section-wrapper.premium-section-black h2:first-child {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-wrapper:has(.email-signup-block) p,
+.section-wrapper.premium-section-white p:not(:first-child),
+.section-wrapper.premium-section-black p:not(:first-child) {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+/* Accessibilité - Contraste WCAG AAA */
+@media (prefers-contrast: high) {
+  .section-wrapper:has(.email-signup-block) .button,
+  .section-wrapper.premium-section-white .button {
+    border-width: 2px;
+  }
+  
+  .section-wrapper.premium-section-black .button {
+    border: 2px solid var(--color-premium-gold);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 749px) {
+  .section-wrapper:has(.email-signup-block) .button,
+  .section-wrapper.premium-section-white .button,
+  .section-wrapper.premium-section-black .button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .email-signup__heading {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .email-signup__input {
+    font-size: 0.95rem;
+  }
+}
