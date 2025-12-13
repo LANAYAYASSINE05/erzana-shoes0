@@ -4585,6 +4585,43 @@ text-component {
   color: var(--color-premium-gold) !important;
 }
 
+/* ============================================
+   SECTION PRODUCT-LIST / PRODUITS EN VEDETTE - Premium
+   ============================================ */
+
+/* Fond blanc pour product-list avec scheme-1 */
+.section-wrapper.color-scheme-1 .section-resource-list,
+.section-resource-list.color-scheme-1,
+.section-wrapper.color-scheme-1 .section-resource-list .section-background {
+  background-color: var(--color-premium-white) !important;
+}
+
+/* Titres premium dans product-list header */
+.section-wrapper.color-scheme-1 .section-resource-list__header,
+.section-wrapper.color-scheme-1 .section-resource-list__header h1,
+.section-wrapper.color-scheme-1 .section-resource-list__header h2,
+.section-wrapper.color-scheme-1 .section-resource-list__header h3,
+.section-wrapper.color-scheme-1 .section-resource-list__header h4,
+.section-wrapper.color-scheme-1 .section-resource-list__header .h1,
+.section-wrapper.color-scheme-1 .section-resource-list__header .h2,
+.section-wrapper.color-scheme-1 .section-resource-list__header .h3,
+.section-wrapper.color-scheme-1 .section-resource-list__header .h4,
+.section-wrapper.color-scheme-1 .section-resource-list__header .text-block,
+.section-wrapper.color-scheme-1 .section-resource-list__header .text-block > *,
+.section-wrapper.color-scheme-1 .section-resource-list__header .group-block-content,
+.section-wrapper.color-scheme-1 .section-resource-list__header .group-block-content > * {
+  color: var(--color-premium-black) !important;
+}
+
+.section-wrapper.color-scheme-1 .section-resource-list__header h2,
+.section-wrapper.color-scheme-1 .section-resource-list__header .h2,
+.section-wrapper.color-scheme-1 .section-resource-list__header .product-list-text {
+  color: var(--color-premium-black) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 600 !important;
+}
+
 /* Sections promotionnelles - Override des fonds gris */
 .section-wrapper.color-scheme-2:not(.premium-section-black):not(:has(.email-signup-block)) {
   background-color: var(--color-premium-white) !important;
