@@ -1,6 +1,6 @@
 
 
-{% liquid
+  {% liquid
   assign block_settings = block.settings
   assign use_inverse_logo = false
 
@@ -21,17 +21,16 @@
     assign use_asset_logo = true
   endif
 
-  if use_inverse_logo
-    if settings.logo_inverse != blank
-      assign inverse_logo = settings.logo_inverse
-      assign use_asset_inverse_logo = false
-    elsif settings.logo != blank
-      assign inverse_logo = settings.logo
-      assign use_asset_inverse_logo = false
-    else
-      # Fallback vers le fichier Logo inverse.png dans assets
-      assign use_asset_inverse_logo = true
-    endif
+  # Toujours préparer le logo inverse pour le changement au scroll
+  if settings.logo_inverse != blank
+    assign inverse_logo = settings.logo_inverse
+    assign use_asset_inverse_logo = false
+  elsif settings.logo != blank
+    assign inverse_logo = settings.logo
+    assign use_asset_inverse_logo = false
+  else
+    # Fallback vers le fichier Logo inverse.png dans assets
+    assign use_asset_inverse_logo = true
   endif
 %}
 
@@ -63,11 +62,12 @@
       assign logo_style = '--header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
     endif
 
-    if use_inverse_logo and inverse_logo != blank
+    # Toujours préparer le style pour le logo inverse
+    if inverse_logo != blank
       assign inverse_logo_width = settings.logo_height | times: inverse_logo.aspect_ratio | ceil
       assign inverse_logo_width_mobile = settings.logo_height_mobile | times: inverse_logo.aspect_ratio | ceil
       assign inverse_logo_style = '--header-logo-image-width: ' | append: inverse_logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: inverse_logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
-    elsif use_inverse_logo
+    else
       assign inverse_logo_style = '--header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
     endif
   %}
@@ -97,32 +97,31 @@
     {% endif %}
   </span>
 
-  {% if use_inverse_logo %}
-    <span
-      class="header-logo__image-container header-logo__image-container--inverse"
-      data-testid="header-logo-inverse"
-    >
-      {% if use_asset_inverse_logo %}
-        <img
-          src="{{ 'Logo inverse.png' | asset_url }}"
-          alt="{{ shop.name | escape }}"
-          class="header-logo__image"
-          style="{{ inverse_logo_style }}"
-          loading="eager"
-          width="auto"
-          height="{{ settings.logo_height }}"
-        >
-      {% else %}
-        {% render 'image',
-          image: inverse_logo,
-          class: 'header-logo__image',
-          height: settings.logo_height,
-          text_fallback: shop.name,
-          style: inverse_logo_style
-        %}
-      {% endif %}
-    </span>
-  {% endif %}
+  {# Toujours afficher le logo inverse pour le changement au scroll #}
+  <span
+    class="header-logo__image-container header-logo__image-container--inverse"
+    data-testid="header-logo-inverse"
+  >
+    {% if use_asset_inverse_logo %}
+      <img
+        src="{{ 'Logo inverse.png' | asset_url }}"
+        alt="{{ shop.name | escape }}"
+        class="header-logo__image"
+        style="{{ inverse_logo_style }}"
+        loading="eager"
+        width="auto"
+        height="{{ settings.logo_height }}"
+      >
+    {% else %}
+      {% render 'image',
+        image: inverse_logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        text_fallback: shop.name,
+        style: inverse_logo_style
+      %}
+    {% endif %}
+  </span>
 </a>
 
 {% stylesheet %}
@@ -183,6 +182,24 @@
 
   .header-logo__image-container--inverse {
     display: var(--header-logo-inverse-display, none);
+  }
+
+  /* Utiliser le logo inverse quand le header est sticky (après scroll) */
+  .header[data-sticky-state='active'] .header-logo__image-container--original {
+    display: none !important;
+  }
+
+  .header[data-sticky-state='active'] .header-logo__image-container--inverse {
+    display: block !important;
+  }
+
+  /* Utiliser le logo inverse quand le header est transparent */
+  .header[transparent] .header-logo__image-container--original {
+    display: var(--header-logo-display, none);
+  }
+
+  .header[transparent] .header-logo__image-container--inverse {
+    display: var(--header-logo-inverse-display, block);
   }
 {% endstylesheet %}
 
