@@ -11,14 +11,6 @@
   elsif section.settings.enable_transparent_header_collection and template.name == 'collection' and section.settings.collection_color_scheme == 'inverse'
     assign use_inverse_logo = true
   endif
-
-  if use_inverse_logo
-    if settings.logo_inverse != blank
-      assign inverse_logo = settings.logo_inverse
-    else
-      assign inverse_logo = settings.logo
-    endif
-  endif
 %}
 
 {% comment %}
@@ -45,10 +37,23 @@
     LOGO IMAGE DIRECTE
     ============================================
     Logo depuis assets/Logo.png - Dimensions: 2000 × 1414 px
+    Logo inverse depuis assets/Logo inverse.png
   {% endcomment %}
   {% assign logo_direct_url = 'Logo.png' | asset_url %}
+  {% assign logo_inverse_direct_url = 'Logo inverse.png' | asset_url %}
 
   {% liquid
+    # Logo inverse direct depuis assets
+    assign use_direct_inverse_logo = false
+    if use_inverse_logo
+      if logo_inverse_direct_url != blank
+        assign use_direct_inverse_logo = true
+      elsif settings.logo_inverse != blank
+        assign inverse_logo = settings.logo_inverse
+      else
+        assign inverse_logo = settings.logo
+      endif
+    endif
     # Si URL directe fournie, utiliser celle-ci, sinon utiliser settings.logo
     if logo_direct_url != blank
       assign use_direct_logo = true
@@ -67,8 +72,20 @@
       endif
     endif
     
-    assign inverse_logo_width = settings.logo_height | times: inverse_logo.aspect_ratio | ceil
-    assign inverse_logo_width_mobile = settings.logo_height_mobile | times: inverse_logo.aspect_ratio | ceil
+    # Calcul des dimensions pour le logo inverse
+    if use_inverse_logo and logo_inverse_direct_url != blank
+      assign use_direct_inverse_logo = true
+      assign inverse_logo_width = settings.logo_height | times: logo_aspect_ratio | ceil
+      assign inverse_logo_width_mobile = settings.logo_height_mobile | times: logo_aspect_ratio | ceil
+    elsif use_inverse_logo and inverse_logo != blank
+      assign use_direct_inverse_logo = false
+      assign inverse_logo_width = settings.logo_height | times: inverse_logo.aspect_ratio | ceil
+      assign inverse_logo_width_mobile = settings.logo_height_mobile | times: inverse_logo.aspect_ratio | ceil
+    else
+      assign use_direct_inverse_logo = false
+      assign inverse_logo_width = settings.logo_height | times: logo_aspect_ratio | ceil
+      assign inverse_logo_width_mobile = settings.logo_height_mobile | times: logo_aspect_ratio | ceil
+    endif
     assign logo_style = '--header-logo-image-width: ' | append: logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
     assign inverse_logo_style = '--header-logo-image-width: ' | append: inverse_logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: inverse_logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
   %}
@@ -101,13 +118,23 @@
       class="header-logo__image-container header-logo__image-container--inverse"
       data-testid="header-logo-inverse"
     >
-      {% render 'image',
-        image: inverse_logo,
-        class: 'header-logo__image',
-        height: settings.logo_height,
-        text_fallback: shop.name,
-        style: inverse_logo_style
-      %}
+      {% if use_direct_inverse_logo and logo_inverse_direct_url != blank %}
+        <img
+          src="{{ logo_inverse_direct_url }}"
+          alt="{{ shop.name }}"
+          class="header-logo__image"
+          style="{{ inverse_logo_style }}"
+          loading="eager"
+        >
+      {% elsif inverse_logo != blank %}
+        {% render 'image',
+          image: inverse_logo,
+          class: 'header-logo__image',
+          height: settings.logo_height,
+          text_fallback: shop.name,
+          style: inverse_logo_style
+        %}
+      {% endif %}
     </span>
   {% endif %}
 </a>
