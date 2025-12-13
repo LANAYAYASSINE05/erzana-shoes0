@@ -4551,6 +4551,40 @@ text-component {
   color: #dc3545;
 }
 
+/* ============================================
+   BARRE D'ANNONCES (ANNOUNCEMENT BAR) - Premium
+   ============================================ */
+
+/* Fond blanc pour announcement-bar avec scheme-3 */
+.announcement-bar.color-scheme-3,
+.announcement-bar.color-scheme-3 .section-background {
+  background-color: var(--color-premium-white) !important;
+}
+
+/* Texte premium pour announcement-bar */
+.announcement-bar.color-scheme-3,
+.announcement-bar.color-scheme-3 .announcement-bar__text,
+.announcement-bar.color-scheme-3 p,
+.announcement-bar.color-scheme-3 .text-block,
+.announcement-bar.color-scheme-3 .text-block > * {
+  color: var(--color-premium-black) !important;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.announcement-bar.color-scheme-3 .announcement-bar__slider .slideshow-control {
+  color: var(--color-premium-black) !important;
+}
+
+.announcement-bar.color-scheme-3 .announcement-bar__link {
+  color: var(--color-premium-black) !important;
+}
+
+.announcement-bar.color-scheme-3 .announcement-bar__link:hover {
+  color: var(--color-premium-gold) !important;
+}
+
 /* Sections promotionnelles - Override des fonds gris */
 .section-wrapper.color-scheme-2:not(.premium-section-black):not(:has(.email-signup-block)) {
   background-color: var(--color-premium-white) !important;
