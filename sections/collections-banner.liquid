@@ -1,0 +1,303 @@
+
+{% liquid
+  assign max_collections = section.settings.max_collections | default: 4
+  assign collection_handles = section.settings.collection_handles | default: ''
+%}
+
+<div class="collections-banner-wrapper section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style">
+  <div class="collections-banner" style="{% render 'spacing-style', settings: section.settings %}">
+    <div class="collections-banner__grid" style="--collections-count: {{ max_collections }}; --gap: {{ section.settings.gap }}px;">
+      {% if collection_handles != blank %}
+        {% assign handles_array = collection_handles | split: ',' %}
+        {% for handle in handles_array %}
+          {% assign handle_clean = handle | strip %}
+          {% assign collection = collections[handle_clean] %}
+          {% if collection != blank %}
+            <a href="{{ collection.url }}" class="collections-banner__item">
+              <div class="collections-banner__image-wrapper">
+                {% if collection.featured_image %}
+                  {{
+                    collection.featured_image
+                    | image_url: width: 1200
+                    | image_tag:
+                      loading: 'lazy',
+                      width: collection.featured_image.width,
+                      height: collection.featured_image.height,
+                      alt: collection.title,
+                      class: 'collections-banner__image'
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'collections-banner__image collections-banner__image--placeholder' }}
+                {% endif %}
+                <div class="collections-banner__overlay"></div>
+              </div>
+              <div class="collections-banner__content">
+                <h3 class="collections-banner__title">{{ collection.title }}</h3>
+                {% if section.settings.show_product_count %}
+                  <p class="collections-banner__count">{{ collection.products_count }} {{ 'collections.general.products' | t }}</p>
+                {% endif %}
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for collection in collections limit: max_collections %}
+          <a href="{{ collection.url }}" class="collections-banner__item">
+            <div class="collections-banner__image-wrapper">
+              {% if collection.featured_image %}
+                {{
+                  collection.featured_image
+                  | image_url: width: 1200
+                  | image_tag:
+                    loading: 'lazy',
+                    width: collection.featured_image.width,
+                    height: collection.featured_image.height,
+                    alt: collection.title,
+                    class: 'collections-banner__image'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'collections-banner__image collections-banner__image--placeholder' }}
+              {% endif %}
+              <div class="collections-banner__overlay"></div>
+            </div>
+            <div class="collections-banner__content">
+              <h3 class="collections-banner__title">{{ collection.title }}</h3>
+              {% if section.settings.show_product_count %}
+                <p class="collections-banner__count">{{ collection.products_count }} {{ 'collections.general.products' | t }}</p>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .collections-banner-wrapper {
+    padding: 0;
+  }
+
+  .collections-banner {
+    width: 100%;
+  }
+
+  .collections-banner__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--collections-count, 4), 1fr);
+    gap: var(--gap, 0);
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .collections-banner__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .collections-banner__item:hover {
+    transform: scale(1.02);
+    z-index: 2;
+  }
+
+  .collections-banner__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  .collections-banner__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+  }
+
+  .collections-banner__item:hover .collections-banner__image {
+    transform: scale(1.1);
+  }
+
+  .collections-banner__image--placeholder {
+    background: #f5f5f5;
+    opacity: 0.5;
+  }
+
+  .collections-banner__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    pointer-events: none;
+  }
+
+  .collections-banner__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    z-index: 1;
+  }
+
+  .collections-banner__title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+  }
+
+  .collections-banner__count {
+    color: #ffffff;
+    font-size: 0.875rem;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 989px) {
+    .collections-banner__grid {
+      grid-template-columns: repeat(2, 1fr);
+      min-height: 300px;
+    }
+
+    .collections-banner__image-wrapper {
+      min-height: 300px;
+    }
+
+    .collections-banner__title {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .collections-banner__grid {
+      grid-template-columns: 1fr;
+      min-height: 250px;
+    }
+
+    .collections-banner__image-wrapper {
+      min-height: 250px;
+    }
+
+    .collections-banner__content {
+      padding: 20px;
+    }
+
+    .collections-banner__title {
+      font-size: 1.125rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Collections Banner",
+  "tag": "section",
+  "class": "collections-banner-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collections"
+    },
+    {
+      "type": "text",
+      "id": "collection_handles",
+      "label": "Handles des collections (séparés par des virgules)",
+      "info": "Exemple: bottes-bottines,chaussures-de-ville,chaussures-classiques,chaussures-confort. Laissez vide pour afficher toutes les collections.",
+      "default": ""
+    },
+    {
+      "type": "range",
+      "id": "max_collections",
+      "label": "Nombre de collections",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_count",
+      "label": "Afficher le nombre de produits",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Largeur de la section",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Largeur de page"
+        },
+        {
+          "value": "full-width",
+          "label": "Pleine largeur"
+        }
+      ],
+      "default": "full-width"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Espacement entre les collections",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Schéma de couleurs",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Espacement"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Espacement en haut",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Espacement en bas",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections Banner"
+    }
+  ]
+}
+{% endschema %}
+
