@@ -53,7 +53,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h1>Nos Collections</h1>",
+                "text": "<h1>Collections</h1>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -157,7 +157,7 @@
         "columns_gap": 12,
         "bento_gap": 8,
         "rows_gap": 24,
-        "max_collections": 6,
+        "max_collections": 4,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
