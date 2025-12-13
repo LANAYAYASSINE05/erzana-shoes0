@@ -12,11 +12,25 @@
     assign use_inverse_logo = true
   endif
 
+  # Utiliser les logos depuis les paramètres du thème, sinon utiliser directement les fichiers assets
+  if settings.logo != blank
+    assign main_logo = settings.logo
+    assign use_asset_logo = false
+  else
+    # Fallback vers le fichier Logo.png dans assets
+    assign use_asset_logo = true
+  endif
+
   if use_inverse_logo
     if settings.logo_inverse != blank
       assign inverse_logo = settings.logo_inverse
-    else
+      assign use_asset_inverse_logo = false
+    elsif settings.logo != blank
       assign inverse_logo = settings.logo
+      assign use_asset_inverse_logo = false
+    else
+      # Fallback vers le fichier Logo inverse.png dans assets
+      assign use_asset_inverse_logo = true
     endif
   endif
 %}
@@ -41,25 +55,46 @@
   {{ block.shopify_attributes }}
 >
   {% liquid
-    assign logo_width = settings.logo_height | times: settings.logo.aspect_ratio | ceil
-    assign logo_width_mobile = settings.logo_height_mobile | times: settings.logo.aspect_ratio | ceil
-    assign inverse_logo_width = settings.logo_height | times: inverse_logo.aspect_ratio | ceil
-    assign inverse_logo_width_mobile = settings.logo_height_mobile | times: inverse_logo.aspect_ratio | ceil
-    assign logo_style = '--header-logo-image-width: ' | append: logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
-    assign inverse_logo_style = '--header-logo-image-width: ' | append: inverse_logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: inverse_logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
+    if main_logo != blank
+      assign logo_width = settings.logo_height | times: main_logo.aspect_ratio | ceil
+      assign logo_width_mobile = settings.logo_height_mobile | times: main_logo.aspect_ratio | ceil
+      assign logo_style = '--header-logo-image-width: ' | append: logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
+    else
+      assign logo_style = '--header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
+    endif
+
+    if use_inverse_logo and inverse_logo != blank
+      assign inverse_logo_width = settings.logo_height | times: inverse_logo.aspect_ratio | ceil
+      assign inverse_logo_width_mobile = settings.logo_height_mobile | times: inverse_logo.aspect_ratio | ceil
+      assign inverse_logo_style = '--header-logo-image-width: ' | append: inverse_logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: inverse_logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
+    elsif use_inverse_logo
+      assign inverse_logo_style = '--header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
+    endif
   %}
 
   <span
     class="header-logo__image-container header-logo__image-container--original"
     data-testid="header-logo"
   >
-    {% render 'image',
-      image: settings.logo,
-      class: 'header-logo__image',
-      height: settings.logo_height,
-      text_fallback: shop.name,
-      style: logo_style
-    %}
+    {% if use_asset_logo %}
+      <img
+        src="{{ 'Logo.png' | asset_url }}"
+        alt="{{ shop.name | escape }}"
+        class="header-logo__image"
+        style="{{ logo_style }}"
+        loading="eager"
+        width="auto"
+        height="{{ settings.logo_height }}"
+      >
+    {% else %}
+      {% render 'image',
+        image: main_logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        text_fallback: shop.name,
+        style: logo_style
+      %}
+    {% endif %}
   </span>
 
   {% if use_inverse_logo %}
@@ -67,13 +102,25 @@
       class="header-logo__image-container header-logo__image-container--inverse"
       data-testid="header-logo-inverse"
     >
-      {% render 'image',
-        image: inverse_logo,
-        class: 'header-logo__image',
-        height: settings.logo_height,
-        text_fallback: shop.name,
-        style: inverse_logo_style
-      %}
+      {% if use_asset_inverse_logo %}
+        <img
+          src="{{ 'Logo inverse.png' | asset_url }}"
+          alt="{{ shop.name | escape }}"
+          class="header-logo__image"
+          style="{{ inverse_logo_style }}"
+          loading="eager"
+          width="auto"
+          height="{{ settings.logo_height }}"
+        >
+      {% else %}
+        {% render 'image',
+          image: inverse_logo,
+          class: 'header-logo__image',
+          height: settings.logo_height,
+          text_fallback: shop.name,
+          style: inverse_logo_style
+        %}
+      {% endif %}
     </span>
   {% endif %}
 </a>
