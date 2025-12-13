@@ -17,6 +17,12 @@
     case item
       when 'actions'
         assign item_column = 'right'
+      when 'logo'
+        # Forcer le logo au centre
+        assign item_column = 'center'
+      when 'menu'
+        # Forcer le menu à gauche
+        assign item_column = 'left'
     endcase
 
     if item_row == row
