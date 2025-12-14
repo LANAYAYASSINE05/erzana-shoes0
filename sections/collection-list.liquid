@@ -71,15 +71,8 @@
 </div>
 
 {% stylesheet %}
-  /* Custom styling for collection cards with brown background - matching image style */
-  #shopify-section-{{ section.id }} .collection-card--image-bg {
-    background-color: #8B4513 !important;
-    background: #8B4513 !important;
-  }
-  
+  /* Custom styling for collection cards - matching image style */
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__inner {
-    background-color: #8B4513 !important;
-    background: #8B4513 !important;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -134,19 +127,10 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
   
-  /* Ensure the card maintains aspect ratio and brown background is visible */
+  /* Ensure the card maintains aspect ratio */
   #shopify-section-{{ section.id }} .collection-card--image-bg {
     aspect-ratio: 3/4;
     overflow: hidden;
-  }
-  
-  /* Make sure the brown background shows through even if image covers it */
-  #shopify-section-{{ section.id }} .collection-card--image-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: #8B4513;
-    z-index: 0;
   }
   
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__inner {
