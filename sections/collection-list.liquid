@@ -70,6 +70,42 @@
   %}
 </div>
 
+{% stylesheet %}
+  /* Custom styling for collection cards with brown background - matching image style */
+  #shopify-section-{{ section.id }} .collection-card--image-bg {
+    background-color: #8B4513 !important;
+  }
+  
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__inner {
+    background-color: #8B4513;
+    min-height: 100%;
+  }
+  
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image img {
+    object-fit: contain;
+    object-position: center;
+    max-height: 70%;
+  }
+  
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content {
+    padding-bottom: 2rem;
+    z-index: 2;
+  }
+  
+  /* Ensure text is white and centered at bottom */
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content p,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content * {
+    color: #ffffff !important;
+    text-align: center;
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "t:names.collection_list",
