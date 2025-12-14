@@ -71,24 +71,37 @@
 </div>
 
 {% stylesheet %}
-  /* Custom styling for collection cards - matching image style */
+  /* Custom styling for CollectionItem - matching image style */
+  /* Style pour les cartes de collection avec classes CollectionItem */
+  #shopify-section-{{ section.id }} .CollectionItem,
+  #shopify-section-{{ section.id }} .collection-card--image-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Wrapper avec background image */
+  #shopify-section-{{ section.id }} .CollectionItem__Wrapper,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__inner {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   
+  /* Image wrapper - centrer l'image */
+  #shopify-section-{{ section.id }} .CollectionItem__ImageWrapper,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image {
-    opacity: 1;
-    position: relative;
-    z-index: 1;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
   }
   
+  /* Image elle-même */
+  #shopify-section-{{ section.id }} .CollectionItem__Image,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image img,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image picture,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image svg {
@@ -99,18 +112,27 @@
     height: auto !important;
   }
   
+  /* Contenu avec texte en bas */
+  #shopify-section-{{ section.id }} .CollectionItem__Content,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content {
     padding: 1.5rem 1rem !important;
     z-index: 2;
     position: relative;
     flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
   }
   
-  /* Ensure text is white and centered at bottom */
-  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content {
-    color: #ffffff !important;
+  /* Positionnement du contenu en bas centre */
+  #shopify-section-{{ section.id }} .CollectionItem__Content--middleCenter {
+    align-items: flex-end !important;
+    justify-content: center !important;
   }
   
+  /* Texte blanc centré en bas */
+  #shopify-section-{{ section.id }} .CollectionItem__Link,
+  #shopify-section-{{ section.id }} .CollectionItem__Content .SectionHeader__Heading,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content p,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h1,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h2,
@@ -124,18 +146,19 @@
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content * {
     color: #ffffff !important;
     text-align: center !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
   }
   
-  /* Ensure the card maintains aspect ratio */
+  /* SectionHeader dans CollectionItem */
+  #shopify-section-{{ section.id }} .CollectionItem__Content .SectionHeader {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Assurer le ratio d'aspect */
+  #shopify-section-{{ section.id }} .CollectionItem__Wrapper,
   #shopify-section-{{ section.id }} .collection-card--image-bg {
     aspect-ratio: 3/4;
-    overflow: hidden;
-  }
-  
-  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__inner {
-    position: relative;
-    z-index: 1;
   }
 {% endstylesheet %}
 
