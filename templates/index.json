@@ -599,17 +599,42 @@
           "static": true,
           "settings": {
             "placement": "on_image",
-            "horizontal_alignment": "center",
-            "vertical_alignment": "flex-end",
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
             "collection_card_gap": 8,
-            "inherit_color_scheme": false,
-            "color_scheme": "scheme-4",
-            "border": "none",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "solid",
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0
           },
           "blocks": {
+            "collection_title_pdM8ax": {
+              "type": "collection-title",
+              "name": "t:names.collection_title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": true,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 4,
+                "padding-inline-start": 8,
+                "padding-inline-end": 8
+              },
+              "blocks": {}
+            },
             "collection-card-image": {
               "type": "_collection-card-image",
               "name": "t:names.collection_card_image",
@@ -626,35 +651,9 @@
                 "border_radius": 0
               },
               "blocks": {}
-            },
-            "collection_title_pdM8ax": {
-              "type": "collection-title",
-              "name": "t:names.collection_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1.25rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "#ffffff",
-                "background": false,
-                "background_color": "#00000000",
-                "corner_radius": 0,
-                "padding-block-start": 16,
-                "padding-block-end": 16,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "collection-card-image",
             "collection_title_pdM8ax"
           ]
         }
@@ -665,23 +664,23 @@
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [
-          "baskets",
+          "chaussures-confort",
           "chaussures-classiques",
           "bottes-bottines",
-          "chaussures-confort"
+          "baskets"
         ],
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "columns": 4,
+        "layout_type": "bento",
+        "carousel_on_mobile": true,
+        "columns": 3,
         "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 0,
+        "mobile_card_size": "44cqw",
+        "columns_gap": 8,
         "bento_gap": 8,
-        "rows_gap": 0,
+        "rows_gap": 8,
         "max_collections": 4,
-        "icons_style": "arrow",
+        "icons_style": "chevron",
         "icons_shape": "none",
-        "section_width": "full-width",
+        "section_width": "page-width",
         "gap": 12,
         "color_scheme": "",
         "padding-block-start": 48,
@@ -789,10 +788,10 @@
         }
       },
       "custom_css": [
-        ".section-brown{background:#3F201B;padding:80px 20px;text-align:center}",
-        ".section-brown h2{color:#fff;margin-bottom:16px}",
-        ".section-brown p{color:#e5dcd8;margin-bottom:32px}",
-        ".section-brown a{background:#000;color:#fff;padding:14px 34px;border-radius:999px;text-decoration:none;font-weight:600}"
+        ".section-brown {background: #3f201b; padding: 80px 20px; text-align: center;}",
+        ".section-brown h2 {color: #fff; margin-bottom: 16px;}",
+        ".section-brown p {color: #e5dcd8; margin-bottom: 32px;}",
+        ".section-brown a {background: #000; color: #fff; padding: 14px 34px; border-radius: 999px; text-decoration: none; font-weight: 600;}"
       ],
       "name": "t:names.media_with_text",
       "settings": {
