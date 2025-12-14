@@ -665,8 +665,9 @@
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [
-          "bottes-bottines",
+          "baskets",
           "chaussures-classiques",
+          "bottes-bottines",
           "chaussures-confort"
         ],
         "layout_type": "grid",

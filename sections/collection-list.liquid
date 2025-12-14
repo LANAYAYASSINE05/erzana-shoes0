@@ -74,35 +74,84 @@
   /* Custom styling for collection cards with brown background - matching image style */
   #shopify-section-{{ section.id }} .collection-card--image-bg {
     background-color: #8B4513 !important;
+    background: #8B4513 !important;
   }
   
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__inner {
-    background-color: #8B4513;
+    background-color: #8B4513 !important;
+    background: #8B4513 !important;
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image {
     opacity: 1;
     position: relative;
     z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
   }
   
-  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image img {
-    object-fit: contain;
-    object-position: center;
-    max-height: 70%;
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image img,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image picture,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__image svg {
+    object-fit: contain !important;
+    object-position: center !important;
+    max-height: 60% !important;
+    width: auto !important;
+    height: auto !important;
   }
   
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content {
-    padding-bottom: 2rem;
+    padding: 1.5rem 1rem !important;
     z-index: 2;
+    position: relative;
+    flex-shrink: 0;
   }
   
   /* Ensure text is white and centered at bottom */
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content {
+    color: #ffffff !important;
+  }
+  
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content p,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h1,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h2,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h3,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h4,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h5,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content h6,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content span,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content div,
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content a,
   #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__content * {
     color: #ffffff !important;
-    text-align: center;
+    text-align: center !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Ensure the card maintains aspect ratio and brown background is visible */
+  #shopify-section-{{ section.id }} .collection-card--image-bg {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+  }
+  
+  /* Make sure the brown background shows through even if image covers it */
+  #shopify-section-{{ section.id }} .collection-card--image-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #8B4513;
+    z-index: 0;
+  }
+  
+  #shopify-section-{{ section.id }} .collection-card--image-bg .collection-card__inner {
+    position: relative;
+    z-index: 1;
   }
 {% endstylesheet %}
 
