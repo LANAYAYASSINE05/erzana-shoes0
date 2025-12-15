@@ -406,7 +406,117 @@
         "order_status_confirmed_order_with_phone": "من المرجح أن تتلقى رسالة نصية عندما يكون طلبك جاهزًا.",
         "order_status_confirmed_order_with_email_and_phone": "ستتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا.",
         "order_status_updates_with_email": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
-        "order_status_updates_with_phone": "من المرجح أن تتلقى تحديثات الشحن والتسليم عبر الرسائل النصية القصيرة."
+        "order_status_updates_with_phone": "من المرجح أن تتلقى تحديثات الشحن والتسليم عبر الرسائل النصية القصيرة.",
+        "order_status_updates_with_email_and_phone": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
+        "order_status_updates_with_missing": "اختر الطريقة التي ترغب في تلقي التحديثات المتعلقة بالشحنة بها.",
+        "confirmed_title": "تم تأكيد طلبك الآن.",
+        "confirmed_description": "لقد قبلنا طلبك ونقوم بتجهيزه. يرجى مراجعة هذه الصفحة للاطلاع على آخر المستجدات المتعلقة بحالة الشحن.",
+        "order_updates_title": "تحديثات الطلبات",
+        "order_updates_description_html": "تم إرسال تأكيد إلى %{customer_contact}",
+        "order_updates_current_step_prefix": "المرحلة الحالية: ",
+        "order_updates_past_step_prefix": "تم إكمال الخطوة: ",
+        "order_updates_upcoming_step_prefix": "الخطوة التالية: ",
+        "in_transit": "في مرحلة انتقالية",
+        "in_transit_title": "طلبك في طريقه إليك",
+        "in_transit_description": "ستتلقى تحديثات حول تقدم المشروع.",
+        "in_transit_description_days": "من المفترض أن تتلقى طلبك خلال فترة %{number} يومًا القادمة.",
+        "in_transit_description_today": "من المفترض أن تستلم طلبك اليوم.",
+        "in_transit_description_tomorrow": "من المتوقع أن يصل طلبك غداً.",
+        "no_tracking_number": "لا يوجد رقم تتبع مرتبط بهذا الطلب.",
+        "out_for_delivery": "أثناء عملية التسليم",
+        "out_for_delivery_title": "يتم توصيل طلبك.",
+        "out_for_delivery_description_html": "طلبك في طريقه إليك. ستستلمه اليوم. إذا لم يتم تسليمه خلال اليومين القادمين، يُرجى التواصل معنا.",
+        "attempted_delivery": "محاولة تسليم",
+        "attempted_delivery_title": "لقد حاولنا توصيل طلبك",
+        "attempted_delivery_description_html": "حاولنا توصيل طلبك، ولكن لم تنجح عملية التوصيل. يرجى التواصل معنا لتحديد موعد جديد للتوصيل.",
+        "delivered": "كتاب",
+        "delivered_title": "تم تسليم طلبك.",
+        "delivered_description_html": "تم توصيل طلبك إلى العنوان الذي قدمته. إذا لم تستلمه أو واجهت أي مشكلة أخرى، يُرجى التواصل معنا.",
+        "contact_us": "اتصل بنا",
+        "contact_us_lowercase": "اتصل بنا",
+        "contact_us_html": "هل تحتاج إلى مساعدة؟ %{contact_us}",
+        "updated_time": "تم التحديث منذ %{time_ago}",
+        "failure": "لم يتم التسليم",
+        "failed_title": "لم يتم تسليم طلبك.",
+        "failed_contact_merchant": "اتصل بشركة %{company} لترتيب عملية التسليم.",
+        "failed_contact_merchant_no_company": "اتصل بنا لترتيب عملية التوصيل.",
+        "non_shippable_title": "تم إكمال طلبك.",
+        "login_title": "سجّل الدخول للاطلاع على جميع تفاصيل الطلب",
+        "login_description": "ستجد رقم الطلب في الإيصال الذي استلمته عبر البريد الإلكتروني.",
+        "login_description_phone": "ستجد رقم طلبك في الإيصال الذي استلمته عبر الرسائل النصية القصيرة.",
+        "login_not_customer_html": "أنت لست %{name}؟ يمكنك %{link}",
+        "login_reorder_link_text": {
+          "one": "اشتر هذا المنتج أيضًا",
+          "other": "اشتر هذه المنتجات أيضًا",
+          "many": "اشتر هذه المنتجات أيضًا"
+        },
+        "customer_information_hidden_fields_message": "قم بتسجيل الدخول للاطلاع على جميع معلومات العملاء.",
+        "cancelled_title": "تم إلغاء طلبك.",
+        "cancelled_description": "تم إلغاء طلبك بتاريخ %{date}. تواصل معنا إذا كانت لديك أي أسئلة.",
+        "order_number_label": "رقم الطلب",
+        "customer_validation_error": "أدخل عنوان بريد إلكتروني أو رقم طلب صحيح.",
+        "customer_validation_error_phone": "أدخل رقم هاتف أو رقم طلب صحيح.",
+        "login": "تسجيل الدخول",
+        "unfulfilled_items_title": "التحضير للشحن",
+        "unfulfilled_items_description": "نقوم حاليًا بتجهيز هذه المنتجات للشحن.",
+        "marker": {
+          "current": "الموقع الحالي للطلب",
+          "shipping": "عنوان التوصيل"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "محتويات هذه الشحنة",
+          "unfulfilled_table_title": "يتم تجهيز العناصر للشحن",
+          "product_image_label": "صورة المنتج",
+          "description_label": "وصف",
+          "quantity_label": "كمية"
+        },
+        "order_updates_description_missing": "أنت لا تتلقى تحديثات حول حالة شحنتك.",
+        "order_updates_subscribe_to_email_notifications": "تلقي تحديثات حالة الشحن عبر البريد الإلكتروني",
+        "order_updates_subscribe_to_email_or_phone_notifications": "تلقي تحديثات الشحن عبر البريد الإلكتروني أو الرسائل النصية القصيرة.",
+        "order_updates_subscribe_to_phone_notifications": "تلقي التحديثات عبر الرسائل النصية القصيرة",
+        "order_updates_submit_subscription": "يرسل",
+        "track_shipment": "تتبع الشحنة",
+        "order_status_confirmed_order_with_email_pick_up": "ستتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
+        "order_status_confirmed_order_with_phone_pick_up": "ستتلقى رسالة نصية عندما يكون طلبك جاهزًا للاستلام.",
+        "order_status_confirmed_order_with_email_and_phone_pick_up": "ستتلقى رسالة بريد إلكتروني ورسالة نصية عندما يكون طلبك جاهزًا للاستلام.",
+        "pick_up_in_store_marker": {
+          "current": "الموقع الحالي للطلب",
+          "shipping": "مركز التجميع"
+        },
+        "thank_you_confirmed_order_with_email_pick_up": "ستتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
+        "thank_you_confirmed_order_with_phone_pick_up": "ستتلقى رسالة نصية عندما يكون طلبك جاهزًا للاستلام.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "ستتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
+        "ready_for_pickup_title": "طلبك جاهز للاستلام",
+        "ready_for_pickup_description": "طلبك جاهز للاستلام. يرجى إحضار تأكيد الطلب معك عند استلام طلبك.",
+        "picked_up_title": "تم استلام طلبك",
+        "picked_up_description_html": "تم استلام طلبك من %{location_name} بتاريخ %{date}.",
+        "other_options": "خيارات أخرى",
+        "shop_phone_description": "ستتلقى رسالة تحتوي على رابط لتطبيق المتجر لمساعدتك في تتبع طلبك.",
+        "ready_for_delivery_title": "طلبك جاهز للتسليم",
+        "ready_for_delivery_description": "لقد جهزنا طلبك.",
+        "order_status_confirmed_order_local": "نقوم حاليًا بتجهيز طلبك للتسليم.",
+        "delivery_information_label": "معلومات التوصيل:",
+        "gift_card_sent_confirmation": "تم إرسال بطاقات الهدايا",
+        "out_for_delivery_local_title": "يتم توصيل طلبك.",
+        "out_for_delivery_local_description_html": "ستتلقى طلبك قريباً.",
+        "delivered_local_title": "تم تسليم طلبك.",
+        "delivered_local_description_html": "ألم تستلم طلبك؟ %{let_us_know}.",
+        "let_us_know": "يرجى إعلامنا.",
+        "qr_code": {
+          "title": "تتبعها على هاتفك",
+          "send_link_to_phone": "أو أرسل رابطًا إلى هاتفك"
+        },
+        "gift_card_confirmation_by_text": "إذا لم تستلم الرسالة، فأعد إرسالها أو اتصل بنا.",
+        "gift_card_confirmation_by_email": "إذا لم تستلمها، فأعد إرسال البريد الإلكتروني أو اتصل بنا.",
+        "gift_card_title": "بطاقات الهدايا",
+        "resend_gift_cards": "أعد إرسال بطاقات الهدايا",
+        "attempted_delivery_local_title": "لم يتم التسليم",
+        "attempted_delivery_local_description_html": "لم نتمكن من توصيل طلبك. لتحديد موعد توصيل آخر، تواصل معنا على %{contact_us}.",
+        "thank_you_title_payment": "تم تأكيد عملية الدفع الخاصة بك",
+        "thank_you_confirmed_order_with_email_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
+        "thank_you_confirmed_order_with_phone_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_email_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}."
       },
       "shop_policies": {
         "terms_of_service": "شروط الاستخدام",
@@ -1175,7 +1285,24 @@
           "actions_accessibility_label": "الإجراءات",
           "products_accessibility_label": "منتجات"
         }
-      }
+      },
+      "order_status": {
+        "expected_by": "مُجدول لـ {{date}}",
+        "was_expected_by": "مُجدول لـ {{date}}"
+      },
+      "status_mark_as_delivered": "ضع علامة كزي رسمي",
+      "buy_again": "سأشتري مرة أخرى",
+      "buy_again_accessibility_label": "إعادة شراء الطلب رقم {{orderId}}",
+      "manage": "يدير",
+      "manage_accessiblity_label": "إدارة الطلب {{orderId}}",
+      "fulfillment_status_title": "حالة معالجة الطلب: {{status}}",
+      "list_title_with_pending_orders": "طلبات:",
+      "list_title_confirmed_orders_accessibility_label": "الطلبات: مؤكدة",
+      "list_title_pending_orders_accessibility_label": "الطلبات: قيد الانتظار",
+      "switch_order_type_pending_orders_accessibility_label": "تغيير نوع الطلب، عرض الطلبات المعلقة",
+      "switch_order_type_confirmed_orders_accessibility_label": "تغيير نوع الطلب، عرض الطلبات المؤكدة",
+      "group_title_label": "جزء من: {{groupTitle}}",
+      "group_title_label_with_parent": "لـ: {{groupTitle}}"
     },
     "B2B": {
       "draft_order_details": {
@@ -1489,7 +1616,9 @@
           "one": "تحميل {{count}} عنصر إضافي",
           "other": "تحميل {{count}} عنصرًا إضافيًا",
           "many": "تحميل {{count}} عنصرًا إضافيًا"
-        }
+        },
+        "next": "اعرض المقالات التالية",
+        "previous": "عرض المقالات السابقة"
       },
       "shop_order_tracking": {
         "download_shop_to_track": "قم بتنزيل تطبيق المتجر لتتبع الشحنة",
@@ -1575,7 +1704,112 @@
       "group_title_label_with_parent": "لـ: {{groupTitle}}",
       "due_on_date": "تاريخ الاستحقاق: {{date}}",
       "due_on_fulfillment": "يُستحق الدفع أثناء معالجة الطلب",
-      "due_on_receipt": "مستحق الدفع عند استلام الفاتورة"
+      "due_on_receipt": "مستحق الدفع عند استلام الفاتورة",
+      "addresses_section_title": "إصدار الفواتير والشحن",
+      "billing_address": "عنوان الفواتير",
+      "card_ending_with": "ينتهي بـ {{lastDigits}}",
+      "hide_items": "إخفاء المقالات",
+      "loading": "يتم تحميل تفاصيل الطلب",
+      "loading_finished_accessibility_message": "تم تحميل تفاصيل الطلب.",
+      "payment": {
+        "status_in_review": "يُستحق الدفع بعد المراجعة",
+        "status_unpaid": "تاريخ استحقاق الدفع: {{date}}",
+        "title": "قسط",
+        "card_payment_details": "ينتهي بـ {{lastDigits}} - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "تم الدفع بالتقسيط عبر خدمة Shop Pay",
+          "view_schedule": "راجع التقويم"
+        },
+        "gift_card_payment_details": "ينتهي بـ {{lastDigits}} - {{formattedTransactionAmount}}",
+        "manual_payment_methods": {
+          "money_order": "التفويض – {{formattedTransactionAmount}}",
+          "cash_on_delivery": "الدفع عند الاستلام – {{formattedTransactionAmount}}",
+          "bank_deposit": "إيداع بنكي – {{formattedTransactionAmount}}",
+          "manual": "يدوي - {{formattedTransactionAmount}}"
+        },
+        "store_credit_payment_details": "رصيد داخل المتجر - {{formattedTransactionAmount}}",
+        "transactions": {
+          "show_all": "عرض الكل",
+          "show_less": "عرض أقل",
+          "details": "تفاصيل",
+          "payment_details": "تفاصيل الدفع"
+        },
+        "emv_details": {
+          "auth": "المصادقة:",
+          "aid": "يساعد:",
+          "source": "مصدر :"
+        },
+        "payment_type": {
+          "gift_card": "بطاقة هدايا",
+          "store_credit": "رصيد داخل المتجر",
+          "money_order": "تفويض",
+          "cash_on_delivery": "الدفع عند الاستلام",
+          "bank_deposit": "إيداع بنكي",
+          "manual": "يدوي"
+        }
+      },
+      "shipping": {
+        "address": "عنوان الشحن",
+        "address_map_marker": "عنوان الشحن",
+        "method": "طريقة الشحن",
+        "summary": "شحن",
+        "free": "حر",
+        "free_shipping_discount": "ًالشحن مجانا",
+        "one_time": "شحن في الموعد المحدد",
+        "subscription": "شحن الاشتراكات"
+      },
+      "show_items": "عرض المقالات",
+      "subtitle": "تم التأكيد في {{date}}",
+      "subtotal": "المجموع الفرعي",
+      "summary_list_title_accessibility_label": "العناصر بالترتيب",
+      "summary_title": "ملخص الطلب",
+      "summary_totals_title_accessibility_label": "إجمالي الطلبات",
+      "taxes": "الضرائب",
+      "title": "الأمر {{name}}",
+      "total": "المجموع",
+      "unit_price": "{{price}} /قطعة",
+      "location": "موقع",
+      "not_applicable": "لذا",
+      "fully_refunded_label": "تم استرداد المبلغ",
+      "partially_refunded_label": "تم استرداد جزء من المبلغ",
+      "refunded_amount": "تم استرداد المبلغ",
+      "discount": "تخفيض",
+      "no_data": "لا أحد",
+      "pagination": {
+        "load_more": "تحميل المزيد",
+        "load_more_accessibility_label": "تحميل المزيد من العناصر",
+        "loading_accessibility_label": "جارٍ تحميل المقالات"
+      },
+      "returns": {
+        "expand_events_label": "عرض التفاصيل",
+        "hide_events_label": "إخفاء التفاصيل",
+        "print_shipping_label": "اطبع ملصق الشحن",
+        "tracking_number": "عدد تتبع:",
+        "return_and_refund_modal_header": "سياسة الاسترداد",
+        "ineligible_return_message": "لا يمكن إرجاع أي من المنتجات الواردة في هذا الطلب.",
+        "ineligible_return_message_when_returned": "لا يمكن إرجاع أي منتجات أخرى من هذا الطلب.",
+        "exchange_header": "تبادل الأشياء",
+        "exchange_subheader": "ستتم إضافة المنتجات البديلة إلى الطلب بمجرد اكتمال عملية الإرجاع."
+      },
+      "request_return_failed": "حدثت مشكلة أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.",
+      "mobile_summary_toggle_button": {
+        "open": "عرض ملخص الطلب",
+        "closed": "إخفاء ملخص الطلب"
+      },
+      "shipment_timeline": {
+        "expand_events_label": "عرض التفاصيل",
+        "expand_events_accessibility_label": "عرض تفاصيل شحن الطلب",
+        "hide_events_label": "إخفاء التفاصيل",
+        "hide_events_accessibility_label": "إخفاء تفاصيل شحن الطلب"
+      },
+      "show_order_summary": "عرض ملخص الطلب",
+      "hide_order_summary": "إخفاء ملخص الطلب",
+      "company": "عمل",
+      "no_data_provided_accessibility_label": "{{fieldName}} فارغ",
+      "marketing_section_title": "منتجات وعروض جديدة",
+      "marketing_description": "ستتلقى رسائل تسويقية عبر البريد الإلكتروني. يمكنك إلغاء الاشتراك في أي وقت.",
+      "marketing_checkbox_label": "أرسل لي الأخبار والعروض عبر البريد الإلكتروني",
+      "marketing_checkmark_label": "أنت مشترك في خدمة تلقي الأخبار والعروض عبر البريد الإلكتروني."
     },
     "addresses": {
       "add_button": "أضف عنوانًا",
