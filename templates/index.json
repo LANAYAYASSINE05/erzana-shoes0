@@ -297,11 +297,31 @@
     },
     "featured_products_home": {
       "type": "featured-products-slider",
+      "blocks": {
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 16,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
       "settings": {
-        "title": "Nos produits",
+        "title": "{{ section.settings.collection.title }}",
         "title_alignment": "center",
-        "collection": "all",
-        "max_products": 8,
+        "collection": "collections-hommes",
+        "max_products": 5,
         "autoplay_enabled": true,
         "autoplay_delay": 3000,
         "section_width": "full-width",
