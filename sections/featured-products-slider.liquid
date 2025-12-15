@@ -1,8 +1,12 @@
 {% liquid
   assign max_products = section.settings.max_products | default: 8
 
-  # Utiliser automatiquement la collection \"all\" (tous les produits)
-  assign collection = collections['all']
+  # Utiliser la collection depuis les settings, ou 'all' par défaut
+  if section.settings.collection != blank
+    assign collection = section.settings.collection
+  else
+    assign collection = collections['all']
+  endif
 
   assign autoplay_enabled = section.settings.autoplay_enabled
   assign autoplay_delay = section.settings.autoplay_delay | default: 3000
@@ -118,10 +122,28 @@
   .featured-products-slider .swiper-slide {
     height: auto;
     display: flex;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .featured-products-slider .swiper-slide > * {
     width: 100%;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* S'assurer que les product cards sont visibles */
+  .featured-products-slider .product-card,
+  .featured-products-slider product-card-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
+  .featured-products-slider .product-card__image img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
   }
 
   /* Navigation buttons */
