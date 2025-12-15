@@ -3,8 +3,15 @@
 
   # Utiliser la collection depuis les settings, ou 'all' par défaut
   if section.settings.collection != blank
-    assign collection = section.settings.collection
+    # section.settings.collection est un handle (string), on doit récupérer l'objet collection
+    assign collection_handle = section.settings.collection
+    assign collection = collections[collection_handle]
   else
+    assign collection = collections['all']
+  endif
+
+  # Fallback: si la collection n'existe pas, utiliser 'all'
+  if collection == blank
     assign collection = collections['all']
   endif
 
@@ -30,7 +37,7 @@
     </div>
   {% endif %}
 
-  {% if collection != blank and collection.products_count > 0 %}
+  {% if collection != blank and collection.products.size > 0 %}
     <div 
       class="swiper-container featured-products-slider" 
       id="swiper-{{ section.id }}"
@@ -52,6 +59,28 @@
       <div class="swiper-button-prev"></div>
       
       {% comment %} Pagination dots {% endcomment %}
+      <div class="swiper-pagination"></div>
+    </div>
+  {% elsif collections.all.products.size > 0 %}
+    {% comment %} Fallback: utiliser tous les produits si la collection spécifiée est vide {% endcomment %}
+    <div 
+      class="swiper-container featured-products-slider" 
+      id="swiper-{{ section.id }}"
+      data-autoplay="{{ autoplay_enabled }}"
+      data-autoplay-delay="{{ autoplay_delay }}"
+    >
+      <div class="swiper-wrapper">
+        {% for product in collections.all.products limit: max_products %}
+          <div class="swiper-slide">
+            {% # theme-check-disable UniqueStaticBlockId %}
+            {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+            {% # theme-check-enable UniqueStaticBlockId %}
+          </div>
+        {% endfor %}
+      </div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
   {% else %}
