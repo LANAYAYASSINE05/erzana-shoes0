@@ -843,7 +843,31 @@
         "recurring_total_intervals": {
           "day": {
             "one": "يوم",
-            "other": "%{count} يومًا"
+            "other": "%{count} يومًا",
+            "many": "%{count} يومًا"
+          },
+          "week": {
+            "one": "أسبوع",
+            "other": "%{count} أسابيع",
+            "many": "%{count} أسابيع"
+          },
+          "month": {
+            "one": "شهر",
+            "other": "%{count} أشهر",
+            "many": "%{count} أشهر"
+          },
+          "year": {
+            "one": "سنة",
+            "other": "%{count} سنوات",
+            "many": "%{count} سنوات"
+          }
+        },
+        "recurring_totals_with_initial_order_shipping_discount": "الدفعة الأولى هي %{total_price_with_discount}، ثم %{recurring_total}",
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": "ثم يتم دفع مبلغ %{count} من إجمالي %{total_price}",
+            "other": "ثم %{count} دفعة بقيمة %{total_price} لكل دفعة",
+            "many": "ثم %{count} دفعة بقيمة %{total_price} لكل دفعة"
           }
         }
       },
@@ -1503,6 +1527,154 @@
           "privacy_policy": "سياسة الخصوصية",
           "terms_of_service": "شروط الخدمة"
         }
+      },
+      "customer_payment_methods": {
+        "page_title": "طرق الدفع",
+        "title": "طرق الدفع",
+        "update_card_button_label": "قم بتحديث الخريطة",
+        "delete_customer_mandate": {
+          "generic_error": "حدثت مشكلة أثناء معالجة طلبك.",
+          "success_message": "تمت إزالة طريقة الدفع الخاصة بك بنجاح."
+        }
+      },
+      "mor_policies": {
+        "terms_and_conditions": "الشروط والأحكام العامة لاستخدام البائع المعين",
+        "privacy_policy": "سياسة خصوصية البائع"
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "المنتج غير متوفر",
+          "other": "المنتجات غير متوفرة",
+          "many": "المنتجات غير متوفرة"
+        },
+        "products_not_available": {
+          "one": "سيتم إزالة هذا المنتج من سلة التسوق الخاصة بك لأنه غير متوفر في بلدك/منطقتك.",
+          "other": "سيتم إزالة هذه المنتجات من سلة التسوق الخاصة بك لأنها غير متوفرة في بلدك/منطقتك.",
+          "many": "سيتم إزالة هذه المنتجات من سلة التسوق الخاصة بك لأنها غير متوفرة في بلدك/منطقتك."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "هذا المنتج غير متوفر في بلدك/منطقتك.",
+          "other": "هذه المنتجات غير متوفرة في بلدك/منطقتك.",
+          "many": "هذه المنتجات غير متوفرة في بلدك/منطقتك."
+        },
+        "unavailable_label": "غير متوفر"
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "تم تحديث بلدك/منطقتك. أدخل عنوان التوصيل لمتابعة عملية الدفع."
+      },
+      "throttle": {
+        "line_to_check_out": "أنت في قائمة انتظار الدفع",
+        "cart_summary_heading": "سلة التسوق الخاصة بك",
+        "merchandise": {
+          "sold_out": "مرهق",
+          "available": "متاح"
+        },
+        "inventory": {
+          "partial_inventory_banner": "بعض المنتجات في سلة التسوق الخاصة بك نفدت ولن تكون متاحة للشراء وقت الدفع.",
+          "sold_out": {
+            "heading": "سلة التسوق الخاصة بك فارغة",
+            "storefront_body": "ارجع إلى المتجر لمواصلة التسوق",
+            "no_storefront_body": "للأسف، المنتج الذي ترغب في شرائه لم يعد متوفراً.",
+            "link": "العودة إلى المتجر"
+          }
+        },
+        "title": "طابور",
+        "time_to_checkout_title": "حان وقت إتمام عملية الدفع - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "يتم حساب وقت الانتظار المقدر",
+          "less_than_one": "يُقدر وقت الانتظار بأقل من دقيقة واحدة.",
+          "one": "الوقت المقدر للانتظار هو {{count}} دقيقة",
+          "other": "الوقت المقدر للانتظار هو {{count}} دقيقة",
+          "many": "الوقت المقدر للانتظار هو {{count}} دقيقة"
+        },
+        "last_checked": "(آخر فحص: {{time}} )",
+        "footer": {
+          "heading": "لا تقم بتحديث هذه الصفحة، سيتم تحديثها تلقائياً.",
+          "body": "لا يتم حجز المنتجات الموجودة في سلة التسوق الخاصة بك إلا بعد إتمام عملية الدفع."
+        },
+        "too_many_attempts": {
+          "message": "محاكمات كثيرة جداً",
+          "description": "يرجى المحاولة مرة أخرى بعد بضع دقائق."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "حدثت مشكلة أثناء معالجة طلبك. يرجى الاتصال بصاحب المتجر."
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "لا تتوفر خدمة التوصيل لـ %{count} عنصر",
+            "other": "لا تتوفر خدمة التوصيل لـ %{count} منتجًا",
+            "many": "لا تتوفر خدمة التوصيل لـ %{count} منتجًا"
+          },
+          "message": {
+            "one": "سيتم إزالة هذا المنتج من سلة التسوق الخاصة بك، حيث لا تتوفر طرق توصيل إلى عنوانك.",
+            "other": "سيتم إزالة هذه المنتجات من سلة التسوق الخاصة بك، حيث لا تتوفر طرق توصيل إلى عنوانك.",
+            "many": "سيتم إزالة هذه المنتجات من سلة التسوق الخاصة بك، حيث لا تتوفر طرق توصيل إلى عنوانك."
+          },
+          "label": "لا يوجد توصيل"
+        }
+      },
+      "no_address_location": {
+        "title": "موقع بدون عنوان",
+        "header": "ليس لديك عنوان شحن لهذا الموقع",
+        "message": "اتصل بنا لإضافة عنوان إلى هذا الموقع وإتمام عملية الدفع.",
+        "email_us_button_label": "أرسل لنا بريدًا إلكترونيًا",
+        "alt_header": "عنوان الشحن مفقود"
+      },
+      "order_errors": {
+        "creation_failure": "حدثت مشكلة أثناء إنشاء طلبك. يرجى المحاولة مرة أخرى، أو الاتصال بنا لمزيد من التفاصيل.",
+        "network_failure": "لم يتم إرسال طلبك بسبب خطأ في الشبكة. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+        "inventory_reservation_failure": "بعض المنتجات لم تعد متوفرة."
+      },
+      "session_errors": {
+        "session_not_unique": "حدثت مشكلة أثناء معالجة طلبك. قم بتحديث هذه الصفحة للعودة إلى المتجر.",
+        "session_already_finished": "تم تقديم هذا الطلب مسبقاً. يمكنك العودة إلى المتجر لإنشاء طلب جديد."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "مزرعة",
+        "business_hours": "ساعات العمل",
+        "title": "نقطة الترحيل",
+        "or": "أو",
+        "selector_tabs": "محدد نقطة الترحيل",
+        "selector_tab_map": "رسم خريطة",
+        "selector_tab_list": "قائمة",
+        "could_not_resolve_address": "لم يتم العثور على عنوانك. يرجى المحاولة مرة أخرى أو استخدام عنوان مختلف.",
+        "no_pickup_points_near_you": "لم يتم العثور على نقاط تجميع بالقرب من العنوان المحدد",
+        "no_pickup_points_near_location": "لم يتم العثور على نقاط تجميع بالقرب من موقعك",
+        "no_pickup_points_found": "لم يتم العثور على نقاط تجميع",
+        "paginator": {
+          "next_accessibility_label": "الصفحة التالية",
+          "previous_accessibility_label": "الصفحة السابقة",
+          "header": {
+            "one": "عرض النقاط من %{first} إلى %{last} على %{count}",
+            "other": "عرض النقاط من %{first} إلى %{last} من أصل %{count}",
+            "many": "عرض النقاط من %{first} إلى %{last} من أصل %{count}"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} من %{count} نقطة",
+            "other": "%{pickup_point_index} من %{count} نقطة",
+            "many": "%{pickup_point_index} من %{count} نقطة"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} من %{count} نقطة",
+            "other": "من %{first} إلى %{last} من %{count} نقطة",
+            "many": "من %{first} إلى %{last} من %{count} نقطة"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "تم العثور على %{count} نقطة ترحيل بالقرب من موقعك",
+          "other": "تم العثور على %{count} نقطة تجميع بالقرب من موقعك",
+          "many": "تم العثور على %{count} نقطة تجميع بالقرب من موقعك"
+        },
+        "change": "تغيير الموقع",
+        "waiting_on_pickup_point_location_notice": "البحث جارٍ عن نقاط التجميع...",
+        "geolocation": {
+          "shared_location_button": "استخدم موقعي",
+          "errors": {
+            "unsuported_by_browser": "لا يدعم متصفحك خاصية تحديد الموقع الجغرافي. يرجى المحاولة مرة أخرى أو استخدام متصفح آخر."
+          }
+        }
       }
     },
     "store_availability": {
@@ -1514,7 +1686,9 @@
         "zero_to_two_hours": "جاهز عادةً خلال ساعتين",
         "two_to_four_hours": "جاهز عادةً خلال 4 ساعات",
         "immediately": "جاهز للاستلام الآن",
-        "next_day": "جاهز للاستلام في اليوم التالي"
+        "next_day": "جاهز للاستلام في اليوم التالي",
+        "one_hour": "جاهز عادةً خلال ساعة واحدة",
+        "two_hours": "جاهز عادةً خلال ساعتين"
       }
     },
     "filters": {
@@ -1541,6 +1715,150 @@
       "buyer_consent_product": "هذا المنتج عبارة عن عملية شراء متكررة أو مؤجلة. بمتابعتي، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لكم بخصم المبلغ من وسيلة الدفع الخاصة بي بالأسعار والتكرارات والتواريخ المذكورة في هذه الصفحة حتى تتم معالجة طلبي أو أقوم بإلغائه، إن كان ذلك مسموحًا به.",
       "buyer_consent_cart": "يحتوي سلة التسوق الخاصة بك على عنصر واحد على الأقل من عناصر الشراء المتكرر أو المؤجل. بمتابعتك، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لك بخصم المبلغ من وسيلة الدفع الخاصة بي بالأسعار والتكرارات والتواريخ المذكورة في هذه الصفحة حتى تتم معالجة طلبي أو أقوم بإلغائه، إذا كان ذلك مسموحًا به.",
       "cancellation_policy": "سياسة الإنهاء"
+    },
+    "notices": {
+      "order": {
+        "cancel_reason": {
+          "declined": "تم رفض الدفع",
+          "inventory": "المنتجات غير متوفرة",
+          "fraud": "طلب احتيالي",
+          "customer": "قام العميل بتعديل/إلغاء الطلب",
+          "other": "آخر",
+          "many": "آخر",
+          "staff": "خطأ من الموظفين"
+        },
+        "cash_on_delivery": "الدفع عند الاستلام"
+      },
+      "cart": {
+        "only_n_items_available": "يمكنك إضافة %{count} %{name} فقط إلى سلة التسوق الخاصة بك.",
+        "too_many_items_in_cart": "لا يمكنك إضافة أكثر من %{name} إلى سلة التسوق.",
+        "all_items_in_cart": "تمت إضافة عدد %{count} من المنتجات %{name} إلى سلة التسوق الخاصة بك.",
+        "empty_update": "لم نتمكن من إعادة ضبط سلة التسوق الخاصة بك",
+        "missing_parameters": "لا يوجد مُعرّف أو مُعامل سطر صالح",
+        "generic_error": "خطأ في سلة التسوق",
+        "too_many_line_items_error": "لا يمكن أن تحتوي سلة التسوق الخاصة بك على أكثر من %{max} عنصرًا.",
+        "link_expired": "انتهت صلاحية الرابط.",
+        "link_no_longer_exists": "الرابط لم يعد موجوداً.",
+        "stock_problems_html": "بعض المنتجات غير متوفرة حالياً. إليك <a href=\"%{link}\">سلة التسوق المحدثة</a> .",
+        "changed": "تم تعديل السلة",
+        "items_changed": "تم تعديل مقال واحد أو أكثر.",
+        "product_sold_out": "المنتج \"%{name}\" لم يعد متوفراً في المخزون.",
+        "variant_not_found": "لم نجد أي اختلافات.",
+        "variant_requires_selling_plan": "لا يمكن شراء هذا الطراز إلا من خلال باقة مبيعات.",
+        "shipping_address_not_required": "لا تتطلب هذه السلة توصيلاً",
+        "shipping_address_invalid": "حدثت مشكلة أثناء حساب تكاليف الشحن. يرجى الانتقال إلى صفحة الدفع لاختيار خيار الشحن قبل إتمام طلبك.",
+        "selling_plan_not_applicable": "تعذر تطبيق حزمة المبيعات على هذا النوع",
+        "selling_plan_not_available_for_company_locations": "تتوفر عمليات الشراء لمرة واحدة فقط لطلبات الشركات (B2B).",
+        "digital_product_not_available_for_company_locations": "لا يمكن إضافة هذا المنتج إلى طلب B2B",
+        "product_not_available": "هذا المنتج غير متوفر",
+        "less_than_minimum": "يحتوي هذا العنصر على حد أدنى قدره %{min}.",
+        "more_than_maximum": "يبلغ الحد الأقصى لهذا العنصر %{max}.",
+        "not_respect_step": "لا يمكنك إضافة هذا العنصر إلا بزيادات قدرها %{step}.",
+        "bundle_requires_components": "لا يمكن إضافة المنتج المجمع \"%{name}\" إلى سلة التسوق.",
+        "gift_card_with_components_not_supported": "لا يمكن إضافة المنتج المجمع \"%{name}\" إلى سلة التسوق.",
+        "view_lines_limit_reached": "يجب أن تكون الصفوف أقل من أو تساوي %{limit}",
+        "merchandise_line_transformers": {
+          "run_error": "حدث خطأ في سلة التسوق الخاصة بك."
+        },
+        "gift_card_price_must_be_greater_than_zero": "لا يمكن إضافة المنتج المجمع \"%{name}\" إلى سلة التسوق.",
+        "cart_too_large": "السلة كبيرة جدًا.",
+        "gift_card_recipient_validation_error": "بطاقة الهدية المحددة غير صالحة",
+        "invalid_input": "المعامل %{parameter} غير صالح.",
+        "buyer_cannot_purchase_for_company_locations": "لا يمكنك الشراء من هذا الموقع",
+        "only_one_added_to_cart": "تمت إضافة عنصر واحد فقط إلى سلة التسوق الخاصة بك بسبب عدم توفره.",
+        "only_n_added_to_cart": "تمت إضافة %{quantity} عنصرًا فقط إلى سلة التسوق الخاصة بك نظرًا لتوافرها.",
+        "maximum_available_quantity_reached": "الحد الأقصى لكمية هذا المنتج موجود بالفعل في سلة التسوق الخاصة بك.",
+        "cart_attributes_error": "تحتوي سمات السلة على بيانات غير صالحة.",
+        "merchandise_not_applicable": "لا يمكن شراء المنتج بتكوينه الحالي."
+      },
+      "storefront": {
+        "invalid_password": "كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى."
+      },
+      "tags": {
+        "add_articles": "قم بتحسين البحث ليشمل المقالات التي تحتوي أيضًا على وسم %{tag}",
+        "add_products": "قم بتضييق نطاق الاختيار ليشمل المنتجات المطابقة للوسم %{tag}",
+        "remove_articles": "وسّع نطاق البحث ليشمل المقالات غير المصنفة بالوسم %{tag}",
+        "remove_products": "قم بإزالة الوسم %{tag}"
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "تمت إضافة %{delta}",
+          "increment_item": "تمت إضافة %{delta}",
+          "decrement_item": "تم سحب نسبة %{delta} من إجمالي %{total}",
+          "decrement_fulfilled_line_item": "تم إرجاع %{delta} على %{total}",
+          "decrement_return_line_item": "إزالة %{delta} من القيمة المُعادة"
+        }
+      }
+    },
+    "page_titles": {
+      "products": "منتجات",
+      "shopping_cart": "سلة التسوق الخاصة بك",
+      "account": "حساب",
+      "create_account": "إنشاء حساب",
+      "reset_account": "إعادة تعيين الحساب",
+      "addresses": "العناوين",
+      "order": "رقم الطلب %{الاسم}",
+      "not_found": "404 الصفحة غير موجودة",
+      "challenge": "تحدي",
+      "checkpoint": "نقطة تفتيش",
+      "search_results": {
+        "one": "نتائج البحث: تم العثور على %{count} نتيجة للبحث عن \"%{terms}\"",
+        "other": "نتائج البحث: تم العثور على %{count} نتيجة للبحث عن \"%{terms}\"",
+        "many": "نتائج البحث: تم العثور على %{count} نتيجة للبحث عن \"%{terms}\""
+      },
+      "blog_or_article_with_error": "خطأ – %{title}"
+    },
+    "cart": {
+      "discounts_with_count": "تم تطبيق خصومات بقيمة %{count}"
+    },
+    "challenge": {
+      "message": "للمتابعة، يرجى إعلامنا بأنك لست روبوتًا.",
+      "error": "إجابتك غير صحيحة، يرجى المحاولة مرة أخرى.",
+      "submit_button_text": "يُقدِّم"
+    },
+    "checkpoint": {
+      "message": "قم بحل اختبار التحقق (كابتشا) للمتابعة",
+      "error": "فشل التحقق من صحة رمز التحقق (CAPTCHA)",
+      "submit_button_text": "يُقدِّم"
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "نشكرك على اشتراكك في قائمتنا البريدية.",
+        "disclaimer": "يمكنك إلغاء الاشتراك في أي وقت.",
+        "unsubscribe": "إلغاء الاشتراك"
+      },
+      "unsubscribed": {
+        "confirmation": "لقد ألغيت اشتراكك من قائمتنا البريدية.",
+        "disclaimer": "لن تتلقى منا رسائل تسويقية بعد الآن. يمكنك إعادة الاشتراك في أي وقت.",
+        "preview": "أنت تشاهد معاينة لما سيراه العملاء عند إلغاء اشتراكهم."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>لقد وافقت على تتبع فتح البريد الإلكتروني.</b>",
+          "visibility": "سيتم الإبلاغ عن معدلات فتح البريد الإلكتروني بشكل مجهول. سنعرف فقط ما إذا كنت قد فتحت بريدًا إلكترونيًا من خلال معدل فتح البريد الإلكتروني الإجمالي.",
+          "opt_out_html": "يمكنك <a style=\"text-decoration:underline;\" href=\"%{link}\">تعطيل</a> تتبع فتح البريد الإلكتروني إذا كنت لا ترغب في مشاركة هذه المعلومات.",
+          "preview_bar": "أنت تشاهد معاينة لما سيراه العملاء عند اشتراكهم في خدمة تتبع فتح البريد الإلكتروني."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>لقد قمت بتعطيل خاصية تتبع فتح البريد الإلكتروني.</b>",
+          "visibility": "لن نتمكن من معرفة ما إذا كنت قد فتحت رسائلنا الإلكترونية.",
+          "opt_in_html": "<a style=\"text-decoration:underline;\" href=\"%{link}\">تفعيل</a> خاصية تتبع فتح الرسائل الإلكترونية.",
+          "preview_bar": "أنت تشاهد معاينة لما سيراه العملاء عند إلغاء اشتراكهم في خدمة تتبع فتح البريد الإلكتروني."
+        },
+        "no_longer_track": {
+          "status_html": "<b>لم نعد نتتبع عمليات فتح البريد الإلكتروني.</b>",
+          "privacy_policy": "بعد إرسال هذه الرسالة الإلكترونية، قمنا بتحديث سياسة الخصوصية الخاصة بنا ولم نعد نتتبع عمليات فتح الرسائل."
+        },
+        "track": {
+          "status_html": "<b>يتضمن التقرير تتبع فتح البريد الإلكتروني.</b>",
+          "visibility": "سنعرف فقط ما إذا كنت قد فتحت البريد الإلكتروني من خلال معدل فتحه الإجمالي."
+        },
+        "updated_policy": {
+          "status_html": "<b>يتضمن التقرير تتبع فتح البريد الإلكتروني.</b>",
+          "visibility": "لقد قمنا بتحديث سياستنا، ونقوم الآن بتتبع عمليات فتح الرسائل الإلكترونية. سيتم الإبلاغ عن معدلات فتح الرسائل الإلكترونية بشكل مجهول. سنعرف فقط ما إذا كنت قد فتحت رسالة إلكترونية بناءً على معدل فتحها الإجمالي.",
+          "opt_out_html": "إذا كنت لا ترغب في مشاركة هذه المعلومات، يمكنك <a style=\"text-decoration:underline;\" href=\"%{link}\">إلغاء الاشتراك</a> ."
+        }
+      }
     }
   },
   "customer_accounts": {
