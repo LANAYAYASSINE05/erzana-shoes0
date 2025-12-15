@@ -243,8 +243,48 @@
             "one": "لا تتوفر خدمة التوصيل لـ %{count} عنصر",
             "other": "لا تتوفر خدمة التوصيل لـ %{count} منتجًا",
             "many": "لا تتوفر خدمة التوصيل لـ %{count} منتجًا"
+          },
+          "message": {
+            "one": "سيتم إزالة هذا المنتج من سلة التسوق الخاصة بك، حيث لا تتوفر طرق توصيل إلى عنوانك.",
+            "other": "سيتم إزالة هذه المنتجات من سلة التسوق الخاصة بك، حيث لا تتوفر طرق توصيل إلى عنوانك.",
+            "many": "سيتم إزالة هذه المنتجات من سلة التسوق الخاصة بك، حيث لا تتوفر طرق توصيل إلى عنوانك."
+          },
+          "status_column_header": "لا يوجد توصيل"
+        },
+        "price_update": {
+          "title": "تغيير السعر",
+          "description": "لقد تغيرت أسعار هذه المنتجات وتم تحديثها في سلة التسوق الخاصة بك.",
+          "updated_price": "تم تحديث السعر"
+        },
+        "return_to_store_label": "العودة إلى المتجر",
+        "item_label": {
+          "one": "{{count}} مقالة",
+          "other": "{{count}} عنصرًا",
+          "many": "{{count}} عنصرًا"
+        },
+        "continue_cta_label": "استمر في الدفع",
+        "out_of_stock": {
+          "description": "هذه المنتجات لم تعد متوفرة وتمت إزالتها من سلة التسوق الخاصة بك.",
+          "items_unavailable": "بعض المنتجات لم تعد متوفرة وتمت إزالتها من سلة التسوق الخاصة بك."
+        },
+        "unfulfillable_product": {
+          "title": "خدمة التوصيل غير متوفرة",
+          "message": {
+            "one": "لم يعد خيار %{delivery_method} متاحًا لهذا المنتج.",
+            "other": "لم يعد خيار %{delivery_method} متاحًا لهذه المنتجات.",
+            "many": "لم يعد خيار %{delivery_method} متاحًا لهذه المنتجات."
+          },
+          "default_message": {
+            "one": "لم تعد طريقة التوصيل المختارة متاحة لهذا المنتج.",
+            "other": "لم تعد طريقة التوصيل المختارة متاحة لهذه المنتجات.",
+            "many": "لم تعد طريقة التوصيل المختارة متاحة لهذه المنتجات."
           }
-        }
+        },
+        "price_and_quantity_update": {
+          "title": "تحديث السعر والكمية",
+          "description": "لقد تغيرت أسعار هذه المنتجات والكميات المتاحة لها وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك."
       },
       "shipping_errors": {
         "unavailable_selected_address_for_region": "الشحن غير متوفر لمنطقة {{region}} . اختر عنوانًا آخر للمتابعة.",
@@ -794,7 +834,84 @@
         "discount_code_removed": "تمت إزالة رمز الخصم %{code}",
         "discount_code_replaced": "تمت إزالة رمز الخصم %{old_code} وتم تطبيق %{code}",
         "discount_code_replaced_multiple": "تمت إزالة العديد من أكواد الخصم وتم تطبيق %{code}",
-        "from_multiple_stores_heading": "من متاجر مختلفة"
+        "from_multiple_stores_heading": "من متاجر مختلفة",
+        "title": "ملخص الطلب",
+        "order_name_label": "رقم الطلب %{الاسم}",
+        "shopping_cart_label": "سلة",
+        "discount_title": "رمز ترويجي",
+        "discount_label": "رمز الخصم",
+        "discount_placeholder": "رمز الخصم",
+        "gift_card_title": "بطاقة هدايا",
+        "gift_card_label": "بطاقة هدايا",
+        "gift_card_placeholder": "بطاقة هدايا",
+        "gift_card_and_discount_title": "رمز خصم أو بطاقة هدية",
+        "gift_card_and_discount_label": "رمز خصم أو بطاقة هدية",
+        "gift_card_and_discount_placeholder": "رمز خصم أو بطاقة هدية",
+        "add_discount_or_gift_card": "أضف رمز خصم أو بطاقة هدية",
+        "remove_gift_card_label": "استبدل بطاقة الهدية",
+        "remove_discount_label": "قم بإزالة رمز العرض الترويجي",
+        "free_shipping_discount_label": "ًالشحن مجانا",
+        "apply_discount_button_label": "للتحقق",
+        "applied_discount_message": "تم خصم مبلغ %{amount} من السعر الإجمالي",
+        "discount_has_been_applied": "تم تطبيق الخصم",
+        "discount_has_been_removed": "تم سحب الخصم",
+        "gift_card_has_been_applied": "تم تطبيق بطاقة الهدية",
+        "gift_card_has_been_removed": "تم سحب بطاقة الهدية",
+        "discount_already_applied": "تم تطبيق خصم على هذا الطلب بالفعل. لا يمكنك تطبيق خصم آخر.",
+        "cart_does_not_meet_discount_requirements_notice": "رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> غير صالح للمنتجات الموجودة في سلة التسوق الخاصة بك",
+        "discount_requires_customer_notice": "أدخل معلومات الشحن الخاصة بك لتطبيق رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> غير متاح لك في الوقت الحالي.",
+        "shipping_information_does_not_meet_discount_requirements_notice": "رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> غير متاح لعنوان الشحن الخاص بك.",
+        "customer_already_used_once_per_customer_discount_notice": "تم استخدام رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> بالفعل.",
+        "subtotal_label": "المجموع الفرعي",
+        "shipping_label": "شحن",
+        "tip_label": "نصيحة",
+        "shipping_default_value": "يتم حسابها في الخطوة التالية",
+        "shipping_pending_message": "غير متوفر بعد",
+        "shipping_policy_link": "تكاليف الشحن",
+        "taxes_label": "الضرائب",
+        "total_label": "المجموع",
+        "total_outstanding_label": "المبلغ المطلوب دفعه",
+        "partial_total_label": "المجموع",
+        "free_total_label": "حر",
+        "free_shipping_total_label": "حر",
+        "paid_label": "مدفوع",
+        "payment_due_label": "الدفعة المستحقة",
+        "vat_label_html": "الضرائب المشمولة هي %{المبلغ}",
+        "discount_and_gift_card_savings_notice": "بعد خصم %{discount_amount} و %{gift_card_amount} في بطاقات الهدايا",
+        "discount_savings_notice": "بعد خصم %{discount_amount}",
+        "gift_card_savings_notice": "بعد مبلغ %{gift_card_amount} في بطاقات الهدايا",
+        "cost_table_title": "ملخص التكاليف",
+        "description_label": "وصف",
+        "quantity_label": "كمية",
+        "product_change_label": "لتعديل",
+        "product_image_label": "صورة المنتج",
+        "scroll_order_summary": "تصفح قائمة العناصر",
+        "expand_order_summary_short": "عرض",
+        "collapse_order_summary_short": "يخفي",
+        "expand_order_summary": "ملخص الطلب",
+        "collapse_order_summary": "إخفاء ملخص الطلب",
+        "total_updated_label": "تم تحديث السعر الإجمالي:",
+        "order_total_updated_label": "تم تحديث الإجمالي",
+        "total_already_paid_label": "مدفوع",
+        "unit_price": {
+          "accessible_separator": "بواسطة",
+          "per_item": {
+            "single": "قطعة واحدة %{السعر}",
+            "one": "%{price} لـ %{count} عنصر",
+            "other": "%{price} لـ %{count} عنصرًا",
+            "many": "%{price} لـ %{count} عنصرًا"
+          }
+        },
+        "pickup_label": "الاستلام من المتجر",
+        "no_pickup_location": "لا توجد نقاط تجميع متاحة.",
+        "calculating_shipping": "الحساب جارٍ...",
+        "estimated_taxes_label": "الضرائب المقدرة",
+        "information_estimated_taxes_label": "الضرائب (تقديرية)",
+        "gift_card_ending": "بطاقة هدايا تنتهي بـ %{last_characters}",
+        "estimated_tax_label": "الضريبة المقدرة",
+        "multiple_shipping_lines_label": "إجمالي الشحنة",
+        "applied_free_shipping_discount_label": "مُطبَّق"
       },
       "shipping": {
         "title": "شحن",
