@@ -146,6 +146,59 @@
     display: block !important;
   }
 
+  /* Style pour les cartes de produits - cartes carrées */
+  .featured-products-slider .product-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .featured-products-slider .product-card__image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+
+  .featured-products-slider .product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-products-slider .product-card__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.5rem;
+  }
+
+  /* Style du bouton "Achete maintenant" */
+  .featured-products-slider .buy-buttons-block {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+
+  .featured-products-slider .buy-buttons-block .button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .featured-products-slider .buy-buttons-block .button:hover {
+    background: #333;
+  }
+
   /* Navigation buttons */
   .featured-products-slider .swiper-button-next,
   .featured-products-slider .swiper-button-prev {
@@ -405,9 +458,17 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               }
+            },
+            "buy_button": {
+              "type": "buy-buttons",
+              "name": "Buy Buttons",
+              "settings": {
+                "show_dynamic_checkout": false,
+                "show_gift_card_recipient": false
+              }
             }
           },
-          "block_order": ["product-card-gallery", "product_title", "price"]
+          "block_order": ["product-card-gallery", "product_title", "price", "buy_button"]
         }
       }
     }
