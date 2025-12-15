@@ -2460,7 +2460,132 @@
           "order": "طلب",
           "actions_accessibility_label": "الإجراءات",
           "products_accessibility_label": "منتجات"
-        }
+        },
+        "delivered": "تم التسليم في {{date}}",
+        "empty_state_order_source_description": "لن يتم عرض سوى الطلبات التي تم تقديمها عبر {{email}} هنا.",
+        "empty_state_subtitle": "ادخل إلى المتجر لتقديم طلب.",
+        "empty_state_title": "لم يتم تقديم أي طلبات حتى الآن",
+        "estimated_delivery": "مُجدول لـ {{date}}",
+        "items": {
+          "one": "{{count}} مقالة",
+          "other": "{{count}} عنصرًا",
+          "many": "{{count}} عنصرًا"
+        },
+        "order_link": "اعرض الأمر {{name}}",
+        "order_number": "الأمر {{name}}",
+        "orders_title": "مؤكد",
+        "pagination": {
+          "nav_accessibility_label": "أزرار التنقل في الأوامر",
+          "next": "التالي",
+          "next_accessibility_label": "الطلبات التالية",
+          "previous": "سابق",
+          "previous_accessibility_label": "الطلبات السابقة",
+          "load_more": "تحميل المزيد",
+          "load_more_accessibility_label": "تحميل المزيد من الطلبات"
+        },
+        "sort_by": "الترتيب حسب: {{option}}",
+        "sort_hide_options_accessibility_label": "إخفاء خيارات الفرز للطلبات المؤكدة.",
+        "sort_show_options_accessibility_label": "عرض خيارات الفرز للطلبات المؤكدة.",
+        "sort_title": "نوع",
+        "sort": {
+          "date": {
+            "newest": "من الأحدث إلى الأقدم",
+            "oldest": "من الأقدم إلى الأحدث"
+          },
+          "location": {
+            "ascending": "الموقع (من الألف إلى الياء)",
+            "descending": "الموقع (من Z إلى A)"
+          },
+          "order_number": {
+            "ascending": "رقم الطلب (بالترتيب التصاعدي)",
+            "descending": "رقم الطلب (بالترتيب التنازلي)"
+          },
+          "order_total": {
+            "ascending": "إجمالي الطلبات (مرتبة تصاعدياً)",
+            "descending": "إجمالي الطلبات (بالترتيب التنازلي)"
+          }
+        },
+        "one_images_accessibility_label": "يتضمن الأمر {{lineItemName1}}",
+        "two_images_accessibility_label": "يتضمن الأمر {{lineItemName1}} و {{lineItemName2}}",
+        "three_images_accessibility_label": "يتضمن الطلب {{lineItemName1}} {{lineItemName2}} و {{lineItemName3}}",
+        "four_images_accessibility_label": "يتضمن الطلب {{lineItemName1}} و {{lineItemName2}} و {{lineItemName3}} و {{lineItemName4}}",
+        "no_filtered_results_description": "قم بإزالة الفلاتر أو تعديلها لعرض طلباتك",
+        "no_filtered_results_title": "لم يتم تصفية النتائج",
+        "estimated_shortform": "التاريخ المقدر: {{date}}",
+        "payment_status": {
+          "list_view": {
+            "overdue": "متأخر",
+            "due": "تاريخ الاستحقاق: {{date}}",
+            "due_today": "مستحق اليوم",
+            "paid": "مدفوع",
+            "due_without_date": "ل",
+            "due_on_fulfillment": "يُستحق الدفع أثناء معالجة الطلب",
+            "pay_to_confirm": "ادفع للتأكيد",
+            "payment_not_due": "لم يحن موعد استحقاقها بعد"
+          },
+          "gallery_view": {
+            "overdue": "التأخر في السداد",
+            "due": "تاريخ استحقاق الدفع: {{date}}",
+            "due_today": "الدفع اليوم",
+            "due_without_date": "الدفعة المستحقة",
+            "due_on_fulfillment": "يُستحق الدفع عند معالجة الطلب.",
+            "pay_to_confirm": "ادفع للتأكيد",
+            "payment_not_due": "لم يحن موعد الدفع بعد"
+          }
+        },
+        "sort_currently_sorted_by_accessibility_label": "الترتيب الحالي حسب: {{option}}",
+        "carousel": {
+          "one_products_accessibility_label": "يتضمن الطلب كمية قدرها {{lineItemQuantity1}} {{lineItemName1}}",
+          "two_products_accessibility_label": "يتضمن الطلب كمية قدرها {{lineItemQuantity1}} {{lineItemName1}} ، وكمية قدرها {{lineItemQuantity2}} {{lineItemName2}}",
+          "three_products_accessibility_label": "يتضمن الطلب كمية قدرها {{lineItemQuantity1}} {{lineItemName1}} ، وكمية قدرها {{lineItemQuantity2}} {{lineItemName2}} ، وكمية قدرها {{lineItemQuantity3}} {{lineItemName3}}",
+          "four_products_accessibility_label": "يتضمن الطلب كمية قدرها {{lineItemQuantity1}} {{lineItemName1}} ، وكمية قدرها {{lineItemQuantity2}} {{lineItemName2}} ، وكمية قدرها {{lineItemQuantity3}} {{lineItemName3}} ، وكمية قدرها {{lineItemQuantity4}} {{lineItemName4}}",
+          "five_products_accessibility_label": "يتضمن الطلب كمية {{lineItemQuantity1}} {{lineItemName1}} ، وكمية {{lineItemQuantity2}} {{lineItemName2}} ، وكمية {{lineItemQuantity3}} {{lineItemName3}} ، وكمية {{lineItemQuantity4}} {{lineItemName4}} ، وكمية {{lineItemQuantity5}} {{lineItemName5}}",
+          "six_products_accessibility_label": "يتضمن الطلب الكمية {{lineItemQuantity1}} {{lineItemName1}} ، والكمية {{lineItemQuantity2}} {{lineItemName2}} ، والكمية {{lineItemQuantity3}} {{lineItemName3}} ، والكمية {{lineItemQuantity4}} {{lineItemName4}} ، والكمية {{lineItemQuantity5}} {{lineItemName5}} ، والكمية {{lineItemQuantity6}} {{lineItemName6}}",
+          "six_and_more_products_accessibility_label": "يتضمن الطلب كمية {{lineItemQuantity1}} {{lineItemName1}} ، وكمية {{lineItemQuantity2}} {{lineItemName2}} ، وكمية {{lineItemQuantity3}} {{lineItemName3}} ، وكمية {{lineItemQuantity4}} {{lineItemName4}} ، وكمية {{lineItemQuantity5}} {{lineItemName5}} ، وكمية {{lineItemQuantity6}} {{lineItemName6}} ، والمزيد.",
+          "view_order_details": "عرض تفاصيل الطلب",
+          "previous": "سابق",
+          "next": "التالي"
+        },
+        "show_order_actions_accessibility_label": "عرض إجراءات الأمر {{name}}",
+        "empty_state_title_for_pending_orders": "الطلبات المعلقة",
+        "more_than_four_products_accessibility_label": "يشمل الطلب {{lineItemName1}} و {{lineItemName2}} و {{lineItemName3}} و {{numberOfAdditionalProducts}} منتجًا آخر",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} منتجًا",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "اطلع على الطلب لمعرفة التفاصيل",
+            "estimated_delivery": "مُجدول لـ {{date}}",
+            "last_updated": "آخر تحديث بتاريخ {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "من المتوقع التسليم في {{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "يشمل الطلب {{lineItemName1}} و {{lineItemName2}} و {{numberOfAdditionalProducts}} منتجات أخرى",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "filter_title": "فلتر",
+        "filter": {
+          "clear_section": "احذف القسم",
+          "clear_all": "حذف الكل",
+          "apply": "يتقدم",
+          "date": {
+            "start_date": "تاريخ البدء",
+            "end_date": "تاريخ الانتهاء",
+            "title": "تاريخ الطلب",
+            "today": "اليوم",
+            "last_7_days": "آخر 7 أيام",
+            "last_30_days": "آخر 30 يومًا",
+            "last_90_days": "آخر 90 يومًا",
+            "last_365_days": "الأشهر الـ 12 الماضية",
+            "custom": "تخصيص"
+          }
+        },
+        "no_order_banner": "لاختبار الإضافة الخاصة بك على صفحة حالة الطلب، قم بإنشاء طلب.",
+        "location_filter_picker": {
+          "all_location": "جميع المواقع",
+          "current_location": "الموقع الحالي",
+          "switch_view": "تغيير المنظور"
+        },
+        "empty_state_with_location_title": "لا توجد أوامر لـ {{locationName}}"
       },
       "order_status": {
         "expected_by": "مُجدول لـ {{date}}",
@@ -2604,7 +2729,16 @@
           "one": "أرسل بطاقة الهدية مرة أخرى",
           "other": "أعد إرسال بطاقات الهدايا",
           "many": "أعد إرسال بطاقات الهدايا"
-        }
+        },
+        "canceled_label": "تم الإلغاء",
+        "canceled_title": "تم إلغاء طلبك.",
+        "come_back": "ارجع إلى هذه الصفحة للاطلاع على آخر التحديثات المتعلقة بحالة شحنتك.",
+        "company_tracking_number": "رقم التتبع {{company}} :",
+        "confirmed_label": "مؤكد",
+        "confirmed_title": "تم تأكيد طلبك",
+        "delivered_label": "تم التوصيل",
+        "estimated_delivery": "مُجدول لـ {{date}}",
+        "in_review_label": "قيد المراجعة حاليًا"
       },
       "status_mark_as_delivered": "ضع علامة كزي رسمي",
       "buy_again": "سأشتري مرة أخرى",
