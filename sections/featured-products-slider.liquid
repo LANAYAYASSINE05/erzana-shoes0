@@ -1,6 +1,9 @@
 {% liquid
   assign max_products = section.settings.max_products | default: 8
-  assign collection = section.settings.collection
+
+  # Utiliser automatiquement la collection \"all\" (tous les produits)
+  assign collection = collections['all']
+
   assign autoplay_enabled = section.settings.autoplay_enabled
   assign autoplay_delay = section.settings.autoplay_delay | default: 3000
 %}
