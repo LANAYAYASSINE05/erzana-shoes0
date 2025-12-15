@@ -1,0 +1,251 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "shopify": {
+    "sentence": {
+      "last_word_connector": " و ",
+      "two_words_connector": " و ",
+      "words_connector": "، "
+    },
+    "checkout": {
+      "general": {
+        "page_title": "قسط",
+        "error_page_title": "خطأ",
+        "skip_to_content": "انتقل إلى المحتوى",
+        "breadcrumb": "فتات الخبز",
+        "continue_button_label": "يكمل",
+        "complete_purchase_button_label": "تأكيد الدفع",
+        "pay_now_button_label": "ادفع الآن",
+        "authenticate_purchase_button_label": "التحقق من صحة عملية الدفع",
+        "edit_link_label": "لتعديل",
+        "all_rights_reserved": "جميع الحقوق محفوظة %{shop_name}",
+        "print_policies_link_label": "مطبعة",
+        "cart": "سلة",
+        "close_modal_label": "يغلق",
+        "close_notice_label": "يغلق",
+        "expand_notice_label": "شاهد المزيد",
+        "continue_to_shipping_method": "استمر في الشحن",
+        "continue_to_payment_method": "تابع عملية الدفع",
+        "continue_to_review": "تحقق من الطلب",
+        "back_to_cart": "العودة إلى سلة التسوق",
+        "back_to_contact_information": "العودة إلى المعلومات",
+        "back_to_shipping_method": "العودة إلى البعثة",
+        "back_to_payment_method": "العودة إلى صفحة الدفع",
+        "choose_shipping_method": "اختر طريقة الشحن",
+        "choose_payment_method": "اختر طريقة الدفع",
+        "choose_billing_address": "اختر عنوان الفوترة",
+        "contact_us_html": "تواصل معنا للحصول على مزيد من المعلومات",
+        "autocomplete_title": "اقتراحات",
+        "autocomplete_single_item": "متوفر منتج واحد",
+        "autocomplete_multi_item": "{{number}} عنصرًا متوفرًا",
+        "autocomplete_close": "إغلاق الاقتراحات",
+        "forwarding_indicator": {
+          "new_window": "يفتح في نافذة جديدة.",
+          "external": "افتح موقع ويب خارجي.",
+          "external_and_new_window": "يفتح موقع ويب خارجي في نافذة جديدة."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - الدفع"
+        },
+        "tooltip_accessibility_label": "يتعلم أكثر",
+        "errors": {
+          "session_identifier_not_unique_error": "حدث خطأ في طلبك. يرجى المحاولة مرة أخرى.",
+          "line_item_limit_reached": "تم الوصول إلى الحد الأقصى لعدد الفئات.",
+          "only_empty_terms_accepted": "لا تقبل هذه السياسة إلا الشروط الفارغة.",
+          "session_is_already_finished": "لقد اكتملت عملية الدفع بالفعل.",
+          "merchandise": {
+            "only_value_constraint": "لا يُسمح إلا بالقيم الدقيقة عند إدخال البضائع.",
+            "merchandise_not_found": "المنتج غير موجود.",
+            "merchandise_variant_not_found": "لم يتم العثور على نوع المنتج.",
+            "merchandise_not_applicable": "تعذر شراء نسخة المنتج.",
+            "bundle_products_not_supported_for_b2b": "لا يمكن إضافة المنتجات بالجملة إلى طلبات B2B لهذا الموقع.",
+            "gift_card_quantity_mismatch": "عند تحديد رموز بطاقات الهدايا، يجب أن تتطابق كمية المنتج مع عدد رموز بطاقات الهدايا.",
+            "gift_card_not_supported": "لا تدعم طريقة الدفع هذه بطاقات الهدايا.",
+            "gift_card_not_unique": "تظهر بطاقة الهدية التي تحمل الرمز {{code}} أكثر من مرة خلال هذه العملية. يتم تنسيق الرموز قبل المقارنة.",
+            "gift_card_used": "تم تخصيص رمز بطاقة الهدية {{code}} بالفعل لبطاقة هدية. يتم تنسيق الرموز قبل المقارنة.",
+            "gift_card_invalid": "رمز بطاقة الهدية {{code}} غير صالح.",
+            "gift_card_code_changed": "تم استبدال رمز بطاقة الهدايا {{proposed_code}} بـ {{formatted_code}} للامتثال لقواعد التنسيق.",
+            "gift_card_with_attributes_not_supported": "لا يتم دعم بطاقات الهدايا ذات السمات الشخصية في هذه المرحلة من الدفع.",
+            "gift_card_with_components_not_supported": "لا تدعم هذه الطريقة بطاقات الهدايا التي تحتوي على مكونات.",
+            "selling_plan_mismatch": "تم تحديث الاشتراك.",
+            "selling_plan_not_supported": "لا يتم دعم الاشتراكات.",
+            "selling_plan_not_supported_b2b": "لا يتم دعم الاشتراكات في عمليات الدفع بين الشركات.",
+            "price_mismatch": "السعر المعروض سابقاً لهذه المنتجات لم يكن صالحاً وتم تحديثه.",
+            "inventory_not_found": "لم يتم العثور على مخزون لهذه المنتجات.",
+            "product_not_published": "المنتج غير منشور.",
+            "duplicated_stable_id": "تتمتع هذه المجموعة من المنتجات بنفس المعرف الثابت لمجموعة أخرى.",
+            "minimum_quantity_not_met": "كمية بعض الأصناف لا تصل إلى الحد الأدنى المطلوب.",
+            "maximum_quantity_exceeded": "كمية بعض الأصناف تتجاوز الحد الأقصى المسموح به.",
+            "quantity_increment_not_met": "كمية بعض الأصناف لا تصل إلى حدود الطلب.",
+            "quantity_rules_not_met": "كمية بعض الأصناف لا تصل إلى حدود الطلب.",
+            "bundle_requires_components": "لا تحتوي هذه العناصر المجمعة على أي مكونات.",
+            "title_too_long": "عناوين المقالات طويلة جداً.",
+            "title_empty": "عناوين المقالات فارغة.",
+            "mixed_currencies": "يشمل الدفع أقسامًا بعملات مختلفة.",
+            "product_not_published_in_buyer_location": "المنتج غير معروض للبيع في موقع المشتري."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "لا يملك مسؤول الاتصال بالشركة صلاحية الوصول إليه.",
+            "customer_account_required": "يجب عليك تسجيل الدخول للمتابعة.",
+            "contact_info_does_not_match_customer_account": "يجب أن تتطابق معلومات الاتصال مع الحساب الذي قمت بتسجيل الدخول إليه.",
+            "phone_number_does_not_match_expected_pattern": "رقم الهاتف المحدد لا يتطابق مع الطراز المتوقع.",
+            "email_required": "يلزم تقديم عنوان بريد إلكتروني عند شراء المنتجات من خلال الاشتراك.",
+            "email_domain_is_invalid": "لا يمكن حل هذا النطاق المحدد.",
+            "missing_contact_method": "لا توجد وسيلة اتصال صالحة.",
+            "checkout_completion_target_is_missing": "هدف إتمام الدفع غير موجود.",
+            "invalid_customer_profile": "تم تقديم ملف تعريف عميل غير صالح.",
+            "customer_profile_access_restricted": "لا يُسمح بالدفع للوصول إلى ملف تعريف العميل.",
+            "checkout_completion_target_is_invalid_proc": "هدف إتمام الدفع غير صالح.",
+            "company_location_required": "يجب على العميل اختيار موقع تجاري للمتابعة.",
+            "lost_access_to_company": "فقد العميل إمكانية الوصول إلى الشركة.",
+            "company_purchase_permission_required": "العميل غير مخول بتقديم طلبات تجارية.",
+            "personal_order_not_allowed": "لا يُسمح بالطلبات الشخصية في هذا المتجر.",
+            "buyer_identity_presentment_currency_does_not_match": "حدثت مشكلة أثناء معالجة طلبك. يرجى المحاولة مرة أخرى بعد بضع دقائق."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "يجب أن تحتوي السلة على عملية توصيل واحدة فقط.",
+            "wrong_number_of_delivery_lines": "يجب تحديد موعد التسليم لكل مجموعة من الأصناف.",
+            "external_delivery_promise_error": "حدث خطأ أثناء استرداد وعد التسليم الخارجي.",
+            "options_instructions_invalid": "التعليمات المحددة لا تتطابق مع النموذج المتوقع.",
+            "destination_address_required": "يلزم إدخال عنوان الوجهة للمتابعة.",
+            "pickup_points_unavailable": "نقاط التجميع غير متوفرة حاليًا.",
+            "local_pickup_delivery_line_detail_changed": "يجب تغيير استراتيجية الاستلام من المتجر الحالية من أجل الاستمرار.",
+            "local_pickup_no_delivery_strategy_available": "لم يتم العثور على استراتيجية للاستلام من المتجر.",
+            "origin_location_id_required": "يلزم تحديد موقع المنشأ عند طلب طريقة التوصيل بالتجزئة.",
+            "invalid_origin_location_id": "لم يتم العثور على موقع مطابق لمعرف الموقع الأصلي.",
+            "origin_location_id_not_allowed": "لا تدعم طرق التسليم المطلوبة معرّف موقع المنشأ.",
+            "auto_fulfill_not_allowed": "لا يُسمح لهذه الزيارة باستبدال سلوك معالجة الطلبات.",
+            "auto_fulfill_required": "يلزم معالجة الطلبات آلياً عند طلب طريقة التوصيل بالتجزئة."
+          }
+        }
+      },
+      "contact": {
+        "state_and_territory_placeholder": "الولاية/الإقليم",
+        "phone_label": "هاتف",
+        "optional_phone_label": "الهاتف (اختياري)",
+        "phone_placeholder": "هاتف",
+        "phone_tooltip": "في حال احتجنا إلى الاتصال بك بخصوص طلبك",
+        "zip_code_label": "الرمز البريدي",
+        "zip_code_placeholder": "الرمز البريدي",
+        "postal_code_label": "رمز بريدي",
+        "postal_code_placeholder": "رمز بريدي",
+        "postcode_label": "رمز بريدي",
+        "postcode_placeholder": "رمز بريدي",
+        "pincode_label": "رمز سري",
+        "pincode_placeholder": "فهرس بريدي",
+        "region_none": "لا يوجد اختيار",
+        "civic_number_warning": "أضف رقم الشارع، إن وجد.",
+        "optional_last_name_label": "الاسم (اختياري)",
+        "different_shipping_address_label": "الشحن إلى عنوان مختلف",
+        "different_shipping_address_text": "استخدم عنوانًا فريدًا لهذا الطلب.",
+        "change_company_location_link_label": "غيّر موقع الشركة",
+        "change_location_link_label": "تغيير الموقع",
+        "ship_to_company": "الشحن إلى {{companyName}}",
+        "shipping_used_as_billing_notice": "سيتم استخدام هذا العنوان أيضًا كعنوان إرسال الفواتير لهذا الطلب.",
+        "company_attention_label": "الشركة/إلى عناية",
+        "optional_company_attention_label": "الشركة/للعناية: (اختياري)",
+        "available_addresses_label": "العناوين المتاحة",
+        "optional_zip_code_label": "الرمز البريدي (اختياري)",
+        "optional_postal_code_label": "الرمز البريدي (اختياري)",
+        "optional_postcode_label": "الرمز البريدي (اختياري)",
+        "optional_pincode_label": "رمز التعريف الشخصي (اختياري)",
+        "email_rollup_accessibility_label": "خيارات البريد الإلكتروني",
+        "phone_rollup_accessibility_label": "خيارات الهاتف",
+        "phone_country_code_label": "رمز الدولة لرقم الهاتف",
+        "storefront_link": "موقع التاجر الإلكتروني"
+      },
+      "delivery_options": {
+        "ship": "سفينة",
+        "pick_up": "للتعافي",
+        "pick_up_in_two_hours": "جاهز عادةً خلال ساعتين",
+        "pick_up_in_four_hours": "جاهز عادةً خلال 4 ساعات",
+        "pick_up_immediately": "جاهز للاستلام الآن",
+        "pick_up_next_day": "جاهز للاستلام في اليوم التالي",
+        "pick_up_in_one_hour": "جاهز عادةً خلال ساعة واحدة",
+        "pick_up_in_twenty_four_hours": "جاهز عادةً خلال 24 ساعة",
+        "pick_up_in_two_to_four_days": "جاهز عادةً خلال يومين إلى أربعة أيام",
+        "pick_up_in_five_or_more_days": "جاهز عادةً خلال 5 أيام أو أكثر",
+        "pick_up_in_zero_to_two_hours": "جاهز للاستلام خلال ساعتين",
+        "pick_up_in_two_to_four_hours": "جاهز للاستلام خلال 4 ساعات",
+        "free_total_label": "حر",
+        "shipping_address": "عنوان الشحن",
+        "pick_up_locations": "مراكز التجميع",
+        "pickup_point_method_definition": "الشحن إلى نقطة الاستلام",
+        "retail_method_definition": "الشحن بالتجزئة",
+        "none_method_definition": "لا يوجد شحن",
+        "subscription_pickup_information": "سيتم تطبيق طريقة التوصيل هذه على جميع العناصر في هذا الطلب وكذلك على جميع الطلبات المستقبلية لهذا الاشتراك.",
+        "ship_to_address": "الشحن إلى العنوان",
+        "pick_up_from_store": "الاستلام من المتجر",
+        "company_location_no_address_banner": "ستخضع طلبات الشحن إلى مواقع بدون عنوان للمراجعة."
+      },
+      "customer_account": {
+        "not_user_label": "أنت لست %{first_name}؟",
+        "have_an_account_label": "هل لديك حساب؟",
+        "sign_in_link_label": "تسجيل الدخول",
+        "sign_out_link_label": "تسجيل الخروج",
+        "save_my_information_label": "احفظ بياناتي للمرة القادمة",
+        "invalid_address": "العنوان المُختار غير صالح. %{update_address_link} أو اختر عنوانًا مختلفًا.",
+        "incomplete_address": "العنوان المحدد غير مكتمل. %{update_address_link} أو اختر عنوانًا مختلفًا.",
+        "rollup_label": "حساب",
+        "invalid_shipping_method_summary": "اختر عنوان شحن صالحًا لعرض طرق الشحن المتاحة",
+        "saved_address_option_link": "استخدم عنوانًا مسجلاً",
+        "saved_address_modal_title": "استخدم عنواني المسجل",
+        "saved_address_option_description": {
+          "one": "لديك {{count}} عنوانًا محفوظًا.",
+          "other": "لديك {{count}} عنوانًا محفوظًا.",
+          "many": "لديك {{count}} عنوانًا محفوظًا."
+        },
+        "rollup_accessibility_label": "خيارات الحساب"
+      },
+      "stock": {
+        "page_title": "مشاكل المخزون",
+        "title": "إنتهى من المخزن",
+        "items_unavailable_notice": "بعض المنتجات لم تعد متوفرة.",
+        "product_column_header": "منتجات",
+        "quantity_column_header": "كمية",
+        "status_column_header": "حالة",
+        "removed_from_cart_notice": "تمت إزالته من سلة التسوق",
+        "sold_out_label": "مرهق",
+        "reduced_label": "مخفض",
+        "reduced_with_quantity_label": "أكثر من %{quantity_available} متبقية",
+        "remove_from_cart_button_label": "إزالة من سلة التسوق",
+        "continue_shopping_button_label": "يكمل",
+        "go_back_to_cart_button_label": "العودة إلى سلة التسوق",
+        "remove": "ينسحب",
+        "empty_cart_label": "سلة التسوق الخاصة بك فارغة",
+        "quantity_update": {
+          "page_title": "تحديث الكمية",
+          "title": "تحديث الكمية",
+          "description": "لقد تغيرت الكميات المتاحة لهذه المنتجات وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "unpurchasable_product": {
+          "title": "المنتج غير مخصص للبيع",
+          "header": "تمت إزالة بعض المنتجات من سلة التسوق الخاصة بك",
+          "message": "هذه المنتجات غير متاحة لطلبات الشركات (B2B).",
+          "status_column_header": "غير متاح"
+        },
+        "unpurchasable_product_generic": {
+          "title": "المنتج غير مخصص للبيع",
+          "header": "تمت إزالة بعض المنتجات من سلة التسوق الخاصة بك",
+          "message": "هذه المنتجات غير متوفرة.",
+          "status_column_header": "غير متاح"
+        },
+        "unshippable_product": {
+          "title": "لا تتوفر خدمة التوصيل",
+          "header": {
+            "one": "لا تتوفر خدمة التوصيل لـ %{count} عنصر",
+            "other": "لا تتوفر خدمة التوصيل لـ %{count} منتجًا",
+            "many": "لا تتوفر خدمة التوصيل لـ %{count} منتجًا"
+          }
+        }
+      }
+    }
+  }
+}
