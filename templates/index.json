@@ -295,6 +295,21 @@
         "padding-block-end": 100
       }
     },
+    "featured_products_home": {
+      "type": "featured-products-slider",
+      "settings": {
+        "title": "Nos produits",
+        "title_alignment": "center",
+        "collection": "all",
+        "max_products": 8,
+        "autoplay_enabled": true,
+        "autoplay_delay": 3000,
+        "section_width": "full-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 24,
+        "padding-block-end": 24
+      }
+    },
     "media_with_content_xMM9EF": {
       "type": "media-with-content",
       "blocks": {
@@ -527,6 +542,7 @@
   },
   "order": [
     "hero_p9CmMG",
+    "featured_products_home",
     "media_with_content_xMM9EF",
     "media_with_content_nrnzPh"
   ]
