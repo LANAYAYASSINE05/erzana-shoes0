@@ -1970,7 +1970,147 @@
       },
       "order_status": {
         "expected_by": "مُجدول لـ {{date}}",
-        "was_expected_by": "مُجدول لـ {{date}}"
+        "was_expected_by": "مُجدول لـ {{date}}",
+        "in_review_title": "يتم مراجعة طلبك",
+        "no_tracking_number": "لا يوجد رقم تتبع لهذه الشحنة.",
+        "on_its_way_label": "في مرحلة انتقالية",
+        "out_for_delivery_label": "أثناء عملية التسليم",
+        "resume_tracking": "متابعة استئناف العمل",
+        "submitted_label": "مطيع",
+        "track_shipment": "تتبع الشحنة",
+        "request_return": "طلب إرجاع",
+        "attempted_delivery_label": "محاولة تسليم",
+        "preparing_for_shipping_label": "التحضير للشحن",
+        "ready_for_pickup_label": "جاهز للاستلام",
+        "ready_for_pickup_description": "هذه المنتجات جاهزة للاستلام. يرجى إحضار تأكيد الطلب عند استلام طلبك.",
+        "picked_up_label": "تم سحبه",
+        "submitted_description": "تحقق من تفاصيل الطلب والدفع.",
+        "last_updated": "آخر تحديث بتاريخ {{date}}",
+        "multiple_shipments_label": "شحنات متعددة",
+        "view_order_for_details": "اطلع على الطلب لمعرفة التفاصيل",
+        "confirmed_description_digital": "ستتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا.",
+        "delivered_description_gift_card": {
+          "one": "تم إرسال بطاقة الهدية عبر البريد الإلكتروني.",
+          "other": "تم إرسال بطاقات الهدايا عبر البريد الإلكتروني.",
+          "many": "تم إرسال بطاقات الهدايا عبر البريد الإلكتروني."
+        },
+        "gift_card_label": {
+          "one": "بطاقة هدايا",
+          "other": "بطاقات الهدايا",
+          "many": "بطاقات الهدايا"
+        },
+        "ready_for_pickup_location": "طلبك جاهز للاستلام من نقطة الاستلام.",
+        "confirmed_description_pickup": "ستتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
+        "confirmed_gift_card_additional_description": {
+          "one": "سيتم إرسال بطاقة الهدية في رسالة بريد إلكتروني منفصلة.",
+          "other": "سيتم إرسال كل بطاقة هدية في رسالة بريد إلكتروني منفصلة.",
+          "many": "سيتم إرسال كل بطاقة هدية في رسالة بريد إلكتروني منفصلة."
+        },
+        "confirmed_description_gift_card_text": "ستتلقى رسالة نصية عندما يكون طلبك جاهزًا.",
+        "delivered_description_gift_card_text": {
+          "one": "تم إرسال بطاقة الهدية عبر رسالة نصية قصيرة.",
+          "other": "تم إرسال بطاقات الهدايا عبر الرسائل النصية القصيرة.",
+          "many": "تم إرسال بطاقات الهدايا عبر الرسائل النصية القصيرة."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "سيتم إرسال بطاقة الهدية في رسالة نصية قصيرة منفصلة.",
+          "other": "سيتم إرسال كل بطاقة هدية في رسالة نصية قصيرة منفصلة.",
+          "many": "سيتم إرسال كل بطاقة هدية في رسالة نصية قصيرة منفصلة."
+        },
+        "gift_resend_success": {
+          "one": "تم إرجاع بطاقة الهدية",
+          "other": "بطاقات الهدايا المستردة",
+          "many": "بطاقات الهدايا المستردة"
+        },
+        "gift_resend_failure": {
+          "one": "حدثت مشكلة أثناء إرسال بطاقة الهدية. يرجى المحاولة مرة أخرى أو الاتصال بنا.",
+          "other": "حدثت مشكلة أثناء إرسال بطاقات الهدايا الخاصة بك. يرجى المحاولة مرة أخرى أو الاتصال بنا.",
+          "many": "حدثت مشكلة أثناء إرسال بطاقات الهدايا الخاصة بك. يرجى المحاولة مرة أخرى أو الاتصال بنا."
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "إدارة مع أمازون",
+            "new_window_disclaimer": "(يفتح في نافذة جديدة)"
+          }
+        },
+        "attempted_to_deliver_label": "محاولة تسليم",
+        "there_was_a_problem_label": "حدثت مشكلة",
+        "buy_with_prime_logo_accessibility_label": "شعار أمازون برايم للشراء",
+        "delivered": "وصل في {{date}}",
+        "complete_label": "انتهى",
+        "multiple_statuses_label": "حالات الطلب المتعددة",
+        "status_timestamp": "تم التحديث بتاريخ {{date}}",
+        "delivery_promise": {
+          "claim_shop_cash_cta": {
+            "no_shop_app_label": "{{appDownloadLink}} للمطالبة برصيد المتجر",
+            "has_shop_app_label": "استلم رصيدك النقدي من المتجر",
+            "download_shop_app_label": "متجر التنزيلات"
+          },
+          "promise_line": {
+            "single_brand_label": "خدمة التوصيل مدعومة من",
+            "mixed_brands_label": "توصيل مضمون",
+            "not_delivered_by_label": "لم يتم التسليم بحلول {{date}}",
+            "modal_accessibility_button_label": "تفاصيل وعد التسليم"
+          },
+          "details_modal": {
+            "title": "خدمة التوصيل مدعومة من",
+            "modal_accessiblity_label": "تفاصيل وعد التسليم",
+            "delivery_by_label": "التسليم بحلول {{date}}",
+            "delivery_guaranteed_by_label": "التسليم مضمون بحلول {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "يضمن متجرنا توصيلًا سريعًا وموثوقًا. يمكنك تقديم مطالبة نقدية من المتجر في حال تأخر وصول طلبك.",
+              "may_be_eligible_not_authorized_label": "قد تكون مؤهلاً للحصول على رصيد مشتريات لأن هذا الطلب وصل متأخراً. سجّل الدخول للاطلاع على التفاصيل.",
+              "redeemed_label": "لقد قدمت بالفعل مطالبة استرداد نقدي من المتجر لأن هذا الطلب وصل متأخراً.",
+              "expired_label": "لا يمكن تقديم مطالبة بشأن التأخير في التسليم لهذا الطلب، حيث انتهت فترة الضمان البالغة 30 يومًا.",
+              "no_shop_cash_label": "لا يمكن تقديم مطالبة بشأن التأخير في التسليم لهذا الطلب، لأنه لم يتم دفع ثمنه باستخدام خدمة Shop Pay.",
+              "no_longer_guaranteed_label": "لم تعد هذه المنتجات مشمولة بضمان التسليم.",
+              "claim_shop_cash_title": "امسح رمز الاستجابة السريعة (QR) للحصول على {{amount}} في رصيد المتجر.",
+              "claim_shop_cash_description": "يمكنك استخدام رصيدك في تطبيق المتجر لإجراء عمليات شراء مستقبلية."
+            },
+            "delivery_guarantee_label": "توصيل مضمون"
+          }
+        },
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "إدارة حسابك على أمازون"
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "التوصيل مضمون من قبل",
+            "external_promise_brand_label": "التوصيل بواسطة",
+            "not_delivered_by_label": "تم التسليم بعد {{date}}",
+            "delivery_guarantee_expired_label": "انتهت صلاحية ضمان التسليم",
+            "modal_accessibility_button_label": "تفاصيل وعد التسليم",
+            "download_shop_app_button_label": "متجر التنزيلات قادم",
+            "track_with_shop_button_label": "تتبع مع المتجر",
+            "claim_shop_cash_button_label": "استلام النقود من المتجر"
+          },
+          "details_modal": {
+            "title": "ضمان التسليم",
+            "active_delivery_guarantee_label": "التسليم بحلول {{date}}",
+            "expired_delivery_guarantee_description": "انتهت صلاحية ضمان المتجر لمدة 30 يومًا لهذا الطلب.",
+            "expired_badge_label": "منتهي الصلاحية",
+            "order_includes_guarantees_label": "يشمل طلبك {{deliveryAgreementsCount}} ضمانًا",
+            "order_includes_guarantees_description": "يضمن لك متجرنا خدمة توصيل سريعة وموثوقة. احصل على رصيدك من المتجر إذا وصل طلبك بعد {{date}} .",
+            "delivered_after_label": "تم التسليم بعد {{date}} .",
+            "delivered_after_description": "وصل طلبك متأخراً، يمكنك استرداد مبلغ {{amount}} في رصيد المتجر.",
+            "claimed_shop_cash_description": "وصل طلبك متأخراً، وقد قمت باسترداد {{amount}} في رصيد المتجر.",
+            "eligible_to_claim_shop_cash_description": "وصل طلبك متأخراً، يمكنك استرداد مبلغ {{amount}} في رصيد المتجر.",
+            "learn_more_button_label": "يتعلم أكثر",
+            "claim_shop_cash_button_label": "استلام النقود من المتجر",
+            "view_balance_in_shop_button_label": "عرض الرصيد في المتجر",
+            "scan_to_claim_shop_cash_label": "امسح ضوئيًا للمطالبة برصيدك النقدي في المتجر بقيمة {{amount}}"
+          }
+        },
+        "tracking_number": {
+          "one": "عدد تتبع",
+          "other": "أرقام التتبع",
+          "many": "أرقام التتبع"
+        },
+        "gift_card_resend_button": {
+          "one": "أرسل بطاقة الهدية مرة أخرى",
+          "other": "أعد إرسال بطاقات الهدايا",
+          "many": "أعد إرسال بطاقات الهدايا"
+        }
       },
       "status_mark_as_delivered": "ضع علامة كزي رسمي",
       "buy_again": "سأشتري مرة أخرى",
