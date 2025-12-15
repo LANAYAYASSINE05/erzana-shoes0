@@ -516,7 +516,129 @@
         "thank_you_confirmed_order_with_email_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
         "thank_you_confirmed_order_with_phone_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
         "thank_you_confirmed_order_with_email_and_phone_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
-        "order_status_confirmed_order_with_email_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}."
+        "order_status_confirmed_order_with_email_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_phone_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_email_and_phone_payment": "لقد قمت بدفع مبلغ مقابل طلبك بتاريخ %{date}.",
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "امسح ضوئيًا باستخدام هاتفك"
+          },
+          "sms": {
+            "title": "أو أرسل رابطًا إلى هاتفك"
+          }
+        },
+        "estimated_delivery": "تقدير موعد التسليم الحالي:",
+        "view_business_customer_account": "عرض الحساب",
+        "company_location_title": "موقع",
+        "thank_you_title_review": "تم إرسال طلبك للتقييم.",
+        "thank_you_confirmed_order_with_draft": "سنتصل بك إذا احتجنا إلى أي معلومات إضافية أو عند تأكيد طلبك.",
+        "breadcrumbs_submitted": "مُقَدَّم",
+        "breadcrumbs_in_review": "قيد المراجعة حاليًا",
+        "breadcrumbs_confirmed": "مؤكد",
+        "missing_shipping_address_banner": {
+          "title": "لا يتضمن الطلب عنوان شحن.",
+          "text_html": "أضف عنوانك إلى %{contact_us}",
+          "contact_us": "اتصل بنا"
+        },
+        "order_status_confirmed_with_installments_payment_return": "يرجى استشارة البائع.",
+        "order_status_confirmed_with_installments_payment_confirm": "ستتلقى قريباً رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك وتفاصيل خطة الدفع بالتقسيط الخاصة بك.",
+        "first_payment_complete": "تم إتمام الدفعة الأولى",
+        "in_store_purchase": "الشراء من المتجر",
+        "choose_payment_method_later": "اختر طريقة الدفع لاحقًا",
+        "purchase_order_number_title": "رقم أمر الشراء %{purchase_order_number}",
+        "thank_you_ready_for_picked_up": "تم استلام طلبك من العنوان التالي: %{address}.",
+        "ready_for_delivery": "جاهز للتسليم",
+        "order_updates_subscribe_to_email_notifications_failed": "لا يمكننا تخزين هذه الرسالة الإلكترونية لتلقي التحديثات. يرجى المحاولة مرة أخرى أو استخدام عنوان بريد إلكتروني مختلف.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "عنوان البريد الإلكتروني الذي أدخلته موجود بالفعل.",
+        "subscriptions_management": {
+          "title": "الاشتراك",
+          "description": "انتقل إلى حسابك لعرض وإدارة اشتراكاتك.",
+          "button_label": "إدارة اشتراكك"
+        },
+        "manage_order_label": "إدارة طلباتك",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "ستتلقى رسالة نصية تحتوي على بطاقة الهدية الخاصة بك في غضون دقائق قليلة.",
+          "other": "ستتلقى رسالة نصية تحتوي على بطاقات الهدايا الخاصة بك في غضون دقائق قليلة.",
+          "many": "ستتلقى رسالة نصية تحتوي على بطاقات الهدايا الخاصة بك في غضون دقائق قليلة."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "ستتلقى رسالة بريد إلكتروني تحتوي على بطاقة الهدية الخاصة بك في غضون دقائق قليلة.",
+          "other": "ستتلقى بريدًا إلكترونيًا يحتوي على بطاقات الهدايا الخاصة بك في غضون دقائق قليلة.",
+          "many": "ستتلقى بريدًا إلكترونيًا يحتوي على بطاقات الهدايا الخاصة بك في غضون دقائق قليلة."
+        },
+        "gift_card_email_title": {
+          "one": "تم إرسال بطاقة الهدية عبر البريد الإلكتروني.",
+          "other": "تم إرسال بطاقات الهدايا عبر البريد الإلكتروني.",
+          "many": "تم إرسال بطاقات الهدايا عبر البريد الإلكتروني."
+        },
+        "gift_card_text_title": {
+          "one": "تم إرسال بطاقة الهدية عبر رسالة نصية قصيرة.",
+          "other": "تم إرسال بطاقات الهدايا عبر الرسائل النصية القصيرة.",
+          "many": "تم إرسال بطاقات الهدايا عبر الرسائل النصية القصيرة."
+        },
+        "resend_gift_cards_by_email": "أعد إرسال البريد الإلكتروني",
+        "resend_gift_cards_by_text": "أرسل رسالة نصية قصيرة",
+        "gift_card_resent_confirmation": {
+          "one": "تم إرجاع بطاقة الهدية.",
+          "other": "تمت إعادة بطاقات الهدايا.",
+          "many": "تمت إعادة بطاقات الهدايا."
+        },
+        "gift_card_resend_failure": {
+          "one": "حدثت مشكلة أثناء إرسال بطاقة الهدية. يرجى المحاولة مرة أخرى أو الاتصال بنا.",
+          "other": "حدثت مشكلة أثناء إرسال بطاقات الهدايا الخاصة بك. يرجى المحاولة مرة أخرى أو الاتصال بنا.",
+          "many": "حدثت مشكلة أثناء إرسال بطاقات الهدايا الخاصة بك. يرجى المحاولة مرة أخرى أو الاتصال بنا."
+        },
+        "failed_pending_payment_page_title": "حدثت مشكلة في عملية الدفع الخاصة بك.",
+        "thank_you_title_payments_app_pending_default": "تتم معالجة دفعتك",
+        "thank_you_title_payments_app_pending_buyer_action_required": "تم استلام طلبك.",
+        "thank_you_title_payments_app_failed_pending_payment": "لم يتم معالجة دفعتك",
+        "thank_you_payments_app_failed_pending_payment": "لم يتم خصم قيمة طلبك. ارجع إلى سلة التسوق لمراجعة طلبك ثم تابع عملية الدفع مرة أخرى.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_default_with_email": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_default_with_phone": "ستتلقى رسالة تأكيد عبر الرسائل النصية القصيرة قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_failed_pending_payment": "لم يتم خصم قيمة طلبك. ارجع إلى سلة التسوق لمراجعة طلبك ثم تابع عملية الدفع مرة أخرى.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "thank_you_confirmed_order_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_draft_payment": "سنتصل بك إذا احتجنا إلى أي معلومات إضافية أو عند تأكيد طلبك.",
+        "thank_you_confirmed_order_with_draft_pick_up": "سنتصل بك إذا احتجنا إلى أي معلومات إضافية أو عند تأكيد طلبك.",
+        "thank_you_payments_app_failed_pending_payment_payment": "لم يتم خصم قيمة طلبك. ارجع إلى سلة التسوق لمراجعة طلبك ثم تابع عملية الدفع مرة أخرى.",
+        "thank_you_payments_app_failed_pending_payment_pick_up": "لم يتم خصم قيمة طلبك. ارجع إلى سلة التسوق لمراجعة طلبك ثم تابع عملية الدفع مرة أخرى.",
+        "order_status_payments_app_pending_payment_description_default_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_default_with_email_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى رسالة تأكيد عبر الرسائل النصية القصيرة قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_pick_up": "ستتلقى رسالة تأكيد عبر الرسائل النصية القصيرة قريبًا. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. يمكنك تتبع طلبك باستخدام تطبيق المتجر.",
+        "order_status_payments_app_failed_pending_payment_payment": "لم يتم خصم قيمة طلبك. ارجع إلى سلة التسوق لمراجعة طلبك ثم تابع عملية الدفع مرة أخرى.",
+        "order_status_payments_app_failed_pending_payment_pick_up": "لم يتم خصم قيمة طلبك. ارجع إلى سلة التسوق لمراجعة طلبك ثم تابع عملية الدفع مرة أخرى.",
+        "order_status_confirmed_order_local_pick_up": "نحن نقوم حاليًا بتجهيز طلبك.",
+        "order_status_confirmed_order_local_payment": "نحن نقوم حاليًا بتجهيز طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone": "ستتلقى قريباً رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_payment": "ستتلقى قريباً رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "ستتلقى قريباً رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_email": "ستتلقى قريباً رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_payment": "ستتلقى قريباً رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "ستتلقى قريباً رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone": "ستتلقى قريباً رسالة نصية قصيرة للتأكيد تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى قريباً رسالة نصية قصيرة للتأكيد تحتوي على رقم طلبك."
       },
       "shop_policies": {
         "terms_of_service": "شروط الاستخدام",
