@@ -643,6 +643,139 @@
         "invalid_stable_id_target": "تشير التعليمات الخاصة بالمقالات %{position} %{name} إلى المعرف الثابت %{stable_id}، ولكن هذا المعرف الثابت لا يظهر في سطور المقالة.",
         "duplicate_variant_id": "تحتوي تعليمات المقالات %{position} %{name} على معرف متغير مكرر %{variant_id}.",
         "invalid_variant_id_target": "تشير التعليمات الخاصة بالمقالات %{name} إلى معرف المتغير %{variant_id}، لكن هذا المتغير لا يظهر في سطور المقالة."
+      },
+      "order_summary": {
+        "original_price": "السعر الأصلي",
+        "sale_price": "سعر ترويجي",
+        "recurring_subtotal_label": "المجموع الفرعي المتكرر",
+        "recurring_total_label": "إجمالي التكرار",
+        "recurring_total_tooltip": "لا يشمل ذلك تكاليف الشحن أو الضرائب أو الرسوم الجمركية أو الخصومات المطبقة.",
+        "gift_card_subscriptions_notice": "سيتم تطبيق بطاقات الهدايا على دفعتك الأولى فقط.",
+        "confirmation_number_label": "رقم التأكيد %{confirmation_number}",
+        "estimated_taxes_finalization_tooltip_content": "سيتم تأكيد الضريبة النهائية والإجمالي عبر البريد الإلكتروني أو الرسائل النصية القصيرة بعد تقديم الطلب.",
+        "deferred_payment_info": {
+          "title": "يُستحق دفع مبلغ %{amount_due} في تاريخ %{due_at}",
+          "description_html": "إذا كانت لديك أي أسئلة حول طلبك، %{contact_us}.",
+          "paid_today": "إجمالي المبلغ المدفوع اليوم",
+          "due_on_fulfillment_title": "يُستحق دفع مبلغ %{amount_due} عند معالجة الطلب",
+          "due_on_receipt_title": "يُستحق دفع مبلغ %{amount_due} عند الاستلام",
+          "paid_today_next": "تم الدفع اليوم"
+        },
+        "percent_off_shipping": "خصم بنسبة %{percent}% على تكاليف الشحن",
+        "amount_off_shipping": "خصم بنسبة %{amount} على تكاليف الشحن",
+        "payment_terms_totals": {
+          "due_today": "إجمالي اليوم",
+          "due_later": "إجمالي المبلغ المستحق %{due_at}",
+          "due_later_checkout_to_draft": "المبلغ الإجمالي مستحق لاحقاً",
+          "due_on_fulfillment": "المبلغ الإجمالي المستحق بعد معالجة الطلب",
+          "due_on_receipt": "المبلغ الإجمالي مستحق عند الاستلام",
+          "total_paid": "إجمالي المبلغ المدفوع",
+          "due_today_next": "مستحق اليوم",
+          "due_on_fulfillment_next": "مطلوب عند معالجة الطلب"
+        },
+        "higher_value_discount_applied": "لا يمكن استخدام الرمز <strong style=\"text-transform:uppercase\">%{code}</strong> مع خصوماتك الحالية.",
+        "maximum_discount_code_limit_reached": "لقد وصلت إلى الحد الأقصى المسموح به من أكواد الخصم. احذف الكود الموجود لتتمكن من استخدام <strong style=\"text-transform:uppercase\">%{code}</strong> .",
+        "order_total_label": "إجمالي الطلب",
+        "discount_code_application_failed": "لا يعمل <strong style=\"text-transform:uppercase\">الرمز %{code}</strong> حاليًا. تواصل معنا للحصول على المساعدة.",
+        "due_on_fulfillment": "يُستحق الدفع بمجرد معالجة الطلب",
+        "subscriptions": "الاشتراكات",
+        "duties_label": "الرسوم الجمركية",
+        "duties_and_taxes_label": "الرسوم والضرائب",
+        "error_duties_tooltip": "بما أن هذا الطلب يتم شحنه من بلد آخر، فقد يتم فرض رسوم جمركية وضرائب عند التسليم.",
+        "may_be_charged_on_delivery": "يتم احتساب الرسوم عند التسليم",
+        "total_updated_label_with_price": "المبلغ الإجمالي المحدث: %{totalPrice}",
+        "recurring_payments": "المدفوعات المتكررة",
+        "recurring_total_multiple_label": "يشمل هذا الطلب رسومًا متكررة لعدة سلع.",
+        "deferred_total_due_date_label": "إجمالي المبلغ المستحق {{date}}",
+        "full_price": "السعر الإجمالي: %{price}",
+        "custom_discount": "خصم شخصي",
+        "expand_component_information": {
+          "one": "عرض %{count} عنصرًا",
+          "other": "عرض %{count} عنصرًا",
+          "many": "عرض %{count} عنصرًا"
+        },
+        "collapse_component_information": {
+          "one": "إخفاء %{count} مقال",
+          "other": "إخفاء %{count} عنصرًا",
+          "many": "إخفاء %{count} عنصرًا"
+        },
+        "component_quantity_title": "%{الكمية} × %{اسم_المنتج}",
+        "discount_discovery": {
+          "add_code": "أضف خصمًا",
+          "merchandise_quantity_label": {
+            "one": "عدد المقالات %{count}",
+            "other": "عدد العناصر %{count}",
+            "many": "عدد العناصر %{count}"
+          }
+        },
+        "alternative_payment_currency_total": "المبلغ المطلوب: %{amount_due}",
+        "calculating": "الحساب جارٍ...",
+        "group_title_label": "جزء من \"%{group_title}\"",
+        "discount_title_stacking": {
+          "one": "تخفيض",
+          "other": "خصومات",
+          "many": "خصومات"
+        },
+        "discount_order_stacking": {
+          "one": "خصم على الطلب",
+          "other": "خصومات على طلبك",
+          "many": "خصومات على طلبك"
+        },
+        "price_per_item": {
+          "accessibility_label": "%{السعر} لكل وحدة",
+          "label": "%{price}/قطعة"
+        },
+        "updated_shipping_method": "تم تحديث طريقة الشحن: %{shipping_method}",
+        "discount_not_found": "لم يتم العثور على خصم صالح مطابق للرمز المدخل.",
+        "total_savings": "إجمالي الوفورات",
+        "return_restocking_fee_label": "رسوم إعادة التخزين",
+        "return_shipping_fee_label": "شحن الإرجاع",
+        "enter_shipping_address": "أدخل عنوان الشحن",
+        "shipping_discount_title": "خصم على تكاليف الشحن",
+        "discount_code_applied": "تم تطبيق رمز الخصم",
+        "discount_code_applied_with_code": "تم تطبيق رمز الخصم %{code}",
+        "gift_card_applied": "تم استخدام بطاقة الهدية",
+        "duties_included_label": "يشمل السعر الإجمالي الضرائب والرسوم الجمركية. لا توجد رسوم إضافية عند التسليم.",
+        "deferred_balance_info": {
+          "title": "المبلغ المتبقي {{amount_due}} مستحق الدفع في {{due_at}}",
+          "due_on_fulfillment_title": "يُستحق دفع المبلغ المتبقي {{amount_due}} عند معالجة الطلب"
+        },
+        "eligible_customer_missing_notice": "يتطلب رمز الخصم <strong style=\"text-transform:uppercase\">%{code}</strong> عميلًا مؤهلًا",
+        "subtotal_label_with_quantity": {
+          "one": "المجموع الفرعي %{count} عنصر",
+          "other": "المجموع الفرعي %{count} عنصرًا",
+          "many": "المجموع الفرعي %{count} عنصرًا"
+        },
+        "cost_table_item_column_header": "شرط",
+        "cost_table_value_column_header": "قيمة",
+        "product_image_quantity_label": "كمية",
+        "more_items_modal": {
+          "clear_search": "مسح البحث",
+          "empty_results": "لم يتم العثور على نتائج للبحث عن \"%{searchText}\". يرجى التحقق من التهجئة أو استخدام كلمة أو عبارة مختلفة.",
+          "number_items_shown": "%{shownNumber} من %{totalNumber} عنصرًا"
+        },
+        "number_items": {
+          "one": "عدد المقالات %{count}",
+          "other": "عدد العناصر %{count}",
+          "many": "عدد العناصر %{count}"
+        },
+        "view_all_items": {
+          "one": "عرض %{count} عنصرًا",
+          "other": "عرض جميع العناصر %{count}",
+          "many": "عرض جميع العناصر %{count}"
+        },
+        "price_before_discount_aria_text": "السعر الأصلي",
+        "price_after_discount_aria_text": "سعر مخفض",
+        "discount_code_aria_text": "رمز الخصم",
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "الشحن إلى العنوان",
+          "ship_to_address_instead_html": "بدلاً من ذلك، %{link}"
+        },
+        "pickup_unavailable_banner_title": {
+          "one": "لا توجد متاجر متاحة مع المنتج الذي طلبته.",
+          "other": "لا يوجد متجر متاح لمنتجاتك.",
+          "many": "لا يوجد متجر متاح لمنتجاتك."
+        }
       }
     },
     "store_availability": {
@@ -963,5 +1096,115 @@
         "description": "تعذر تحميل نموذج العنوان."
       }
     }
+  },
+  "actions": {
+    "add": "يضيف",
+    "choose": "يختار",
+    "added": "تمت الإضافة",
+    "show_less": "عرض أقل",
+    "show_more": "عرض المزيد",
+    "close": "يغلق",
+    "more": "أكثر",
+    "reset": "إعادة ضبط",
+    "zoom": "تكبير",
+    "close_dialog": "أغلق مربع الحوار",
+    "enter_using_password": "قم بتسجيل الدخول باستخدام كلمة المرور",
+    "submit": "يُقدِّم",
+    "enter_password": "أدخل كلمة المرور",
+    "back": "خلف",
+    "log_in": "تسجيل الدخول",
+    "log_out": "تسجيل الخروج",
+    "remove_discount": "قم بإزالة {{ code }} الخصم",
+    "view_store_information": "عرض معلومات المتجر",
+    "apply": "يتقدم",
+    "sign_up": "يسجل",
+    "sign_in_options": "خيارات اتصال أخرى",
+    "open_image_in_full_screen": "افتح الصورة في وضع ملء الشاشة",
+    "sort": "نوع",
+    "show_all_options": "عرض جميع الخيارات",
+    "open": "يفتح"
+  },
+  "content": {
+    "reviews": "يلاحظ",
+    "language": "لغة",
+    "localization_region_and_language": "المنطقة واللغة",
+    "no_results_found": "لم يتم العثور على نتائج",
+    "cart_total": "إجمالي السلة",
+    "your_cart_is_empty": "سلة التسوق الخاصة بك فارغة",
+    "product_image": "صورة المنتج",
+    "product_information": "معلومات المنتج",
+    "quantity": "كمية",
+    "product_total": "إجمالي عدد المنتجات",
+    "cart_estimated_total": "الإجمالي المُقدّر",
+    "seller_note": "تعليمات خاصة",
+    "cart_subtotal": "المجموع الفرعي",
+    "discounts": "خصومات",
+    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "الرسوم الجمركية والضرائب مشمولة. يتم احتساب الخصومات <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">وتكاليف الشحن</a> عند إتمام عملية الشراء.",
+    "duties_and_taxes_included_shipping_at_checkout_without_policy": "الرسوم الجمركية والضرائب مشمولة. يتم احتساب الخصومات وتكاليف الشحن عند إتمام عملية الشراء.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "الضرائب مشمولة. يتم احتساب الخصومات <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">وتكاليف الشحن</a> عند إتمام عملية الشراء.",
+    "taxes_included_shipping_at_checkout_without_policy": "الضرائب مشمولة. يتم احتساب الخصومات وتكاليف الشحن عند إتمام عملية الشراء.",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "الرسوم الجمركية مشمولة. يتم احتساب الضرائب والخصومات <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">وتكاليف الشحن</a> عند إتمام عملية الشراء.",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "الرسوم الجمركية مشمولة. يتم احتساب الضرائب والخصومات وتكاليف الشحن عند إتمام عملية الشراء.",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "يتم احتساب الضرائب والخصومات <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">وتكاليف الشحن</a> عند مرحلة الدفع.",
+    "taxes_at_checkout_shipping_at_checkout_without_policy": "يتم احتساب الضرائب والخصومات وتكاليف الشحن عند مرحلة الدفع.",
+    "checkout": "يدفع",
+    "cart_title": "سلة",
+    "price_regular": "السعر العادي",
+    "price_compare_at": "السعر قبل الخصم",
+    "price_sale": "سعر ترويجي",
+    "duties_and_taxes_included": "الرسوم الجمركية والضرائب مشمولة.",
+    "duties_included": "الرسوم الجمركية مشمولة.",
+    "shipping_policy_html": "سيتم حساب <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">تكاليف الشحن</a> عند إتمام عملية الشراء.",
+    "taxes_included": "الضرائب مشمولة.",
+    "product_badge_sold_out": "مرهق",
+    "product_badge_sale": "ترقية",
+    "grid_view": {
+      "default_view": "افتراضيًا",
+      "grid_fieldset": "شبكة الأعمدة",
+      "single_item": "فريد",
+      "zoom_out": "تصغير العرض"
+    },
+    "search_results": "نتائج البحث",
+    "search_results_label": "نتائج البحث",
+    "search_results_no_results": "لم يتم العثور على نتائج للبحث عن \" {{ terms }} \". حاول البحث مرة أخرى.",
+    "search_results_resource_articles": "منشورات المدونة",
+    "search_results_resource_pages": "الصفحات",
+    "search_results_resource_products": "منتجات",
+    "search_results_resource_queries": "اقتراحات البحث",
+    "search_results_view_all": "عرض الكل",
+    "search_results_view_all_button": "عرض الكل",
+    "search_results_resource_products_count": {
+      "one": "{{ count }} منتج",
+      "other": "{{ count }} منتجًا",
+      "many": "{{ count }} منتجًا"
+    },
+    "recently_viewed_products": "تم الاطلاع عليه مؤخراً",
+    "unavailable": "غير متاح",
+    "collection_placeholder": "عنوان المجموعة",
+    "product_card_placeholder": "عنوان المنتج",
+    "product_count": "عدد المنتجات",
+    "item_count": {
+      "one": "{{ count }} مقالة",
+      "other": "{{ count }} مقالة",
+      "many": "{{ count }} مقالة"
+    },
+    "errors": "أخطاء",
+    "price_from": "ابتداءً من {{ price }}",
+    "search_results_no_results_check_spelling": "لم يتم العثور على نتائج لـ \" {{ terms }} \". تحقق من التهجئة أو استخدم كلمة أو عبارة مختلفة.",
+    "no_products_found": "لم يتم العثور على أي منتجات.",
+    "use_fewer_filters_html": "حاول استخدام عدد أقل من الفلاتر، أو <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">قم بمسح جميع الفلاتر</a> .",
+    "featured_products": "المنتجات المميزة",
+    "filters": "الفلاتر",
+    "price_filter_html": "أعلى سعر هو {{ price }}",
+    "read_more": "اقرأ المزيد...",
+    "wrong_password": "كلمة مرور خاطئة",
+    "account_title": "حساب",
+    "account_title_personalized": "مرحباً {{ first_name }}",
+    "account_profile": "حساب تعريفي",
+    "discount_code": "رمز الخصم",
+    "duties_and_taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "الرسوم الجمركية والضرائب مشمولة. يتم حساب تكلفة الشحن عند إتمام عملية الشراء.",
+    "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "الرسوم الجمركية والضرائب مشمولة. يتم حساب تكلفة الشحن عند إتمام عملية الشراء.",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "الرسوم الجمركية مشمولة. يتم حساب تكلفة الشحن عند إتمام عملية الشراء.",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "الرسوم الجمركية مشمولة. يتم حساب تكلفة الشحن عند إتمام عملية الشراء."
   }
 }
