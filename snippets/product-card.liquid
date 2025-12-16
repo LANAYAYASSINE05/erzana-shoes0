@@ -131,6 +131,7 @@
       border-style
       gap-style
       {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
+      shoe-card-wrapper
     "
     style="
       {% render 'border-override', settings: block_settings %}
@@ -145,7 +146,62 @@
       {% if block_settings.padding-block-end > 0 %}--zoom-out-padding-block-end: min(var(--padding-xs), {{ block_settings.padding-block-end | times: 0.7}}px);{% endif %}
     "
   >
-    {{ children }}
+    {%- unless onboarding -%}
+      <div class="shoe-card__header">
+        <span class="shoe-card__subtitle">CONFORT MAÎTRISÉ</span>
+        <div class="shoe-card__badges">
+          {%- if product.compare_at_price > product.price -%}
+            <span class="badge badge--promo">
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-right: 2px; vertical-align: middle;">
+                <rect x="1.5" y="2.5" width="5" height="4" fill="white" opacity="0.9"/>
+                <path d="M4 1.5L2.5 2.5L4 3.5L5.5 2.5L4 1.5Z" fill="white"/>
+                <path d="M1.5 2.5L4 1.5L6.5 2.5" stroke="white" stroke-width="0.3"/>
+              </svg>
+              PROMO 3D<br>EXCLUSIVE
+            </span>
+          {%- endif -%}
+          {%- comment -%} Check if product is new (created within last 30 days) {%- endcomment -%}
+          {%- assign current_timestamp = 'now' | date: '%s' | plus: 0 -%}
+          {%- assign product_timestamp = product.created_at | date: '%s' | plus: 0 -%}
+          {%- assign days_old = current_timestamp | minus: product_timestamp | divided_by: 86400 -%}
+          {%- if days_old < 30 and days_old >= 0 -%}
+            <span class="badge badge--new">NEW</span>
+          {%- endif -%}
+          <span class="badge badge--light">
+            LÉGER
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-left: 3px; vertical-align: middle;">
+              <path d="M5 1L4 3L2 4L4 5L5 7L6 5L8 4L6 3L5 1Z" stroke="white" stroke-width="0.5" fill="white" opacity="0.9"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    {%- endunless -%}
+    
+    <div class="shoe-card__image-section">
+      {{ children }}
+      <div class="shoe-card__wood-texture"></div>
+    </div>
+    
+    {%- unless onboarding -%}
+      <div class="shoe-card__info">
+        <div class="shoe-card__title">{{ product.title | upcase }}</div>
+        <div class="shoe-card__price">
+          {% render 'price', product_resource: product %}
+        </div>
+      </div>
+      
+      {%- assign size_option = product.options_with_values | where: 'name', 'Size' | first -%}
+      {%- if size_option == blank -%}
+        {%- assign size_option = product.options_with_values | first -%}
+      {%- endif -%}
+      {%- if size_option and size_option.values.size > 0 -%}
+        <div class="shoe-card__sizes">
+          {%- for value in size_option.values limit: 4 -%}
+            <button class="size-btn" type="button" data-size="{{ value }}">{{ value }}</button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- endunless -%}
   </div>
 </product-card>
 {%- if settings.transition_to_main_product -%}
@@ -224,5 +280,212 @@
 
   .product-card [data-available-count='0'] ~ svg {
     display: block;
+  }
+
+  /* Shoe Card Design Styles */
+  .shoe-card-wrapper {
+    position: relative;
+    background: #fff;
+    padding: 16px 18px 20px;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .shoe-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .shoe-card__subtitle {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .shoe-card__badges {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+  }
+
+  .badge {
+    font-size: 9px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .badge--promo {
+    background: #c0171c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .badge--promo svg {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 1px;
+  }
+
+  .badge--new {
+    background: #444;
+  }
+
+  .badge--light {
+    background: #006da7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .badge--light svg {
+    flex-shrink: 0;
+  }
+
+  .shoe-card__image-section {
+    position: relative;
+    margin: 8px 0 12px;
+    padding: 10px 0 22px;
+  }
+
+  .shoe-card__image-section .card-gallery {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Hide duplicate title and price from children if they exist */
+  .shoe-card-wrapper .shoe-card__image-section ~ * product-title,
+  .shoe-card-wrapper .shoe-card__image-section ~ * product-price {
+    display: none;
+  }
+
+  /* Ensure our styled title and price are visible */
+  .shoe-card__info {
+    display: block;
+  }
+
+  .shoe-card__wood-texture {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 90%;
+    height: 34px;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #f3c98b 0%, #e2a960 50%, #d4984a 100%);
+    border-radius: 0 0 18px 18px;
+    z-index: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .shoe-card__wood-texture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 4px),
+      repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0, 0, 0, 0.02) 1px, rgba(0, 0, 0, 0.02) 2px);
+    border-radius: 0 0 18px 18px;
+  }
+
+  .shoe-card__info {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .shoe-card__title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: #000;
+  }
+
+  .shoe-card__price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .shoe-card__price .price {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .shoe-card__sizes {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .size-btn {
+    min-width: 34px;
+    height: 26px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    background: #fff;
+    font-size: 11px;
+    cursor: pointer;
+    color: #000;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  .size-btn:hover {
+    border-color: #000;
+    background: #f5f5f5;
+  }
+
+  .size-btn:active {
+    background: #000;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 749px) {
+    .shoe-card-wrapper {
+      padding: 12px 14px 16px;
+    }
+
+    .shoe-card__subtitle {
+      font-size: 10px;
+    }
+
+    .badge {
+      font-size: 8px;
+      padding: 2px 5px;
+    }
+
+    .shoe-card__title {
+      font-size: 12px;
+    }
+
+    .shoe-card__price {
+      font-size: 14px;
+    }
+
+    .size-btn {
+      min-width: 30px;
+      height: 24px;
+      font-size: 10px;
+    }
   }
 {% endstylesheet %}
