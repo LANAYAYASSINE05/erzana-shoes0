@@ -47,19 +47,8 @@
       <div class="swiper-wrapper">
         {% for product in collection.products limit: max_products %}
           <div class="swiper-slide">
-            <a href="{{ product.url }}" class="slider-card">
-              {% if product.featured_image %}
-                <div class="slider-card__image">
-                  {{ product.featured_image | image_url: width: 800 | image_tag: alt: product.title }}
-                </div>
-              {% endif %}
-
-              <div class="slider-card__content">
-                <h3 class="slider-card__title">{{ product.title }}</h3>
-                <p class="slider-card__price">{{ product.price | money }}</p>
-                <span class="slider-card__button">Acheter maintenant</span>
-              </div>
-            </a>
+            {% # Utiliser le bloc product card standard pour profiter du nouveau design de carte %}
+            {% content_for 'block', type: '_product-card', id: 'slider-product-card', closest.product: product %}
           </div>
         {% endfor %}
       </div>
@@ -82,19 +71,7 @@
       <div class="swiper-wrapper">
         {% for product in collections.all.products limit: max_products %}
           <div class="swiper-slide">
-            <a href="{{ product.url }}" class="slider-card">
-              {% if product.featured_image %}
-                <div class="slider-card__image">
-                  {{ product.featured_image | image_url: width: 800 | image_tag: alt: product.title }}
-                </div>
-              {% endif %}
-
-              <div class="slider-card__content">
-                <h3 class="slider-card__title">{{ product.title }}</h3>
-                <p class="slider-card__price">{{ product.price | money }}</p>
-                <span class="slider-card__button">Acheter maintenant</span>
-              </div>
-            </a>
+            {% content_for 'block', type: '_product-card', id: 'slider-product-card', closest.product: product %}
           </div>
         {% endfor %}
       </div>
