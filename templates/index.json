@@ -410,9 +410,9 @@
                 "collection_card_gap": 8,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
+                "border": "solid",
+                "border_width": 0,
+                "border_opacity": 0,
                 "border_radius": 0
               },
               "blocks": {
@@ -478,9 +478,9 @@
             "collection_card_gap": 8,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
+            "border": "solid",
+            "border_width": 0,
+            "border_opacity": 0,
             "border_radius": 0
           },
           "blocks": {
@@ -500,7 +500,7 @@
                 "wrap": "balance",
                 "color": "var(--color-foreground-heading)",
                 "background": true,
-                "background_color": "#00000000",
+                "background_color": "rgba(0,0,0,0)",
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
@@ -516,12 +516,12 @@
               "settings": {
                 "image_ratio": "portrait",
                 "toggle_overlay": true,
-                "overlay_color": "#0303035b",
-                "overlay_style": "solid",
+                "overlay_color": "#03030372",
+                "overlay_style": "gradient",
                 "gradient_direction": "to top",
-                "border": "none",
+                "border": "solid",
                 "border_width": 1,
-                "border_opacity": 100,
+                "border_opacity": 0,
                 "border_radius": 0
               },
               "blocks": {}
