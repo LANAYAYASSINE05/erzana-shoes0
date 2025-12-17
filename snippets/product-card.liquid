@@ -178,9 +178,7 @@
     {%- endunless -%}
     
     <div class="shoe-card__image-section">
-      {% if children != blank %}
-        {{ children }}
-      {% elsif product and product != blank %}
+      {% if product and product != blank %}
         {% render 'card-gallery', section: section, block: block %}
       {% endif %}
     </div>
