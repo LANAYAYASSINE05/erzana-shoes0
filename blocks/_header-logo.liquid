@@ -187,6 +187,15 @@
     display: var(--header-logo-inverse-display, none);
   }
 
+  /* Toujours utiliser le logo inverse sur toutes les pages */
+  .header-logo__image-container--original {
+    display: none !important;
+  }
+
+  .header-logo__image-container--inverse {
+    display: block !important;
+  }
+
   /* Utiliser le logo inverse quand le header est sticky (après scroll) */
   .header[data-sticky-state='active'] .header-logo__image-container--original {
     display: none !important;
