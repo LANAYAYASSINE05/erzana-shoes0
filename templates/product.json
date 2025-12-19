@@ -178,11 +178,26 @@
                 "padding-block-end": 0
               },
               "blocks": {}
+            },
+            "variant_picker_Bwt8BG": {
+              "type": "variant-picker",
+              "name": "t:names.product_variant_picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 8,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "group_icgrde",
-            "divider_VJhene"
+            "divider_VJhene",
+            "variant_picker_Bwt8BG"
           ]
         }
       },
